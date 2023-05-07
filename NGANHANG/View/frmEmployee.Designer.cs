@@ -36,8 +36,8 @@
             System.Windows.Forms.Label dIACHILabel;
             System.Windows.Forms.Label sODTLabel;
             System.Windows.Forms.Label trangThaiXoaLabel1;
-            System.Windows.Forms.Label pHAILabel;
             System.Windows.Forms.Label mACNLabel;
+            System.Windows.Forms.Label pHAILabel1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployee));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
@@ -77,8 +77,8 @@
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox = new DevExpress.XtraEditors.PanelControl();
+            this.txtPHAI = new DevExpress.XtraEditors.TextEdit();
             this.txtMACN = new DevExpress.XtraEditors.TextEdit();
-            this.cbPHAI = new DevExpress.XtraEditors.CheckEdit();
             this.cbXoa = new DevExpress.XtraEditors.CheckEdit();
             this.txtSDT = new DevExpress.XtraEditors.TextEdit();
             this.txtDIACHI = new DevExpress.XtraEditors.TextEdit();
@@ -95,8 +95,8 @@
             dIACHILabel = new System.Windows.Forms.Label();
             sODTLabel = new System.Windows.Forms.Label();
             trangThaiXoaLabel1 = new System.Windows.Forms.Label();
-            pHAILabel = new System.Windows.Forms.Label();
             mACNLabel = new System.Windows.Forms.Label();
+            pHAILabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -106,8 +106,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBox)).BeginInit();
             this.groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPHAI.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMACN.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbPHAI.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbXoa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDIACHI.Properties)).BeginInit();
@@ -183,15 +183,6 @@
             trangThaiXoaLabel1.Text = "Trạng thái xóa:";
             trangThaiXoaLabel1.Click += new System.EventHandler(this.trangThaiXoaLabel1_Click);
             // 
-            // pHAILabel
-            // 
-            pHAILabel.AutoSize = true;
-            pHAILabel.Location = new System.Drawing.Point(518, 74);
-            pHAILabel.Name = "pHAILabel";
-            pHAILabel.Size = new System.Drawing.Size(75, 19);
-            pHAILabel.TabIndex = 17;
-            pHAILabel.Text = "Giới tính:";
-            // 
             // mACNLabel
             // 
             mACNLabel.AutoSize = true;
@@ -200,6 +191,15 @@
             mACNLabel.Size = new System.Drawing.Size(59, 19);
             mACNLabel.TabIndex = 18;
             mACNLabel.Text = "MACN:";
+            // 
+            // pHAILabel1
+            // 
+            pHAILabel1.AutoSize = true;
+            pHAILabel1.Location = new System.Drawing.Point(558, 75);
+            pHAILabel1.Name = "pHAILabel1";
+            pHAILabel1.Size = new System.Drawing.Size(75, 19);
+            pHAILabel1.TabIndex = 19;
+            pHAILabel1.Text = "Giới tính:";
             // 
             // barManager1
             // 
@@ -557,10 +557,10 @@
             // 
             // groupBox
             // 
+            this.groupBox.Controls.Add(pHAILabel1);
+            this.groupBox.Controls.Add(this.txtPHAI);
             this.groupBox.Controls.Add(mACNLabel);
             this.groupBox.Controls.Add(this.txtMACN);
-            this.groupBox.Controls.Add(pHAILabel);
-            this.groupBox.Controls.Add(this.cbPHAI);
             this.groupBox.Controls.Add(trangThaiXoaLabel1);
             this.groupBox.Controls.Add(this.cbXoa);
             this.groupBox.Controls.Add(sODTLabel);
@@ -582,6 +582,16 @@
             this.groupBox.TabIndex = 7;
             this.groupBox.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
+            // txtPHAI
+            // 
+            this.txtPHAI.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsNV, "PHAI", true));
+            this.txtPHAI.Location = new System.Drawing.Point(639, 72);
+            this.txtPHAI.MenuManager = this.barManager1;
+            this.txtPHAI.Name = "txtPHAI";
+            this.txtPHAI.Size = new System.Drawing.Size(150, 26);
+            this.txtPHAI.TabIndex = 20;
+            this.txtPHAI.EditValueChanged += new System.EventHandler(this.txtPHAI_EditValueChanged);
+            // 
             // txtMACN
             // 
             this.txtMACN.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsNV, "MACN", true));
@@ -591,17 +601,6 @@
             this.txtMACN.Name = "txtMACN";
             this.txtMACN.Size = new System.Drawing.Size(150, 26);
             this.txtMACN.TabIndex = 19;
-            // 
-            // cbPHAI
-            // 
-            this.cbPHAI.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsNV, "PHAI", true));
-            this.cbPHAI.Location = new System.Drawing.Point(599, 71);
-            this.cbPHAI.MenuManager = this.barManager1;
-            this.cbPHAI.Name = "cbPHAI";
-            this.cbPHAI.Properties.Caption = "Nam";
-            this.cbPHAI.Size = new System.Drawing.Size(112, 27);
-            this.cbPHAI.TabIndex = 18;
-            this.cbPHAI.CheckedChanged += new System.EventHandler(this.cbPHAI_CheckedChanged);
             // 
             // cbXoa
             // 
@@ -705,8 +704,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupBox)).EndInit();
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPHAI.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMACN.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbPHAI.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbXoa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDIACHI.Properties)).EndInit();
@@ -769,7 +768,7 @@
         private DevExpress.XtraEditors.CheckEdit cbXoa;
         private DevExpress.XtraEditors.TextEdit txtSDT;
         private DevExpress.XtraEditors.TextEdit txtMACN;
-        private DevExpress.XtraEditors.CheckEdit cbPHAI;
         private DevExpress.XtraBars.BarButtonItem btnSave;
+        private DevExpress.XtraEditors.TextEdit txtPHAI;
     }
 }
