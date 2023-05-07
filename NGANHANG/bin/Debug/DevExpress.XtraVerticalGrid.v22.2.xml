@@ -5097,6 +5097,11 @@
       </summary>
       <value>A <see cref="T:System.Windows.Forms.Cursor"/> that represents the cursor to display when the mouse pointer is over the control.</value>
     </member>
+    <member name="E:DevExpress.XtraVerticalGrid.VGridControlBase.CustomDrawCaption">
+      <summary>
+        <para>Allows you to paint the control’s caption.</para>
+      </summary>
+    </member>
     <member name="E:DevExpress.XtraVerticalGrid.VGridControlBase.CustomDrawRowHeaderCell">
       <summary>
         <para>Enables row header cells to be painted manually.</para>
@@ -5905,7 +5910,7 @@
       <summary>
         <para>Indicates whether the vertical grid control can be printed.</para>
       </summary>
-      <value>true if the Pivot Grid Control can be printed; otherwise, false.</value>
+      <value>true if the Vertical Grid control can be printed; otherwise, false.</value>
     </member>
     <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.IsValidRecordHandle(System.Int32)">
       <summary>

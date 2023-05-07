@@ -12,9 +12,9 @@ namespace NGANHANG
     static class Program
     {
         // Program variables
-        public static String connPublisherString = "Data Source = ADMIN; Initial Catalog = NGANHANG; Integrated Security = True";
+        public static String connPublisherString = "Data Source = MSI; Initial Catalog = NGANHANG; Integrated Security = True";
         public static SqlConnection conn = new SqlConnection();
-        public static string connString = null;
+        public static String connString = null;
         public static String serverName = "";
         public static String database = "NGANHANG";
         public static String login = "";

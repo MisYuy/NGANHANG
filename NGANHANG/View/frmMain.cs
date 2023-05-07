@@ -147,7 +147,17 @@ namespace NGANHANG
 
         private void btnCustomer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            Form f = this.checkExists(typeof(frmCustomer));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                f = new frmCustomer();
+                f.MdiParent = this;
+                f.Show();
+            }
         }
     }
 }

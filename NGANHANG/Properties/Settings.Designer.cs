@@ -12,7 +12,7 @@ namespace NGANHANG.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.5.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -20,6 +20,16 @@ namespace NGANHANG.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN;Initial Catalog=NGANHANG;User ID=sa; Password=123")]
+        public string NGANHANGConnectionString {
+            get {
+                return ((string)(this["NGANHANGConnectionString"]));
             }
         }
         
@@ -36,20 +46,20 @@ namespace NGANHANG.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN;Initial Catalog=NGANHANG;User ID=sa")]
-        public string NGANHANGConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN\\MSSQLSERVER02;Initial Catalog=NGANHANG;User ID=sa")]
+        public string NGANHANGConnectionString3 {
             get {
-                return ((string)(this["NGANHANGConnectionString"]));
+                return ((string)(this["NGANHANGConnectionString3"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN\\MSSQLSERVER02;Initial Catalog=NGANHANG;User ID=sa")]
-        public string NGANHANGConnectionString3 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI\\MSSQLSERVER01;Initial Catalog=NGANHANG;User ID=sa")]
+        public string NGANHANGConnectionString1 {
             get {
-                return ((string)(this["NGANHANGConnectionString3"]));
+                return ((string)(this["NGANHANGConnectionString1"]));
             }
         }
     }

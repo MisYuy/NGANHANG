@@ -6,12 +6,12 @@
   <members>
     <member name="N:DevExpress.XtraEditors">
       <summary>
-        <para>Contains editor classes. They provide the functionality for corresponding controls.</para>
+        <para>Contains editor classes that implement the functionality for corresponding controls.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraEditors.FindMode">
       <summary>
-        <para>Contains values that specify how data searching is initiated within specific controls.</para>
+        <para>Contains values that specify how data search is initiated within specific controls.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.FindMode.Always">
@@ -87,7 +87,7 @@
     </member>
     <member name="T:DevExpress.XtraEditors.GridLookUpEditBase">
       <summary>
-        <para>Represents the base class for grid look up editors.</para>
+        <para>The base class for grid look up editors.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.GridLookUpEditBase.ForceInitialize">
@@ -105,6 +105,12 @@
       <summary>
         <para>Opens the popup window.</para>
       </summary>
+    </member>
+    <member name="P:DevExpress.XtraEditors.GridLookUpEditBase.Text">
+      <summary>
+        <para>Gets or sets the text displayed in the edit box.</para>
+      </summary>
+      <value>The text displayed in the edit box.</value>
     </member>
     <member name="N:DevExpress.XtraEditors.Repository">
       <summary>
@@ -223,6 +229,12 @@
         <para>Fires after the AutoSuggest event is finished. Allows you to additionally customize the editor.</para>
       </summary>
     </member>
+    <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit.CaseSensitiveSearch">
+      <summary>
+        <para>Gets or sets whether to enable case sensitive search.</para>
+      </summary>
+      <value>true to enable case sensitive search; otherwise, false.</value>
+    </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit.EditorTypeName">
       <summary>
         <para>Gets the class name of the current editor.</para>
@@ -294,6 +306,12 @@
         <para>Gets or sets whether server mode is enabled.</para>
       </summary>
       <value>true if server mode is enabled; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit.TextEditStyle">
+      <summary>
+        <para>Gets or sets a value that specifies whether users can type in the lookup’s text box.</para>
+      </summary>
+      <value>A TextEditStyles enumeration value.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEditBase">
       <summary>
@@ -522,7 +540,7 @@
     </member>
     <member name="T:DevExpress.XtraEditors.SearchLookUpEdit">
       <summary>
-        <para>The editor that provides lookup functionality using a dropdown feature-rich data grid (<see cref="T:DevExpress.XtraGrid.GridControl"/>), and contains the built-in Find Panel, allowing end-users to quickly filter and locate dropdown records. You can display lookup records in a tabular format, banded tabular format, or as tiles (which can be arranged in one or multiple columns/rows, rendered as a list or a Kanban board).</para>
+        <para>The editor that implements lookup functionality using a drop-down feature-rich data grid (<see cref="T:DevExpress.XtraGrid.GridControl"/>), and contains the built-in Find Panel, which allows end users to quickly filter and locate drop-down records. You can display lookup records in a tabular format, banded tabular format, or as tiles (which can be arranged in one or multiple columns/rows, rendered as a list or a Kanban board).</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SearchLookUpEdit.#ctor">
@@ -2911,9 +2929,9 @@ If this parameter has a value (it’s not null or an empty string) the val param
     </member>
     <member name="P:DevExpress.XtraGrid.GridControl.EmbeddedNavigator">
       <summary>
-        <para>Provides access to the embedded data navigator.</para>
+        <para>Allows to customize the embedded data navigator.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.XtraEditors.ControlNavigator"/> descendant representing the grid control’s embedded data navigator.</value>
+      <value>The data navigator.</value>
     </member>
     <member name="M:DevExpress.XtraGrid.GridControl.EndUpdate">
       <summary>
@@ -7822,7 +7840,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.CustomUnboundColumnData">
       <summary>
-        <para>Fires for all cells of visible unbound columns. Allows you to manually provide data to these cells, and save values entered by users at runtime.</para>
+        <para>Fires for all cells of visible unbound columns. Allows you to manually supply data to these cells, and save values entered by users at runtime.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.DataManagerReset">
@@ -7991,7 +8009,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <summary>
         <para>Read this property value to retrieve the currently selected row’s handle. Modify the property to manually select a row with the given handle.</para>
       </summary>
-      <value>An integer value representing the handle of the focused record.</value>
+      <value>An integer value that is the handle of the focused record.</value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.FocusedRowLoaded">
       <summary>
@@ -8947,6 +8965,24 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Contains  appearance settings used to customize the View Caption.</para>
       </summary>
       <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> that contains corresponding appearance settings.</value>
+    </member>
+    <member name="T:DevExpress.XtraGrid.Views.Base.ColumnViewHyperlinkClickEventArgs">
+      <summary>
+        <para>Contains data for the <see cref="E:DevExpress.XtraGrid.Views.Items.ItemsView.HyperlinkClick"/> event.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewHyperlinkClickEventArgs.#ctor(DevExpress.Utils.Html.DxHtmlHitInfo,System.Int32)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.Views.Base.ColumnViewHyperlinkClickEventArgs"/> class with specified settings.</para>
+      </summary>
+      <param name="hitInfo">The hit information related to the target HTML element.</param>
+      <param name="rowHandle">An integer value that identifies an item (data row). This value is assigned to the <see cref="P:DevExpress.XtraGrid.Views.Base.ColumnViewHyperlinkClickEventArgs.RowHandle"/> property.</param>
+    </member>
+    <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewHyperlinkClickEventArgs.RowHandle">
+      <summary>
+        <para>Gets an item’s handle.</para>
+      </summary>
+      <value>An integer value that identifies an item (data row).</value>
     </member>
     <member name="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior">
       <summary>
@@ -13579,9 +13615,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsDetail.AllowZoomDetail">
       <summary>
-        <para>Gets or sets a value specifying whether the View’s immediate details can be maximized to fit the entire grid control’s area.</para>
+        <para>Gets or sets a value that specifies whether the detail views can be maximized to fit the entire grid control’s area. Set this property for a root master view only.</para>
       </summary>
-      <value>true if details can be zoomed; otherwise, false.</value>
+      <value>true to allow zoom detail views; otherwise, false.</value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridOptionsDetail.Assign(DevExpress.Utils.Controls.BaseOptions)">
       <summary>
@@ -15022,9 +15058,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.DefaultRelationIndex">
       <summary>
-        <para>Gets or sets the value indicating which detail level is processed by default.</para>
+        <para>Gets or sets the index of a detail view (detail tab) to process by default.</para>
       </summary>
-      <value>A zero-based integer representing the relation index processed by default.</value>
+      <value>A zero-based integer that specifies the index of a detail view processed by default.</value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.DetailTabStyle">
       <summary>
@@ -17820,6 +17856,13 @@ The <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> value if th
       </summary>
       <value>The appearance settings specific to the <see cref="T:DevExpress.XtraGrid.Views.Items.ItemsView"/>.</value>
     </member>
+    <member name="M:DevExpress.XtraGrid.Views.Items.ItemsView.Assign(DevExpress.XtraGrid.Views.Base.BaseView,System.Boolean)">
+      <summary>
+        <para>Copies properties and, optionally, event handlers from another View to the current view.</para>
+      </summary>
+      <param name="v">A View whose properties and event handlers are to be copied.</param>
+      <param name="copyEvents">true to copy event handlers; otherwise, false.</param>
+    </member>
     <member name="M:DevExpress.XtraGrid.Views.Items.ItemsView.BindCommand(System.Linq.Expressions.Expression{System.Action},System.Object,System.String,System.Func{System.Object})">
       <summary>
         <para>Uses the command selector to find an appropriate parameterized command of the target type in the source and binds it to this HTML element.</para>
@@ -17881,6 +17924,11 @@ The <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> value if th
         <para>Provides access to the collection of HTML-CSS templates.</para>
       </summary>
       <value>A collection of HTML-CSS tile templates.</value>
+    </member>
+    <member name="E:DevExpress.XtraGrid.Views.Items.ItemsView.HyperlinkClick">
+      <summary>
+        <para>Occurs when a user clicks a URL in an HTML template and allows you to manually handle the event.</para>
+      </summary>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Items.ItemsView.OptionsSelection">
       <summary>
