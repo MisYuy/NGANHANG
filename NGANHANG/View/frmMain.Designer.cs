@@ -50,6 +50,8 @@ namespace NGANHANG
             this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEmployee = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCustomer = new DevExpress.XtraBars.BarButtonItem();
             this.HeThongPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -66,8 +68,8 @@ namespace NGANHANG
             this.MaNV = new System.Windows.Forms.ToolStripStatusLabel();
             this.HoTen = new System.Windows.Forms.ToolStripStatusLabel();
             this.Nhom = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnEmployee = new DevExpress.XtraBars.BarButtonItem();
-            this.btnCustomer = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -108,7 +110,8 @@ namespace NGANHANG
             this.ribbonControl1.OptionsMenuMinWidth = 495;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.HeThongPage,
-            this.QuanTriPage});
+            this.QuanTriPage,
+            this.ribbonPage1});
             this.ribbonControl1.Size = new System.Drawing.Size(1464, 231);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
@@ -267,6 +270,24 @@ namespace NGANHANG
             this.barButtonItem19.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem19.ImageOptions.LargeImage")));
             this.barButtonItem19.Name = "barButtonItem19";
             // 
+            // btnEmployee
+            // 
+            this.btnEmployee.Caption = "Nhân viên";
+            this.btnEmployee.Id = 25;
+            this.btnEmployee.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.ImageOptions.Image")));
+            this.btnEmployee.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEmployee.ImageOptions.LargeImage")));
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEmployee_ItemClick);
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.Caption = "Khách hàng";
+            this.btnCustomer.Id = 26;
+            this.btnCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.ImageOptions.Image")));
+            this.btnCustomer.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCustomer.ImageOptions.LargeImage")));
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCustomer_ItemClick);
+            // 
             // HeThongPage
             // 
             this.HeThongPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -377,23 +398,17 @@ namespace NGANHANG
             this.Nhom.Size = new System.Drawing.Size(62, 25);
             this.Nhom.Text = "Nhom";
             // 
-            // btnEmployee
+            // ribbonPage1
             // 
-            this.btnEmployee.Caption = "Nhân viên";
-            this.btnEmployee.Id = 25;
-            this.btnEmployee.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.btnEmployee.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEmployee_ItemClick);
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup4});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "ribbonPage1";
             // 
-            // btnCustomer
+            // ribbonPageGroup4
             // 
-            this.btnCustomer.Caption = "Khách hàng";
-            this.btnCustomer.Id = 26;
-            this.btnCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image1")));
-            this.btnCustomer.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage1")));
-            this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCustomer_ItemClick);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
             // 
             // frmMain
             // 
@@ -459,6 +474,8 @@ namespace NGANHANG
         public System.Windows.Forms.ToolStripStatusLabel Nhom;
         private DevExpress.XtraBars.BarButtonItem btnEmployee;
         private DevExpress.XtraBars.BarButtonItem btnCustomer;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
     }
 }
 

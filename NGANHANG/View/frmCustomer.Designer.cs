@@ -55,7 +55,7 @@ namespace NGANHANG.View
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.khachHang_BENTHANH = new NGANHANG.KhachHang_BENTHANH();
+            this.khachHangDataSet = new NGANHANG.KhachHang_BENTHANH();
             this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.khachHangTableAdapter = new NGANHANG.KhachHang_BENTHANHTableAdapters.KhachHangTableAdapter();
             this.tableAdapterManager = new NGANHANG.KhachHang_BENTHANHTableAdapters.TableAdapterManager();
@@ -71,6 +71,7 @@ namespace NGANHANG.View
             this.colSODT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControlKH = new DevExpress.XtraEditors.PanelControl();
+            this.txtPhai = new System.Windows.Forms.TextBox();
             this.txtMaCN = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.dateNgayCap = new DevExpress.XtraEditors.DateEdit();
@@ -79,7 +80,6 @@ namespace NGANHANG.View
             this.txtHo = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.taiKhoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txtPhai = new System.Windows.Forms.TextBox();
             cMNDLabel = new System.Windows.Forms.Label();
             hOLabel = new System.Windows.Forms.Label();
             dIACHILabel = new System.Windows.Forms.Label();
@@ -90,7 +90,7 @@ namespace NGANHANG.View
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.khachHang_BENTHANH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -343,15 +343,15 @@ namespace NGANHANG.View
             this.label1.TabIndex = 0;
             this.label1.Text = "Chi nhánh";
             // 
-            // khachHang_BENTHANH
+            // khachHangDataSet
             // 
-            this.khachHang_BENTHANH.DataSetName = "KhachHang_BENTHANH";
-            this.khachHang_BENTHANH.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.khachHangDataSet.DataSetName = "KHACHHANG";
+            this.khachHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // khachHangBindingSource
             // 
             this.khachHangBindingSource.DataMember = "KhachHang";
-            this.khachHangBindingSource.DataSource = this.khachHang_BENTHANH;
+            this.khachHangBindingSource.DataSource = this.khachHangDataSet;
             // 
             // khachHangTableAdapter
             // 
@@ -500,6 +500,14 @@ namespace NGANHANG.View
             this.panelControlKH.Size = new System.Drawing.Size(1455, 222);
             this.panelControlKH.TabIndex = 7;
             // 
+            // txtPhai
+            // 
+            this.txtPhai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.khachHangBindingSource, "PHAI", true));
+            this.txtPhai.Location = new System.Drawing.Point(128, 109);
+            this.txtPhai.Name = "txtPhai";
+            this.txtPhai.Size = new System.Drawing.Size(139, 27);
+            this.txtPhai.TabIndex = 15;
+            // 
             // txtMaCN
             // 
             this.txtMaCN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.khachHangBindingSource, "MACN", true));
@@ -528,6 +536,7 @@ namespace NGANHANG.View
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateNgayCap.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgayCap.Properties.MaxValue = new System.DateTime(2023, 5, 14, 0, 0, 0, 0);
             this.dateNgayCap.Size = new System.Drawing.Size(150, 26);
             this.dateNgayCap.TabIndex = 10;
             // 
@@ -568,14 +577,6 @@ namespace NGANHANG.View
             this.taiKhoanBindingSource.DataMember = "FK_TaiKhoan_KhachHang";
             this.taiKhoanBindingSource.DataSource = this.khachHangBindingSource;
             // 
-            // txtPhai
-            // 
-            this.txtPhai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.khachHangBindingSource, "PHAI", true));
-            this.txtPhai.Location = new System.Drawing.Point(128, 109);
-            this.txtPhai.Name = "txtPhai";
-            this.txtPhai.Size = new System.Drawing.Size(139, 27);
-            this.txtPhai.TabIndex = 15;
-            // 
             // frmCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -595,7 +596,7 @@ namespace NGANHANG.View
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.khachHang_BENTHANH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -625,7 +626,7 @@ namespace NGANHANG.View
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private System.Windows.Forms.BindingSource khachHangBindingSource;
-        private KhachHang_BENTHANH khachHang_BENTHANH;
+        private KhachHang_BENTHANH khachHangDataSet;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.ComboBox cmbChiNhanh;
         private System.Windows.Forms.Label label1;

@@ -23,25 +23,25 @@ namespace NGANHANG.View
         {
             this.Validate();
             this.khachHangBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.khachHang_BENTHANH);
+            this.tableAdapterManager.UpdateAll(this.khachHangDataSet);
 
         }
 
         private void frmCustomer_Load(object sender, EventArgs e)
         {
-            
+            khachHangDataSet.EnforceConstraints = false;
             this.khachHangTableAdapter.Connection.ConnectionString = Program.connString;
-            this.khachHangTableAdapter.Fill(this.khachHang_BENTHANH.KhachHang);
+            this.khachHangTableAdapter.Fill(this.khachHangDataSet.KhachHang);
 
             this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connString;
-            this.taiKhoanTableAdapter.Fill(this.khachHang_BENTHANH.TaiKhoan);
+            this.taiKhoanTableAdapter.Fill(this.khachHangDataSet.TaiKhoan);
 
             macn = ((DataRowView)khachHangBindingSource[0])["MACN"].ToString();
             cmbChiNhanh.DataSource = Program.bds_dspm;
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             if (Program.branch == 0)
-            {
+            { 
                 cmbChiNhanh.SelectedIndex = 0;
             }
             else cmbChiNhanh.SelectedIndex = 1;
@@ -93,7 +93,7 @@ namespace NGANHANG.View
         {
             try
             {
-                this.khachHangTableAdapter.Fill(this.khachHang_BENTHANH.KhachHang);
+                this.khachHangTableAdapter.Fill(this.khachHangDataSet.KhachHang);
             }
             catch (Exception ex)
             {
@@ -113,7 +113,33 @@ namespace NGANHANG.View
 
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            String cmnd = "";
+            if (taiKhoanBindingSource.Count > 0)
+            {
+                MessageBox.Show("Không thế xóa khách hàng đã tạo tài khoản");
+                return;
+            }
+            
+            if (MessageBox.Show("Bạn có xác nhận xóa khách hàng?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                try
+                {
+                    cmnd = ((DataRowView)khachHangBindingSource[khachHangBindingSource.Position])["CMND"].ToString();
+                    khachHangBindingSource.RemoveCurrent();
+                    this.khachHangTableAdapter.Connection.ConnectionString = Program.connString;
+                    this.khachHangTableAdapter.Update(this.khachHangDataSet.KhachHang);
+                    MessageBox.Show("Xóa thành công");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi xóa khách hàng. Bạn hãy xóa lại\n" + ex.Message, "", MessageBoxButtons.OK);
+                    this.khachHangTableAdapter.Fill(this.khachHangDataSet.KhachHang);
+                    khachHangBindingSource.Position = khachHangBindingSource.Find("CMND", cmnd);
+                    return;
 
+                }
+            }
+            if (khachHangBindingSource.Count == 0) btnDelete.Enabled = false;
         }
 
         private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
@@ -137,23 +163,30 @@ namespace NGANHANG.View
             else
             {
                 this.khachHangTableAdapter.Connection.ConnectionString = Program.connString;
-                this.khachHangTableAdapter.Fill(this.khachHang_BENTHANH.KhachHang);
+                this.khachHangTableAdapter.Fill(this.khachHangDataSet.KhachHang);
             
                 this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connString;
-                this.taiKhoanTableAdapter.Fill(this.khachHang_BENTHANH.TaiKhoan);
+                this.taiKhoanTableAdapter.Fill(this.khachHangDataSet.TaiKhoan);
                 /*macn = ((DataRowView)bdsNV[0])["MACN"].ToString();//**/
             }
         }
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (txtCMND.Text.Trim() == "")
+            txtCMND.Text = txtCMND.Text.Trim();
+            txtHo.Text = txtHo.Text.Trim();
+            txtTen.Text = txtTen.Text.Trim();
+            txtPhai.Text = txtPhai.Text.Trim();
+            txtDiaChi.Text = txtDiaChi.Text.Trim();
+            txtSDT.Text = txtSDT.Text.Trim();
+
+            if (txtCMND.Text == "")
             {
                 MessageBox.Show("CMND không được để trống");
                 txtCMND.Focus();
                 return;
             }
-            if (txtTen.Text.Trim() == "")
+            if (txtTen.Text == "")
             {
                 MessageBox.Show("Tên không được để trống");
                 txtTen.Focus();
@@ -165,7 +198,7 @@ namespace NGANHANG.View
                 dateNgayCap.Focus();
                 return;
             }
-            if(txtPhai.Text.Trim() == "")
+            if (txtPhai.Text.Trim() == "")
             {
                 MessageBox.Show("Phái không được để trống");
                 txtPhai.Focus();
@@ -174,12 +207,11 @@ namespace NGANHANG.View
             else
             {
                 String phai = txtPhai.Text.Trim();
-                if(phai == "Nam" || phai == "Nữ")
+                if(phai != "Nam" && phai != "Nữ")
                 {
                     MessageBox.Show("Phái là Nam hoặc Nữ");
                     txtPhai.Focus();
                     return;
-
                 }
             }
             
@@ -188,7 +220,7 @@ namespace NGANHANG.View
                 khachHangBindingSource.EndEdit();
                 khachHangBindingSource.ResetCurrentItem();
                 this.khachHangTableAdapter.Connection.ConnectionString = Program.connString;
-                this.khachHangTableAdapter.Update(this.khachHang_BENTHANH.KhachHang);
+                this.khachHangTableAdapter.Update(this.khachHangDataSet.KhachHang);
             }
             catch (Exception ex)
             {
