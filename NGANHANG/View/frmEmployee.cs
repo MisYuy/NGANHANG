@@ -35,8 +35,7 @@ namespace NGANHANG.View
                 return;
             }
             String manv = ((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString();
-            String chinhanh;
-            /*Form f = this.checkExists(typeof(frmConvert));
+            Form f = this.checkExists(typeof(frmConvert));
             if (f != null)
             {
                 f.Activate();
@@ -45,34 +44,7 @@ namespace NGANHANG.View
             {
                 f = new frmConvert(manv);
                 f.Show();
-            }*/
-            if (macn == "BENTHANH") chinhanh = "TANDINH";
-            else chinhanh = "BENTHANH";
-            if (MessageBox.Show("Bạn có xác nhận chuyển nhân viên?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
-            {
-                try
-                {
-                    SqlDataReader myReader = Program.ExecSqlDataReader("EXEC SP_CONVERT_EMPLOYEE '" + manv + "','" + macn + "'");
-                    if (myReader.Read())
-                    {
-                        MessageBox.Show("Chuyển thành công");
-                        this.NhanVienTableAdapter.Connection.ConnectionString = Program.connString;
-                        this.NhanVienTableAdapter.Fill(this.NGANHANG_NHANVIEN.NhanVien);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Chuyển thất bại");
-
-                    }
-                    myReader.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi chuyển nhân viên.\n" + ex.Message, "", MessageBoxButtons.OK);
-
-                }
             }
-            
         }
 
         private void nhanVienBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -395,5 +367,6 @@ namespace NGANHANG.View
         {
 
         }
+
     }
 }
