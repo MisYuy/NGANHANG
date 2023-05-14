@@ -19,7 +19,14 @@ namespace NGANHANG.View
         {
             InitializeComponent();
         }
-
+        private Form checkExists(Type t)
+        {
+            foreach (Form f in MdiChildren)
+            {
+                if (f.GetType() == t) return f;
+            }
+            return null;
+        }
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (((DataRowView)bdsNV[bdsNV.Position])["TrangThaiXoa"].ToString().Equals("1"))
@@ -27,19 +34,30 @@ namespace NGANHANG.View
                 MessageBox.Show("Nhân viên hiện không còn ở chi nhánh của bạn nữa\n", "", MessageBoxButtons.OK);
                 return;
             }
-
+            String manv = ((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString();
+            String chinhanh;
+            /*Form f = this.checkExists(typeof(frmConvert));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                f = new frmConvert(manv);
+                f.Show();
+            }*/
+            if (macn == "BENTHANH") chinhanh = "TANDINH";
+            else chinhanh = "BENTHANH";
             if (MessageBox.Show("Bạn có xác nhận chuyển nhân viên?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 try
                 {
-                    String manv = ((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString();
-                    SqlDataReader myReader = Program.ExecSqlDataReader("EXEC SP_CONVERT_EMPLOYEE '" + manv + "'");
-                    if(myReader.Read())
+                    SqlDataReader myReader = Program.ExecSqlDataReader("EXEC SP_CONVERT_EMPLOYEE '" + manv + "','" + macn + "'");
+                    if (myReader.Read())
                     {
                         MessageBox.Show("Chuyển thành công");
                         this.NhanVienTableAdapter.Connection.ConnectionString = Program.connString;
                         this.NhanVienTableAdapter.Fill(this.NGANHANG_NHANVIEN.NhanVien);
-                       
                     }
                     else
                     {
@@ -51,10 +69,10 @@ namespace NGANHANG.View
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi chuyển nhân viên.\n" + ex.Message, "", MessageBoxButtons.OK);
-                    
+
                 }
-                 
             }
+            
         }
 
         private void nhanVienBindingNavigatorSaveItem_Click(object sender, EventArgs e)
