@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -368,5 +368,19 @@ namespace NGANHANG.View
 
         }
 
+        private void btnRegister_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            String manv = ((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString();
+            Form f = this.checkExists(typeof(frmRegister));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                f = new frmRegister(manv);
+                f.Show();
+            }
+        }
     }
 }
