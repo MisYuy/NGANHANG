@@ -38,6 +38,8 @@ namespace NGANHANG
                 this.HoTen.Text = "HOTEN";
                 this.Nhom.Text = "NHOM";
                 this.QuanTriPage.Visible = false;
+                this.NghiepVuPage.Visible = false;
+                this.ThongKePage.Visible = false;
                 this.btnLogin.Enabled = true;
                 this.btnChangePassword.Enabled = false;
                 this.btnLogout.Enabled = false;
@@ -45,18 +47,26 @@ namespace NGANHANG
                 this.btnCustomer.Enabled = false;
                 
             }
-            else if (role != null)
+            else if (role == "ChiNhanh" || role == "NganHang")
             {
                 this.MaNV.Text = Program.userName;
                 this.HoTen.Text = Program.name;
                 this.Nhom.Text = Program.group;
-                this.QuanTriPage.Visible = true;
+                this.QuanTriPage.Visible = this.NghiepVuPage.Visible = this.ThongKePage.Visible = true;
                 this.btnLogin.Enabled = false;
                 this.btnChangePassword.Enabled = true;
                 this.btnLogout.Enabled = true;
                 this.btnEmployee.Enabled = true;
                 this.btnCustomer.Enabled = true;
             }
+            else if (role == "KhachHang")
+            {
+                this.MaNV.Text = Program.userName;
+                this.HoTen.Text = Program.name;
+                this.Nhom.Text = Program.group;
+
+            }
+            
             else
             {
                 MessageBox.Show("Chưa xác định phân quyền người dùng");
@@ -155,6 +165,21 @@ namespace NGANHANG
             else
             {
                 f = new frmCustomer();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnAccount_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = this.checkExists(typeof(frmAccount));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                f = new frmAccount();
                 f.MdiParent = this;
                 f.Show();
             }

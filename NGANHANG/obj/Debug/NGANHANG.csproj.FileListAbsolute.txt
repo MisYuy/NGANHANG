@@ -304,3 +304,4 @@ D:\Visual Studio\NGANHANG\NGANHANG\obj\Debug\NGANHANG.csproj.CoreCompileInputs.c
 D:\Visual Studio\NGANHANG\NGANHANG\obj\Debug\NGANHANG.csproj.CopyComplete
 D:\Visual Studio\NGANHANG\NGANHANG\obj\Debug\NGANHANG.exe
 D:\Visual Studio\NGANHANG\NGANHANG\obj\Debug\NGANHANG.pdb
+D:\Visual Studio\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.frmAccount.resources
