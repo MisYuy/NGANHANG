@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,39 @@ namespace NGANHANG.View
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (((DataRowView)bdsNV[bdsNV.Position])["TrangThaiXoa"].ToString().Equals("1"))
+            {
+                MessageBox.Show("Nhân viên hiện không còn ở chi nhánh của bạn nữa\n", "", MessageBoxButtons.OK);
+                return;
+            }
 
+            if (MessageBox.Show("Bạn có xác nhận chuyển nhân viên?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                try
+                {
+                    String manv = ((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString();
+                    SqlDataReader myReader = Program.ExecSqlDataReader("EXEC SP_CONVERT_EMPLOYEE '" + manv + "'");
+                    if(myReader.Read())
+                    {
+                        MessageBox.Show("Chuyển thành công");
+                        this.NhanVienTableAdapter.Connection.ConnectionString = Program.connString;
+                        this.NhanVienTableAdapter.Fill(this.NGANHANG_NHANVIEN.NhanVien);
+                       
+                    }
+                    else
+                    {
+                        MessageBox.Show("Chuyển thất bại");
+
+                    }
+                    myReader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi chuyển nhân viên.\n" + ex.Message, "", MessageBoxButtons.OK);
+                    
+                }
+                 
+            }
         }
 
         private void nhanVienBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -34,7 +67,7 @@ namespace NGANHANG.View
 
         private void frmEmployee_Load(object sender, EventArgs e)
         {
-            
+            this.NGANHANG_NHANVIEN.EnforceConstraints = false;
             // TODO: This line of code loads data into the 'nGANHANG_NHANVIEN.NhanVien' table. You can move, or remove it, as needed.
             this.NhanVienTableAdapter.Connection.ConnectionString = Program.connString;
             this.NhanVienTableAdapter.Fill(this.NGANHANG_NHANVIEN.NhanVien);
@@ -120,16 +153,10 @@ namespace NGANHANG.View
             position = bdsNV.Position;
             groupBox.Enabled = true;
             bdsNV.AddNew();
-            txtMANV.Text = " ";
-            txtMACN.Text = macn;
-            txtHO.Text = " ";
-            txtTEN.Text= " ";
             txtPHAI.Text = "Nam";
-            txtDIACHI.Text = " ";
-            txtSDT.Text = " ";
-            txtCMND.Text = " ";
+            txtMACN.Text = macn;
             cbXoa.EditValue = false;
-            btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = btnConvert.Enabled = btnRefresh.Enabled = btnExit.Enabled = btnPrint.Enabled = false;
+            btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = btnConvert.Enabled = btnRefresh.Enabled = btnExit.Enabled = false;
             btnSave.Enabled = btnUndo.Enabled = true;
             gcNhanVien.Enabled = false;
         }
@@ -223,7 +250,7 @@ namespace NGANHANG.View
                 return;
             }
             gcNhanVien.Enabled = true;
-            btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = btnRefresh.Enabled = btnPrint.Enabled = btnConvert.Enabled = btnExit.Enabled= true;
+            btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = btnRefresh.Enabled = btnConvert.Enabled = btnExit.Enabled= true;
             btnSave.Enabled = btnUndo.Enabled = false;
             groupBox.Enabled = false;
         }
@@ -247,7 +274,7 @@ namespace NGANHANG.View
             if (btnAdd.Enabled == false) bdsNV.Position = position;
             gcNhanVien.Enabled = true;
             groupBox.Enabled = false;
-            btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = btnConvert.Enabled = btnPrint.Enabled = btnRefresh.Enabled = btnExit.Enabled = true;
+            btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = btnConvert.Enabled = btnRefresh.Enabled = btnExit.Enabled = true;
             btnSave.Enabled = btnUndo.Enabled = false;
         }
 
@@ -255,7 +282,7 @@ namespace NGANHANG.View
         {
             position = bdsNV.Position;
             groupBox.Enabled = true;
-            btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = btnRefresh.Enabled = btnExit.Enabled = btnPrint.Enabled = btnConvert.Enabled = false;
+            btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = btnRefresh.Enabled = btnExit.Enabled = btnConvert.Enabled = false;
             btnSave.Enabled = btnUndo.Enabled = true;
             gcNhanVien.Enabled = false;
         }
@@ -299,6 +326,11 @@ namespace NGANHANG.View
 
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (((DataRowView)bdsNV[bdsNV.Position])["TrangThaiXoa"].ToString().Equals("1"))
+            {
+                MessageBox.Show("Nhân viên hiện không còn ở chi nhánh của bạn nữa\n", "", MessageBoxButtons.OK);
+                return;
+            }
             String manv="";
             if (bdsCT.Count > 0)
             {
