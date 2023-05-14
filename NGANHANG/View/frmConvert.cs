@@ -1,4 +1,4 @@
-﻿using DevExpress.XtraEditors;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,15 +29,8 @@ namespace NGANHANG.View
                 try
                 {
                     SqlDataReader myReader = Program.ExecSqlDataReader("EXEC SP_CONVERT_EMPLOYEE '" + manv+ "','" + macn + "'");
-                    if (myReader.Read())
-                    {
-                        MessageBox.Show("Chuyển thành công");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Chuyển thất bại");
-
-                    }
+                    myReader.Read();
+                    MessageBox.Show("Chuyển thành công");
                     myReader.Close();
                 }
                 catch (Exception ex)
