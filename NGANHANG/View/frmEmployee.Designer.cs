@@ -35,9 +35,9 @@
             System.Windows.Forms.Label cMNDLabel;
             System.Windows.Forms.Label dIACHILabel;
             System.Windows.Forms.Label sODTLabel;
-            System.Windows.Forms.Label trangThaiXoaLabel1;
-            System.Windows.Forms.Label pHAILabel;
             System.Windows.Forms.Label mACNLabel;
+            System.Windows.Forms.Label pHAILabel1;
+            System.Windows.Forms.Label trangThaiXoaLabel1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployee));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
@@ -46,9 +46,10 @@
             this.btnEdit = new DevExpress.XtraBars.BarButtonItem();
             this.btnSave = new DevExpress.XtraBars.BarButtonItem();
             this.btnConvert = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRegister = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDeleteLogin = new DevExpress.XtraBars.BarButtonItem();
             this.btnUndo = new DevExpress.XtraBars.BarButtonItem();
             this.btnRefresh = new DevExpress.XtraBars.BarButtonItem();
-            this.btnPrint = new DevExpress.XtraBars.BarButtonItem();
             this.btnExit = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -75,10 +76,10 @@
             this.colPHAI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSODT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox = new DevExpress.XtraEditors.PanelControl();
+            this.txtPHAI = new DevExpress.XtraEditors.TextEdit();
             this.txtMACN = new DevExpress.XtraEditors.TextEdit();
-            this.cbPHAI = new DevExpress.XtraEditors.CheckEdit();
             this.cbXoa = new DevExpress.XtraEditors.CheckEdit();
             this.txtSDT = new DevExpress.XtraEditors.TextEdit();
             this.txtDIACHI = new DevExpress.XtraEditors.TextEdit();
@@ -88,15 +89,16 @@
             this.txtMANV = new System.Windows.Forms.TextBox();
             this.bdsCT = new System.Windows.Forms.BindingSource(this.components);
             this.bdsGR = new System.Windows.Forms.BindingSource(this.components);
+            this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
             mANVLabel = new System.Windows.Forms.Label();
             hOLabel = new System.Windows.Forms.Label();
             tENLabel = new System.Windows.Forms.Label();
             cMNDLabel = new System.Windows.Forms.Label();
             dIACHILabel = new System.Windows.Forms.Label();
             sODTLabel = new System.Windows.Forms.Label();
-            trangThaiXoaLabel1 = new System.Windows.Forms.Label();
-            pHAILabel = new System.Windows.Forms.Label();
             mACNLabel = new System.Windows.Forms.Label();
+            pHAILabel1 = new System.Windows.Forms.Label();
+            trangThaiXoaLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -106,8 +108,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBox)).BeginInit();
             this.groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPHAI.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMACN.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbPHAI.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbXoa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDIACHI.Properties)).BeginInit();
@@ -173,6 +175,24 @@
             sODTLabel.TabIndex = 12;
             sODTLabel.Text = "Số điện thoại:";
             // 
+            // mACNLabel
+            // 
+            mACNLabel.AutoSize = true;
+            mACNLabel.Location = new System.Drawing.Point(336, 34);
+            mACNLabel.Name = "mACNLabel";
+            mACNLabel.Size = new System.Drawing.Size(59, 19);
+            mACNLabel.TabIndex = 18;
+            mACNLabel.Text = "MACN:";
+            // 
+            // pHAILabel1
+            // 
+            pHAILabel1.AutoSize = true;
+            pHAILabel1.Location = new System.Drawing.Point(520, 75);
+            pHAILabel1.Name = "pHAILabel1";
+            pHAILabel1.Size = new System.Drawing.Size(80, 19);
+            pHAILabel1.TabIndex = 19;
+            pHAILabel1.Text = "Giới tính: ";
+            // 
             // trangThaiXoaLabel1
             // 
             trangThaiXoaLabel1.AutoSize = true;
@@ -182,24 +202,6 @@
             trangThaiXoaLabel1.TabIndex = 16;
             trangThaiXoaLabel1.Text = "Trạng thái xóa:";
             trangThaiXoaLabel1.Click += new System.EventHandler(this.trangThaiXoaLabel1_Click);
-            // 
-            // pHAILabel
-            // 
-            pHAILabel.AutoSize = true;
-            pHAILabel.Location = new System.Drawing.Point(518, 74);
-            pHAILabel.Name = "pHAILabel";
-            pHAILabel.Size = new System.Drawing.Size(75, 19);
-            pHAILabel.TabIndex = 17;
-            pHAILabel.Text = "Giới tính:";
-            // 
-            // mACNLabel
-            // 
-            mACNLabel.AutoSize = true;
-            mACNLabel.Location = new System.Drawing.Point(336, 34);
-            mACNLabel.Name = "mACNLabel";
-            mACNLabel.Size = new System.Drawing.Size(59, 19);
-            mACNLabel.TabIndex = 18;
-            mACNLabel.Text = "MACN:";
             // 
             // barManager1
             // 
@@ -218,11 +220,12 @@
             this.btnConvert,
             this.btnUndo,
             this.btnRefresh,
-            this.btnPrint,
             this.btnExit,
-            this.btnSave});
+            this.btnSave,
+            this.btnRegister,
+            this.btnDeleteLogin});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 9;
+            this.barManager1.MaxItemId = 11;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar2
@@ -237,9 +240,10 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnEdit),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnSave),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnConvert),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnRegister),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDeleteLogin),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnUndo),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnRefresh),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnPrint),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnExit)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
@@ -295,6 +299,26 @@
             this.btnConvert.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnConvert.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
+            // btnRegister
+            // 
+            this.btnRegister.Caption = "Tạo login";
+            this.btnRegister.Id = 9;
+            this.btnRegister.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRegister.ImageOptions.Image")));
+            this.btnRegister.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnRegister.ImageOptions.LargeImage")));
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnRegister.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRegister_ItemClick_1);
+            // 
+            // btnDeleteLogin
+            // 
+            this.btnDeleteLogin.Caption = "Xóa login";
+            this.btnDeleteLogin.Id = 10;
+            this.btnDeleteLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteLogin.ImageOptions.Image")));
+            this.btnDeleteLogin.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteLogin.ImageOptions.LargeImage")));
+            this.btnDeleteLogin.Name = "btnDeleteLogin";
+            this.btnDeleteLogin.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnDeleteLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDeleteLogin_ItemClick);
+            // 
             // btnUndo
             // 
             this.btnUndo.Caption = "Phục hồi";
@@ -314,15 +338,6 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnRefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRefresh_ItemClick);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Caption = "In danh sách";
-            this.btnPrint.Id = 6;
-            this.btnPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.Image")));
-            this.btnPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.LargeImage")));
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // btnExit
             // 
@@ -470,7 +485,7 @@
             this.colPHAI,
             this.colSODT,
             this.colMACN,
-            this.colTrangThaiXoa});
+            this.TrangThaiXoa});
             this.gridView1.GridControl = this.gcNhanVien;
             this.gridView1.Name = "gridView1";
             // 
@@ -546,21 +561,22 @@
             this.colMACN.VisibleIndex = 7;
             this.colMACN.Width = 112;
             // 
-            // colTrangThaiXoa
+            // TrangThaiXoa
             // 
-            this.colTrangThaiXoa.FieldName = "TrangThaiXoa";
-            this.colTrangThaiXoa.MinWidth = 30;
-            this.colTrangThaiXoa.Name = "colTrangThaiXoa";
-            this.colTrangThaiXoa.Visible = true;
-            this.colTrangThaiXoa.VisibleIndex = 8;
-            this.colTrangThaiXoa.Width = 112;
+            this.TrangThaiXoa.Caption = "TrangThaiXoa";
+            this.TrangThaiXoa.FieldName = "TrangThaiXoa";
+            this.TrangThaiXoa.MinWidth = 30;
+            this.TrangThaiXoa.Name = "TrangThaiXoa";
+            this.TrangThaiXoa.Visible = true;
+            this.TrangThaiXoa.VisibleIndex = 8;
+            this.TrangThaiXoa.Width = 112;
             // 
             // groupBox
             // 
+            this.groupBox.Controls.Add(pHAILabel1);
+            this.groupBox.Controls.Add(this.txtPHAI);
             this.groupBox.Controls.Add(mACNLabel);
             this.groupBox.Controls.Add(this.txtMACN);
-            this.groupBox.Controls.Add(pHAILabel);
-            this.groupBox.Controls.Add(this.cbPHAI);
             this.groupBox.Controls.Add(trangThaiXoaLabel1);
             this.groupBox.Controls.Add(this.cbXoa);
             this.groupBox.Controls.Add(sODTLabel);
@@ -582,6 +598,15 @@
             this.groupBox.TabIndex = 7;
             this.groupBox.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
+            // txtPHAI
+            // 
+            this.txtPHAI.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsNV, "PHAI", true));
+            this.txtPHAI.Location = new System.Drawing.Point(606, 72);
+            this.txtPHAI.MenuManager = this.barManager1;
+            this.txtPHAI.Name = "txtPHAI";
+            this.txtPHAI.Size = new System.Drawing.Size(42, 26);
+            this.txtPHAI.TabIndex = 20;
+            // 
             // txtMACN
             // 
             this.txtMACN.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsNV, "MACN", true));
@@ -591,17 +616,6 @@
             this.txtMACN.Name = "txtMACN";
             this.txtMACN.Size = new System.Drawing.Size(150, 26);
             this.txtMACN.TabIndex = 19;
-            // 
-            // cbPHAI
-            // 
-            this.cbPHAI.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsNV, "PHAI", true));
-            this.cbPHAI.Location = new System.Drawing.Point(599, 71);
-            this.cbPHAI.MenuManager = this.barManager1;
-            this.cbPHAI.Name = "cbPHAI";
-            this.cbPHAI.Properties.Caption = "Nam";
-            this.cbPHAI.Size = new System.Drawing.Size(112, 27);
-            this.cbPHAI.TabIndex = 18;
-            this.cbPHAI.CheckedChanged += new System.EventHandler(this.cbPHAI_CheckedChanged);
             // 
             // cbXoa
             // 
@@ -679,6 +693,13 @@
             this.bdsGR.DataMember = "GD_GOIRUT";
             this.bdsGR.DataSource = this.NGANHANG_NHANVIEN;
             // 
+            // colTrangThaiXoa
+            // 
+            this.colTrangThaiXoa.FieldName = "TrangThaiXoa";
+            this.colTrangThaiXoa.MinWidth = 30;
+            this.colTrangThaiXoa.Name = "colTrangThaiXoa";
+            this.colTrangThaiXoa.Width = 112;
+            // 
             // frmEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -705,8 +726,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupBox)).EndInit();
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPHAI.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMACN.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbPHAI.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbXoa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDIACHI.Properties)).EndInit();
@@ -735,7 +756,6 @@
         private DevExpress.XtraBars.BarButtonItem btnConvert;
         private DevExpress.XtraBars.BarButtonItem btnUndo;
         private DevExpress.XtraBars.BarButtonItem btnRefresh;
-        private DevExpress.XtraBars.BarButtonItem btnPrint;
         private DevExpress.XtraBars.BarButtonItem btnExit;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraBars.Bar bar1;
@@ -758,7 +778,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colPHAI;
         private DevExpress.XtraGrid.Columns.GridColumn colSODT;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
-        private DevExpress.XtraGrid.Columns.GridColumn colTrangThaiXoa;
         private NGANHANG_NHANVIENTableAdapters.GD_CHUYENTIENTableAdapter GD_CHUYENTIENTableAdapter;
         private System.Windows.Forms.BindingSource bdsCT;
         private NGANHANG_NHANVIENTableAdapters.GD_GOIRUTTableAdapter GD_GOIRUTTableAdapter;
@@ -766,10 +785,14 @@
         private DevExpress.XtraEditors.TextEdit txtTEN;
         private DevExpress.XtraEditors.TextEdit txtCMND;
         private DevExpress.XtraEditors.TextEdit txtDIACHI;
-        private DevExpress.XtraEditors.CheckEdit cbXoa;
         private DevExpress.XtraEditors.TextEdit txtSDT;
         private DevExpress.XtraEditors.TextEdit txtMACN;
-        private DevExpress.XtraEditors.CheckEdit cbPHAI;
         private DevExpress.XtraBars.BarButtonItem btnSave;
+        private DevExpress.XtraBars.BarButtonItem btnRegister;
+        private DevExpress.XtraEditors.TextEdit txtPHAI;
+        private DevExpress.XtraEditors.CheckEdit cbXoa;
+        private DevExpress.XtraGrid.Columns.GridColumn colTrangThaiXoa;
+        private DevExpress.XtraGrid.Columns.GridColumn TrangThaiXoa;
+        private DevExpress.XtraBars.BarButtonItem btnDeleteLogin;
     }
 }
