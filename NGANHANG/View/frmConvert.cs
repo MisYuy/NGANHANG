@@ -26,9 +26,8 @@ namespace NGANHANG.View
         {
             if (MessageBox.Show("Bạn có xác nhận chuyển nhân viên?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                
-                int excute = Program.ExecSqlNonQuery("EXEC SP_CHUYENNHANVIEN '" + manv+ "','" + macn + "'");
-                if (excute==0)
+                int excute = Program.ExecSqlNonQuery("EXEC SP_CHUYENNHANVIEN '" + manv + "','" + macn + "'");
+                if (excute == 0)
                 {
                     MessageBox.Show("Chuyển thành công");
                 }

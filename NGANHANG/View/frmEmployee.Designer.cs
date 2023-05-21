@@ -407,6 +407,7 @@
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 34);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1127, 100);
             this.panelControl1.TabIndex = 4;
@@ -466,6 +467,7 @@
             this.gcNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.gcNhanVien.Location = new System.Drawing.Point(0, 134);
             this.gcNhanVien.MainView = this.gridView1;
+            this.gcNhanVien.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.gcNhanVien.MenuManager = this.barManager1;
             this.gcNhanVien.Name = "gcNhanVien";
             this.gcNhanVien.Size = new System.Drawing.Size(1127, 220);
