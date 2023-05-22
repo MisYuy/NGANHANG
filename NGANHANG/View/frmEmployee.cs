@@ -280,17 +280,10 @@ namespace NGANHANG.View
                                 btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = btnRefresh.Enabled = btnConvert.Enabled = btnExit.Enabled = btnRegister.Enabled = btnDeleteLogin.Enabled = true;
                                 btnSave.Enabled = btnUndo.Enabled = false;
                                 groupBox.Enabled = false;
-                                return;
                             }
                             else MessageBox.Show("Khôi phục thất bại!");
                         }
-                        else
-                        {
-                            if (MessageBox.Show("Bạn có muốn tiếp tục tạo mới nhân viên?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
-                            {
-                                return;
-                            }
-                        }
+                        return;
                     }
                 }
                 bdsNV.EndEdit();
