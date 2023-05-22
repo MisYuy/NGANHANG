@@ -67,32 +67,7 @@ namespace NGANHANG.View
         {
             this.Dispose();
         }
-        /*private Boolean checkLoginExist(String login)
-        {
-            //Combo box chưa tạo hoặc có lỗi hiển thị
-            if (this.cbQuarter==null || this.cbQuarter.SelectedValue==null||this.cbQuarter.SelectedValue.ToString().Length==0)
-            {
-                MessageBox.Show("Lỗi lấy dữ liệu combo box");
-                return false;
-            }
-            Program.serverName = this.cbQuarter.SelectedValue.ToString();
-            Program.login = "sa";
-            Program.password = "123";
-            if (Program.ConnectSql() == 1)
-            {
-                SqlDataReader myReader = Program.ExecSqlDataReader("SELECT * FROM sys.sql_logins WHERE name = '" + login + "'");
-                if(myReader.Read())
-                {
-                    Program.conn.Close();
-                    return true;
-                }
-                MessageBox.Show("Tài khoản không tồn tại");
-                Program.conn.Close();
-                return false;
-            }
-            MessageBox.Show("Lỗi kết nối server! Không thể kiểm tra tài khoản có tồn tại không");
-            return false;
-        }*/
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             
@@ -113,6 +88,7 @@ namespace NGANHANG.View
                     if (Program.group != "NGANHANG" && Program.group != "CHINHANH" && Program.group != "KHACHHANG")
                     {
                         MessageBox.Show("Lỗi không thể lấy được thông tin tài khoản");
+                        myReader.Close();
                         return;
                     }
                     Program.userName = myReader.GetString(0);
@@ -121,7 +97,7 @@ namespace NGANHANG.View
                     Program.loginLogin = Program.login;
                     Program.loginPassword = Program.password;
                 }
-
+                myReader.Close ();
                 Program.f.SetWorkingSpace(Program.group);
                 MessageBox.Show("Đăng nhập thành công");
                 this.Dispose();

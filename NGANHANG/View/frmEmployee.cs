@@ -7,8 +7,10 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DevExpress.Utils.MVVM.Internal.ILReader;
 
 namespace NGANHANG.View
 {
@@ -172,6 +174,7 @@ namespace NGANHANG.View
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            Regex so = new Regex("^\\d{10}$");
             if (txtMANV.Text.Trim() == "")
             {
                 MessageBox.Show("Mã nhân viên không được để trống");
@@ -213,7 +216,13 @@ namespace NGANHANG.View
                 return;
 
             }
-            if (txtDIACHI.Text == null)
+            if (!so.IsMatch(txtCMND.Text.Trim()))
+            {
+                MessageBox.Show("CMND sai dạng chuẩn gồm 10 chữ số");
+                txtCMND.Focus();
+                return;
+            }
+            if (txtDIACHI.Text.Trim() == "")
             {
                 MessageBox.Show("Địa chỉ không được để trống");
                 txtDIACHI.Focus();
@@ -226,6 +235,12 @@ namespace NGANHANG.View
                 txtSDT.Focus();
                 return;
 
+            }
+            if (!so.IsMatch(txtSDT.Text.Trim()))
+            {
+                MessageBox.Show("Số điện thoại sai dạng chuẩn gồm 10 chữ số");
+                txtSDT.Focus();
+                return;
             }
             if (txtMACN.Text.Trim() == "")
             {

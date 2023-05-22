@@ -65,8 +65,10 @@ namespace NGANHANG
                 {
                     MessageBox.Show("Tài khoản không tồn tại trong server chỉ định");
                     Program.conn.Close();
+                    myReader.Close();
                     return 0;
                 }
+                myReader.Close();
             }
             catch (SqlException ex)
             {

@@ -407,7 +407,7 @@
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 34);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(6);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1127, 100);
             this.panelControl1.TabIndex = 4;
@@ -467,7 +467,7 @@
             this.gcNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.gcNhanVien.Location = new System.Drawing.Point(0, 134);
             this.gcNhanVien.MainView = this.gridView1;
-            this.gcNhanVien.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gcNhanVien.Margin = new System.Windows.Forms.Padding(6);
             this.gcNhanVien.MenuManager = this.barManager1;
             this.gcNhanVien.Name = "gcNhanVien";
             this.gcNhanVien.Size = new System.Drawing.Size(1127, 220);
@@ -606,6 +606,7 @@
             this.txtPHAI.Location = new System.Drawing.Point(606, 72);
             this.txtPHAI.MenuManager = this.barManager1;
             this.txtPHAI.Name = "txtPHAI";
+            this.txtPHAI.Properties.MaxLength = 3;
             this.txtPHAI.Size = new System.Drawing.Size(42, 26);
             this.txtPHAI.TabIndex = 20;
             // 
@@ -636,6 +637,7 @@
             this.txtSDT.Location = new System.Drawing.Point(473, 119);
             this.txtSDT.MenuManager = this.barManager1;
             this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Properties.MaxLength = 10;
             this.txtSDT.Size = new System.Drawing.Size(175, 26);
             this.txtSDT.TabIndex = 13;
             // 
@@ -645,6 +647,7 @@
             this.txtDIACHI.Location = new System.Drawing.Point(149, 160);
             this.txtDIACHI.MenuManager = this.barManager1;
             this.txtDIACHI.Name = "txtDIACHI";
+            this.txtDIACHI.Properties.MaxLength = 100;
             this.txtDIACHI.Size = new System.Drawing.Size(499, 26);
             this.txtDIACHI.TabIndex = 11;
             this.txtDIACHI.EditValueChanged += new System.EventHandler(this.dIACHITextEdit_EditValueChanged);
@@ -655,6 +658,7 @@
             this.txtCMND.Location = new System.Drawing.Point(149, 119);
             this.txtCMND.MenuManager = this.barManager1;
             this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Properties.MaxLength = 10;
             this.txtCMND.Size = new System.Drawing.Size(185, 26);
             this.txtCMND.TabIndex = 7;
             // 
@@ -664,6 +668,7 @@
             this.txtTEN.Location = new System.Drawing.Point(401, 72);
             this.txtTEN.MenuManager = this.barManager1;
             this.txtTEN.Name = "txtTEN";
+            this.txtTEN.Properties.MaxLength = 10;
             this.txtTEN.Size = new System.Drawing.Size(96, 26);
             this.txtTEN.TabIndex = 5;
             // 
@@ -673,6 +678,7 @@
             this.txtHO.Location = new System.Drawing.Point(149, 72);
             this.txtHO.MenuManager = this.barManager1;
             this.txtHO.Name = "txtHO";
+            this.txtHO.Properties.MaxLength = 40;
             this.txtHO.Size = new System.Drawing.Size(185, 26);
             this.txtHO.TabIndex = 3;
             this.txtHO.EditValueChanged += new System.EventHandler(this.txtHO_EditValueChanged);
@@ -681,6 +687,7 @@
             // 
             this.txtMANV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "MANV", true));
             this.txtMANV.Location = new System.Drawing.Point(149, 30);
+            this.txtMANV.MaxLength = 10;
             this.txtMANV.Name = "txtMANV";
             this.txtMANV.Size = new System.Drawing.Size(107, 27);
             this.txtMANV.TabIndex = 1;
