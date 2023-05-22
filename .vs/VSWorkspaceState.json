@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\NGANHANG",
+    "\\NGANHANG\\View"
   ],
-  "SelectedNode": "\\NGANHANG - Copy",
+  "SelectedNode": "\\NGANHANG\\View\\frmRegister.cs",
   "PreviewInSolutionExplorer": false
 }

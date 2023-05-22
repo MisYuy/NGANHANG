@@ -16,6 +16,7 @@ namespace NGANHANG.View
     {
         String macn;
         int position;
+        String btnStatus;
         public frmEmployee()
         {
             InitializeComponent();
@@ -161,6 +162,7 @@ namespace NGANHANG.View
             btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = btnConvert.Enabled = btnRefresh.Enabled = btnExit.Enabled = btnRegister.Enabled = btnDeleteLogin.Enabled = false;
             btnSave.Enabled = btnUndo.Enabled = true;
             gcNhanVien.Enabled = false;
+            btnStatus = "btnAdd";
         }
 
         private void nhanVienGridControl_Click(object sender, EventArgs e)
@@ -241,10 +243,46 @@ namespace NGANHANG.View
             }
             try
             {
+                if (btnStatus!=null && btnStatus.Equals("btnAdd"))
+                {
+                    int excute = Program.ExecSqlNonQuery("EXEC SP_KT_NHANVIENLAM '" + txtCMND.Text + "'");
+
+                    if (excute == 1 || excute == 2)
+                    {
+                        return;
+                    }
+                    else if (excute == 3)
+                    {
+                        if (MessageBox.Show("Bạn có muốn khôi phục nhân viên?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                        {
+                            int excute2 = Program.ExecSqlNonQuery("EXEC SP_KHOIPHUCNHANVIEN '" + txtCMND.Text + "'");
+                            if (excute2 == 0)
+                            {
+                                MessageBox.Show("Khôi phục thành công");
+                                this.NhanVienTableAdapter.Connection.ConnectionString = Program.connString;
+                                this.NhanVienTableAdapter.Fill(this.NGANHANG_NHANVIEN.NhanVien);
+                                gcNhanVien.Enabled = true;
+                                btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = btnRefresh.Enabled = btnConvert.Enabled = btnExit.Enabled = btnRegister.Enabled = btnDeleteLogin.Enabled = true;
+                                btnSave.Enabled = btnUndo.Enabled = false;
+                                groupBox.Enabled = false;
+                                return;
+                            }
+                            else MessageBox.Show("Khôi phục thất bại!");
+                        }
+                        else
+                        {
+                            if (MessageBox.Show("Bạn có muốn tiếp tục tạo mới nhân viên?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+                            {
+                                return;
+                            }
+                        }
+                    }
+                }
                 bdsNV.EndEdit();
                 bdsNV.ResetCurrentItem();
                 this.NhanVienTableAdapter.Connection.ConnectionString = Program.connString;
                 this.NhanVienTableAdapter.Update(this.NGANHANG_NHANVIEN.NhanVien);
+                btnStatus = null;
             }
             catch(Exception ex)
             {
@@ -285,21 +323,10 @@ namespace NGANHANG.View
         {
             if (((DataRowView)bdsNV[bdsNV.Position])["TrangThaiXoa"].ToString().Equals("1"))
             {
-                
-                if (MessageBox.Show("Nhân viên hiện không còn ở chi nhánh của bạn nữa\nBạn có phải đang muốn khôi phục nhân viên?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
-                {
-                    String manv = ((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString();
-                    int excute = Program.ExecSqlNonQuery("EXEC SP_LAPNHANVIENCU '" + manv + "'");
-                    if (excute == 0)
-                    {
-                        MessageBox.Show("Lập lại nhân viên cũ thành công");
-                    }
-                    this.NhanVienTableAdapter.Fill(this.NGANHANG_NHANVIEN.NhanVien);
-                    bdsNV.Position = bdsNV.Find("MANV", manv);
-                    return;
-                }
-                    return;
+                MessageBox.Show("Nhân viên hiện không còn ở chi nhánh của bạn nữa");
+                return;
             }
+
             position = bdsNV.Position;
             groupBox.Enabled = true;
             btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = btnRefresh.Enabled = false;
@@ -307,6 +334,7 @@ namespace NGANHANG.View
             btnSave.Enabled = btnUndo.Enabled = true;
             gcNhanVien.Enabled = false;
             cbXoa.Enabled = false;
+            btnStatus = "btnEdit";
         }
 
         private void btnExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
