@@ -35,16 +35,13 @@ namespace NGANHANG.View
             System.Windows.Forms.Label sODULabel;
             System.Windows.Forms.Label mACNLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAccount));
+            System.Windows.Forms.Label nGAYMOTKLabel;
             this.TaiKhoanDataSet = new NGANHANG.TAIKHOANDataSet();
             this.TaiKhoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TaiKhoanTableAdapter = new NGANHANG.TAIKHOANDataSetTableAdapters.TaiKhoanTableAdapter();
             this.tableAdapterManager = new NGANHANG.TAIKHOANDataSetTableAdapters.TableAdapterManager();
             this.taiKhoanGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colSOTK = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCMND = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSODU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnAdd = new DevExpress.XtraBars.BarButtonItem();
@@ -52,6 +49,7 @@ namespace NGANHANG.View
             this.btnSave = new DevExpress.XtraBars.BarButtonItem();
             this.btnUndo = new DevExpress.XtraBars.BarButtonItem();
             this.btnReload = new DevExpress.XtraBars.BarButtonItem();
+            this.btnExit = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -62,11 +60,17 @@ namespace NGANHANG.View
             this.txtSoDu = new DevExpress.XtraEditors.TextEdit();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.txtSoTK = new System.Windows.Forms.TextBox();
-            this.btnExit = new DevExpress.XtraBars.BarButtonItem();
+            this.colSOTK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCMND = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSODU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNGAYMOTK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dateNgayMoTK = new DevExpress.XtraEditors.DateEdit();
             sOTKLabel = new System.Windows.Forms.Label();
             cMNDLabel = new System.Windows.Forms.Label();
             sODULabel = new System.Windows.Forms.Label();
             mACNLabel = new System.Windows.Forms.Label();
+            nGAYMOTKLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TaiKhoanDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TaiKhoanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanGridControl)).BeginInit();
@@ -75,6 +79,8 @@ namespace NGANHANG.View
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoDu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
             // 
             // sOTKLabel
@@ -98,7 +104,7 @@ namespace NGANHANG.View
             // sODULabel
             // 
             sODULabel.AutoSize = true;
-            sODULabel.Location = new System.Drawing.Point(104, 102);
+            sODULabel.Location = new System.Drawing.Point(104, 95);
             sODULabel.Name = "sODULabel";
             sODULabel.Size = new System.Drawing.Size(58, 19);
             sODULabel.TabIndex = 4;
@@ -151,49 +157,10 @@ namespace NGANHANG.View
             this.colSOTK,
             this.colCMND,
             this.colSODU,
-            this.colMACN});
+            this.colMACN,
+            this.colNGAYMOTK});
             this.gridView1.GridControl = this.taiKhoanGridControl;
             this.gridView1.Name = "gridView1";
-            // 
-            // colSOTK
-            // 
-            this.colSOTK.FieldName = "SOTK";
-            this.colSOTK.MinWidth = 30;
-            this.colSOTK.Name = "colSOTK";
-            this.colSOTK.OptionsColumn.ReadOnly = true;
-            this.colSOTK.Visible = true;
-            this.colSOTK.VisibleIndex = 0;
-            this.colSOTK.Width = 112;
-            // 
-            // colCMND
-            // 
-            this.colCMND.FieldName = "CMND";
-            this.colCMND.MinWidth = 30;
-            this.colCMND.Name = "colCMND";
-            this.colCMND.OptionsColumn.ReadOnly = true;
-            this.colCMND.Visible = true;
-            this.colCMND.VisibleIndex = 1;
-            this.colCMND.Width = 112;
-            // 
-            // colSODU
-            // 
-            this.colSODU.FieldName = "SODU";
-            this.colSODU.MinWidth = 30;
-            this.colSODU.Name = "colSODU";
-            this.colSODU.OptionsColumn.ReadOnly = true;
-            this.colSODU.Visible = true;
-            this.colSODU.VisibleIndex = 2;
-            this.colSODU.Width = 112;
-            // 
-            // colMACN
-            // 
-            this.colMACN.FieldName = "MACN";
-            this.colMACN.MinWidth = 30;
-            this.colMACN.Name = "colMACN";
-            this.colMACN.OptionsColumn.ReadOnly = true;
-            this.colMACN.Visible = true;
-            this.colMACN.VisibleIndex = 3;
-            this.colMACN.Width = 112;
             // 
             // barManager1
             // 
@@ -280,6 +247,16 @@ namespace NGANHANG.View
             this.btnReload.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnReload.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReload_ItemClick);
             // 
+            // btnExit
+            // 
+            this.btnExit.Caption = "Thoát";
+            this.btnExit.Id = 5;
+            this.btnExit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.ImageOptions.Image")));
+            this.btnExit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnExit.ImageOptions.LargeImage")));
+            this.btnExit.Name = "btnExit";
+            this.btnExit.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExit_ItemClick);
+            // 
             // bar3
             // 
             this.bar3.BarName = "Status bar";
@@ -304,7 +281,7 @@ namespace NGANHANG.View
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 581);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 592);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1350, 20);
             // 
@@ -314,7 +291,7 @@ namespace NGANHANG.View
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 34);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 547);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 558);
             // 
             // barDockControlRight
             // 
@@ -322,10 +299,12 @@ namespace NGANHANG.View
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1350, 34);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 547);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 558);
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(nGAYMOTKLabel);
+            this.panelControl2.Controls.Add(this.dateNgayMoTK);
             this.panelControl2.Controls.Add(mACNLabel);
             this.panelControl2.Controls.Add(this.txtMaCN);
             this.panelControl2.Controls.Add(sODULabel);
@@ -338,7 +317,7 @@ namespace NGANHANG.View
             this.panelControl2.Enabled = false;
             this.panelControl2.Location = new System.Drawing.Point(0, 436);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1350, 145);
+            this.panelControl2.Size = new System.Drawing.Size(1350, 156);
             this.panelControl2.TabIndex = 8;
             // 
             // txtMaCN
@@ -354,7 +333,7 @@ namespace NGANHANG.View
             // 
             this.txtSoDu.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.TaiKhoanBindingSource, "SODU", true));
             this.txtSoDu.EditValue = "0";
-            this.txtSoDu.Location = new System.Drawing.Point(168, 99);
+            this.txtSoDu.Location = new System.Drawing.Point(168, 92);
             this.txtSoDu.MenuManager = this.barManager1;
             this.txtSoDu.Name = "txtSoDu";
             this.txtSoDu.Size = new System.Drawing.Size(206, 26);
@@ -376,21 +355,79 @@ namespace NGANHANG.View
             this.txtSoTK.Size = new System.Drawing.Size(206, 27);
             this.txtSoTK.TabIndex = 1;
             // 
-            // btnExit
+            // colSOTK
             // 
-            this.btnExit.Caption = "Thoát";
-            this.btnExit.Id = 5;
-            this.btnExit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.ImageOptions.Image")));
-            this.btnExit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnExit.ImageOptions.LargeImage")));
-            this.btnExit.Name = "btnExit";
-            this.btnExit.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExit_ItemClick);
+            this.colSOTK.FieldName = "SOTK";
+            this.colSOTK.MinWidth = 30;
+            this.colSOTK.Name = "colSOTK";
+            this.colSOTK.Visible = true;
+            this.colSOTK.VisibleIndex = 0;
+            this.colSOTK.Width = 112;
+            // 
+            // colCMND
+            // 
+            this.colCMND.FieldName = "CMND";
+            this.colCMND.MinWidth = 30;
+            this.colCMND.Name = "colCMND";
+            this.colCMND.Visible = true;
+            this.colCMND.VisibleIndex = 1;
+            this.colCMND.Width = 112;
+            // 
+            // colSODU
+            // 
+            this.colSODU.FieldName = "SODU";
+            this.colSODU.MinWidth = 30;
+            this.colSODU.Name = "colSODU";
+            this.colSODU.Visible = true;
+            this.colSODU.VisibleIndex = 2;
+            this.colSODU.Width = 112;
+            // 
+            // colMACN
+            // 
+            this.colMACN.FieldName = "MACN";
+            this.colMACN.MinWidth = 30;
+            this.colMACN.Name = "colMACN";
+            this.colMACN.Visible = true;
+            this.colMACN.VisibleIndex = 3;
+            this.colMACN.Width = 112;
+            // 
+            // colNGAYMOTK
+            // 
+            this.colNGAYMOTK.FieldName = "NGAYMOTK";
+            this.colNGAYMOTK.MinWidth = 30;
+            this.colNGAYMOTK.Name = "colNGAYMOTK";
+            this.colNGAYMOTK.Visible = true;
+            this.colNGAYMOTK.VisibleIndex = 4;
+            this.colNGAYMOTK.Width = 112;
+            // 
+            // nGAYMOTKLabel
+            // 
+            nGAYMOTKLabel.AutoSize = true;
+            nGAYMOTKLabel.Location = new System.Drawing.Point(382, 95);
+            nGAYMOTKLabel.Name = "nGAYMOTKLabel";
+            nGAYMOTKLabel.Size = new System.Drawing.Size(101, 19);
+            nGAYMOTKLabel.TabIndex = 8;
+            nGAYMOTKLabel.Text = "NGAYMOTK:";
+            // 
+            // dateNgayMoTK
+            // 
+            this.dateNgayMoTK.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.TaiKhoanBindingSource, "NGAYMOTK", true));
+            this.dateNgayMoTK.EditValue = null;
+            this.dateNgayMoTK.Location = new System.Drawing.Point(489, 92);
+            this.dateNgayMoTK.MenuManager = this.barManager1;
+            this.dateNgayMoTK.Name = "dateNgayMoTK";
+            this.dateNgayMoTK.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgayMoTK.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgayMoTK.Size = new System.Drawing.Size(206, 26);
+            this.dateNgayMoTK.TabIndex = 9;
             // 
             // frmAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1350, 601);
+            this.ClientSize = new System.Drawing.Size(1350, 612);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.taiKhoanGridControl);
             this.Controls.Add(this.barDockControlLeft);
@@ -409,6 +446,8 @@ namespace NGANHANG.View
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoDu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,10 +460,6 @@ namespace NGANHANG.View
         private TAIKHOANDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private DevExpress.XtraGrid.GridControl taiKhoanGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colSOTK;
-        private DevExpress.XtraGrid.Columns.GridColumn colCMND;
-        private DevExpress.XtraGrid.Columns.GridColumn colSODU;
-        private DevExpress.XtraGrid.Columns.GridColumn colMACN;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar1;
         private DevExpress.XtraBars.BarButtonItem btnAdd;
@@ -443,5 +478,11 @@ namespace NGANHANG.View
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.TextBox txtSoTK;
         private DevExpress.XtraBars.BarButtonItem btnExit;
+        private DevExpress.XtraGrid.Columns.GridColumn colSOTK;
+        private DevExpress.XtraGrid.Columns.GridColumn colCMND;
+        private DevExpress.XtraGrid.Columns.GridColumn colSODU;
+        private DevExpress.XtraGrid.Columns.GridColumn colMACN;
+        private DevExpress.XtraGrid.Columns.GridColumn colNGAYMOTK;
+        private DevExpress.XtraEditors.DateEdit dateNgayMoTK;
     }
 }
