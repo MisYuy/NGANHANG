@@ -87,6 +87,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>KhachHang_BENTHANH.xsd</DependentUpon>
     </Compile>
+    <Compile Include="NGANHANG_ChiNhanh.cs">
+      <DependentUpon>NGANHANG_ChiNhanh.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NGANHANG_ChiNhanh.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
