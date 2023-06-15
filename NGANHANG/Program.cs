@@ -13,7 +13,7 @@ namespace NGANHANG
     {
         // Program variables
         public static SqlConnection conn = new SqlConnection();
-        public static string connString = null;
+        public static String connString = null;
         public static String serverName = "";
         public static String database = "NGANHANG";
         public static String connPublisherString = "Data Source = ADMIN; Initial Catalog =" +database+"; Integrated Security = True";
@@ -30,6 +30,7 @@ namespace NGANHANG
         public static String remoteLogin = "HTKN";
         public static String remotePassword="123";
         //Tài khoản đăng nhập
+        public static String loginServer = "";
         public static String loginLogin = "";
         public static String loginPassword = "";
         /// <summary>

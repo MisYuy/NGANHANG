@@ -97,6 +97,7 @@ namespace NGANHANG.View
                         Program.userName = myReader.GetString(0);
                         Program.name = myReader.GetString(1);
                         Program.branch = cmbChiNhanh.SelectedIndex;
+                        Program.loginServer = cmbChiNhanh.SelectedValue.ToString();
                         Program.loginLogin = Program.login;
                         Program.loginPassword = Program.password;
                         Program.f.SetWorkingSpace(Program.group);
