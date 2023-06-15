@@ -155,6 +155,11 @@ namespace NGANHANG.View
                     MessageBox.Show("Giao dịch rút tiền thành công");
                     txtSoDu.Text = (sodu - inputTien).ToString();
                 }
+                else
+                {
+                    MessageBox.Show("Vui lòng kiểm tra lại tài khoản");
+                    groupControlChuyenTien.Enabled = false;
+                }
             }
         }
 
@@ -174,6 +179,11 @@ namespace NGANHANG.View
                 {
                     MessageBox.Show("Giao dịch gửi tiền thành công");
                     txtSoDu.Text = (sodu + inputTien).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng kiểm tra lại tài khoản");
+                    groupControlGuiRut.Enabled = false;
                 }
             }
         }
@@ -259,6 +269,11 @@ namespace NGANHANG.View
                 {
                     MessageBox.Show("Giao dịch chuyển tiền thành công");
                     txtSoDu.Text = (sodu - inputTien).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng kiểm tra lại tài khoản");
+                    groupControlChuyenTien.Enabled = false;
                 }
             }
         }
