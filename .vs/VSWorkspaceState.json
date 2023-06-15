@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\NGANHANG"
+    "\\NGANHANG",
+    "\\NGANHANG\\View"
   ],
-  "SelectedNode": "\\NGANHANG.sln",
+  "SelectedNode": "\\NGANHANG\\View\\frmEmployee.cs",
   "PreviewInSolutionExplorer": false
 }

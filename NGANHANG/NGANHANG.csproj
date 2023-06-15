@@ -96,10 +96,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NGANHANG_NHANVIEN.xsd</DependentUpon>
     </Compile>
+    <Compile Include="View\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmConvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmConvert.Designer.cs">
+      <DependentUpon>frmConvert.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmEmployee.Designer.cs">
+    <Compile Include="View\frmEmployee.designer.cs">
       <DependentUpon>frmEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmLogin.cs">
@@ -116,6 +128,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmConvert.resx">
+      <DependentUpon>frmConvert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmEmployee.resx">
       <DependentUpon>frmEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +159,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="NGANHANG_TANDINH.xsc">
       <DependentUpon>NGANHANG_TANDINH.xsd</DependentUpon>
