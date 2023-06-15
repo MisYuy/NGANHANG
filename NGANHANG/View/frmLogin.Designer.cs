@@ -48,6 +48,7 @@ namespace NGANHANG.View
             // 
             // groupControl1
             // 
+            this.groupControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupControl1.Controls.Add(this.hyperlinkLabelControl2);
             this.groupControl1.Controls.Add(this.hyperlinkLabelControl1);
             this.groupControl1.Controls.Add(this.cmbChiNhanh);
@@ -56,7 +57,7 @@ namespace NGANHANG.View
             this.groupControl1.Controls.Add(this.label2);
             this.groupControl1.Controls.Add(this.txtUserName);
             this.groupControl1.Controls.Add(this.label1);
-            this.groupControl1.Location = new System.Drawing.Point(580, 78);
+            this.groupControl1.Location = new System.Drawing.Point(247, 78);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(394, 265);
             this.groupControl1.TabIndex = 0;
@@ -132,8 +133,9 @@ namespace NGANHANG.View
             // 
             // btnLogin
             // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnLogin.Location = new System.Drawing.Point(612, 364);
+            this.btnLogin.Location = new System.Drawing.Point(279, 364);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(135, 54);
             this.btnLogin.TabIndex = 1;
@@ -142,8 +144,9 @@ namespace NGANHANG.View
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(809, 364);
+            this.btnCancel.Location = new System.Drawing.Point(476, 364);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(97, 54);
             this.btnCancel.TabIndex = 2;
@@ -156,7 +159,7 @@ namespace NGANHANG.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(1582, 563);
+            this.ClientSize = new System.Drawing.Size(916, 563);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.groupControl1);

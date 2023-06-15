@@ -30,6 +30,7 @@ namespace NGANHANG
         public static String remoteLogin = "HTKN";
         public static String remotePassword="123";
         //Tài khoản đăng nhập
+        public static String loginServer = "";
         public static String loginLogin = "";
         public static String loginPassword = "";
         /// <summary>

@@ -113,13 +113,6 @@ namespace NGANHANG
 
         }
 
-
-        private void nhanVienBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-
-        }
-
         private void ribbonControl1_Click(object sender, EventArgs e)
         {
 
@@ -145,10 +138,6 @@ namespace NGANHANG
             }
         }
 
-        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
 
         private void btnChangePassword_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -172,14 +161,18 @@ namespace NGANHANG
 
         private void btnAccount_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form f = this.checkExists(typeof(frmAccount));
+        }
+
+        private void btnTransaction_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = this.checkExists(typeof(frmService));
             if (f != null)
             {
                 f.Activate();
             }
             else
             {
-                f = new frmAccount();
+                f = new frmService();
                 f.MdiParent = this;
                 f.Show();
             }

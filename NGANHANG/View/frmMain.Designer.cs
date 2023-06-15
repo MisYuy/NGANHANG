@@ -311,6 +311,7 @@ namespace NGANHANG
             this.btnTransaction.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTransaction.ImageOptions.Image")));
             this.btnTransaction.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTransaction.ImageOptions.LargeImage")));
             this.btnTransaction.Name = "btnTransaction";
+            this.btnTransaction.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTransaction_ItemClick);
             // 
             // HeThongPage
             // 
