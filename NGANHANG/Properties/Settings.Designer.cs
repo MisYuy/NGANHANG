@@ -12,7 +12,7 @@ namespace NGANHANG.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.5.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -70,6 +70,17 @@ namespace NGANHANG.Properties {
         public string NGANHANGConnectionString4 {
             get {
                 return ((string)(this["NGANHANGConnectionString4"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN\\MSSQLSERVER03;Initial Catalog=NGANHANG;Persist Security Info=Tr" +
+            "ue;User ID=sa;Password=123")]
+        public string NGANHANG_KhachHang {
+            get {
+                return ((string)(this["NGANHANG_KhachHang"]));
             }
         }
     }

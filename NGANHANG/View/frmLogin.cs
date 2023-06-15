@@ -88,7 +88,7 @@ namespace NGANHANG.View
                     if (myReader.Read())
                     {
                         Program.group = myReader.GetString(2);
-                        if (Program.group != "NganHang" && Program.group != "ChiNhanh" && Program.group != "KhachHang")
+                        if (Program.group != "NGANHANG" && Program.group != "CHINHANH" && Program.group != "KHACHHANG")
                         {
                             MessageBox.Show("Lỗi không thể lấy được thông tin tài khoản");
                             myReader.Close();

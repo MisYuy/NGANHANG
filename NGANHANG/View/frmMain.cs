@@ -47,7 +47,7 @@ namespace NGANHANG
                 this.btnCustomer.Enabled = false;
                 
             }
-            else if (role == "ChiNhanh" || role == "NganHang")
+            else if (role == "CHINHANH" || role == "NGANHANG")
             {
                 this.MaNV.Text = Program.userName;
                 this.HoTen.Text = Program.name;
@@ -59,7 +59,7 @@ namespace NGANHANG
                 this.btnEmployee.Enabled = true;
                 this.btnCustomer.Enabled = true;
             }
-            else if (role == "KhachHang")
+            else if (role == "KHACHHANG")
             {
                 this.MaNV.Text = Program.userName;
                 this.HoTen.Text = Program.name;
@@ -183,6 +183,51 @@ namespace NGANHANG
             else
             {
                 f = new frmService();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = this.checkExists(typeof(frmLietKeKhachHangTheoChiNhanh));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                f = new frmLietKeKhachHangTheoChiNhanh();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem1_ItemClick_2(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = this.checkExists(typeof(frmLietKeTaiKhoanMocs));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                f = new frmLietKeTaiKhoanMocs();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = this.checkExists(typeof(frmSaoKeGiaoDich));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                f = new frmSaoKeGiaoDich();
                 f.MdiParent = this;
                 f.Show();
             }
