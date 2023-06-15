@@ -7325,7 +7325,7 @@ If null (Nothing in Visual Basic), then a <see cref="T:System.ArgumentNullExcept
     </member>
     <member name="T:DevExpress.XtraCharts.CustomizeLegendEventArgs">
       <summary>
-        <para>Provides data for the ChartControl.CustomizeLegend (WebChartControl.CustomizeLegend) event.</para>
+        <para>Provides data for the <see cref="E:DevExpress.XtraCharts.ChartControl.CustomizeLegend"/> (<see cref="E:DevExpress.XtraCharts.Web.WebChartControl.CustomizeLegend"/>) event.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraCharts.CustomizeLegendEventArgs.Legend">
@@ -7348,7 +7348,7 @@ If null (Nothing in Visual Basic), then a <see cref="T:System.ArgumentNullExcept
     </member>
     <member name="T:DevExpress.XtraCharts.CustomizeLegendEventHandler">
       <summary>
-        <para>A method that will handle the ChartControl.CustomizeLegend, WebChartControl.CustomizeLegend, or XRChart.CustomizeLegend event.</para>
+        <para>A method that will handle the <see cref="E:DevExpress.XtraCharts.ChartControl.CustomizeLegend"/>, <see cref="E:DevExpress.XtraCharts.Web.WebChartControl.CustomizeLegend"/>, or <see cref="E:DevExpress.XtraReports.UI.XRChart.CustomizeLegend"/> event.</para>
       </summary>
       <param name="sender">The event source. This parameter identifies the <see cref="T:DevExpress.XtraCharts.ChartControl"/>, <see cref="T:DevExpress.XtraCharts.Web.WebChartControl"/> or <see cref="T:DevExpress.XtraReports.UI.XRChart"/> which raised the event.</param>
       <param name="e">A <see cref="T:DevExpress.XtraCharts.CustomizeLegendEventArgs"/> object that contains data related to the event.</param>
@@ -7391,7 +7391,7 @@ If null (Nothing in Visual Basic), then a <see cref="T:System.ArgumentNullExcept
     </member>
     <member name="T:DevExpress.XtraCharts.CustomizeResolveOverlappingModeEventArgs">
       <summary>
-        <para>Provides data for the <see cref="E:DevExpress.XtraCharts.ChartControl.PivotChartingCustomizeResolveOverlappingMode"/> (<see cref="E:DevExpress.XtraCharts.Web.WebChartControl.PivotChartingCustomizeResolveOverlappingMode"/>) event.</para>
+        <para>Provides data for the <see cref="E:DevExpress.XtraCharts.ChartControl.CustomizeResolveOverlappingMode"/> (<see cref="E:DevExpress.XtraCharts.Web.WebChartControl.CustomizeResolveOverlappingMode"/>) event.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraCharts.CustomizeResolveOverlappingModeEventArgs.ResolveOverlappingMode">
@@ -7402,7 +7402,7 @@ If null (Nothing in Visual Basic), then a <see cref="T:System.ArgumentNullExcept
     </member>
     <member name="T:DevExpress.XtraCharts.CustomizeResolveOverlappingModeEventHandler">
       <summary>
-        <para>A method that will handle the <see cref="E:DevExpress.XtraCharts.ChartControl.PivotChartingCustomizeXAxisLabels"/>, <see cref="E:DevExpress.XtraCharts.Web.WebChartControl.PivotChartingCustomizeXAxisLabels"/>, or <see cref="E:DevExpress.XtraReports.UI.XRChart.PivotChartingCustomizeXAxisLabels"/> event.</para>
+        <para>A method that will handle the <see cref="E:DevExpress.XtraCharts.ChartControl.CustomizeResolveOverlappingMode"/>, <see cref="E:DevExpress.XtraCharts.Web.WebChartControl.CustomizeResolveOverlappingMode"/>, or <see cref="E:DevExpress.XtraReports.UI.XRChart.CustomizeResolveOverlappingMode"/> event.</para>
       </summary>
       <param name="sender">The event source. This parameter identifies the <see cref="T:DevExpress.XtraCharts.ChartControl"/>, <see cref="T:DevExpress.XtraCharts.Web.WebChartControl"/> or <see cref="T:DevExpress.XtraReports.UI.XRChart"/> which raised the event.</param>
       <param name="e">A <see cref="T:DevExpress.XtraCharts.CustomizeResolveOverlappingModeEventArgs"/> object that contains data related to the event.</param>
@@ -7469,7 +7469,7 @@ If null (Nothing in Visual Basic), then a <see cref="T:System.ArgumentNullExcept
     </member>
     <member name="T:DevExpress.XtraCharts.CustomizeXAxisLabelsEventArgs">
       <summary>
-        <para>Provides data for the <see cref="E:DevExpress.XtraCharts.ChartControl.PivotChartingCustomizeXAxisLabels"/> (<see cref="E:DevExpress.XtraCharts.Web.WebChartControl.PivotChartingCustomizeXAxisLabels"/>) event.</para>
+        <para>Provides data for the <see cref="E:DevExpress.XtraCharts.ChartControl.CustomizeXAxisLabels"/> (<see cref="E:DevExpress.XtraCharts.Web.WebChartControl.CustomizeXAxisLabels"/>) event.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraCharts.CustomizeXAxisLabelsEventArgs.Axis">
@@ -7486,7 +7486,7 @@ If null (Nothing in Visual Basic), then a <see cref="T:System.ArgumentNullExcept
     </member>
     <member name="T:DevExpress.XtraCharts.CustomizeXAxisLabelsEventHandler">
       <summary>
-        <para>A method that will handle the <see cref="E:DevExpress.XtraCharts.ChartControl.PivotChartingCustomizeXAxisLabels"/>, <see cref="E:DevExpress.XtraCharts.Web.WebChartControl.PivotChartingCustomizeXAxisLabels"/>, or <see cref="E:DevExpress.XtraReports.UI.XRChart.PivotChartingCustomizeXAxisLabels"/> event.</para>
+        <para>A method that will handle the <see cref="E:DevExpress.XtraCharts.ChartControl.CustomizeXAxisLabels"/>, <see cref="E:DevExpress.XtraCharts.Web.WebChartControl.CustomizeXAxisLabels"/>, or <see cref="E:DevExpress.XtraReports.UI.XRChart.CustomizeXAxisLabels"/> event.</para>
       </summary>
       <param name="sender">The event source. This parameter identifies the <see cref="T:DevExpress.XtraCharts.ChartControl"/>, <see cref="T:DevExpress.XtraCharts.Web.WebChartControl"/> or <see cref="T:DevExpress.XtraReports.UI.XRChart"/> which raised the event.</param>
       <param name="e">A <see cref="T:DevExpress.XtraCharts.CustomizeXAxisLabelsEventArgs"/> object that contains data related to the event.</param>
@@ -15308,12 +15308,6 @@ If null (Nothing in Visual Basic), then a <see cref="T:System.ArgumentNullExcept
       </summary>
       <value>A <see cref="T:DevExpress.XtraCharts.NumericGridAlignment"/> enumeration value that represents the measurement unit to which the beginning of an axis’s gridlines and labels should be aligned.</value>
     </member>
-    <member name="P:DevExpress.XtraCharts.NumericScaleOptions.GridAlignmentStartPoint">
-      <summary>
-        <para>Specifies the start point for aligning the scale along the x-axis.</para>
-      </summary>
-      <value>The start point for aligning the scale along the x-axis.</value>
-    </member>
     <member name="P:DevExpress.XtraCharts.NumericScaleOptions.IntervalOptions">
       <summary>
         <para>Stores options for numeric axis when its ScaleMode is Interval.</para>
@@ -15325,21 +15319,6 @@ If null (Nothing in Visual Basic), then a <see cref="T:System.ArgumentNullExcept
         <para>Gets or sets the detail level for numeric values.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraCharts.NumericMeasureUnit"/> enumeration value which represents the axis’ detail level.</value>
-    </member>
-    <member name="T:DevExpress.XtraCharts.NumericStartPoint">
-      <summary>
-        <para>Lists values that specify the start point for aligning the scale along the x-axis.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraCharts.NumericStartPoint.MinRangeValue">
-      <summary>
-        <para>The alignment of the chart x-axis scale starts at the specified <see cref="P:DevExpress.XtraCharts.Range.MinValue"/> property value.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraCharts.NumericStartPoint.Zero">
-      <summary>
-        <para>The alignment of the chart x-axis scale starts at zero.</para>
-      </summary>
     </member>
     <member name="T:DevExpress.XtraCharts.NumericSummaryOptions">
       <summary>
@@ -20315,14 +20294,14 @@ If null (Nothing in Visual Basic), then a <see cref="T:System.ArgumentNullExcept
       <summary>
         <para>The 3D chart is rotated at design time with the Ctrl+mouse pointer (at runtime only the mouse pointer should be used); and the rotation is based upon the advanced rotation algorithm. In this instance the chart diagram is rotated around the axes which have the same directions as the X&#0045;axis and Y&#0045;axis of the screen.</para>
         <para>For instance, to start rotating a 3D chart at design time, you need to press the Ctrl button, then left-click the chart’s diagram and start moving the mouse pointer.</para>
-        <para>To start rotating a 3D chart at runtime, you need to simply left&#0045;click the chart’s diagram and start moving the mouse pointer. Note that in this instance, the RuntimeRotation property must be set to true.</para>
+        <para>To start rotating a 3D chart at runtime, you need to simply left&#0045;click the chart’s diagram and start moving the mouse pointer. Note that in this instance, the <see cref="P:DevExpress.XtraCharts.ChartControl.RuntimeRotation"/> property must be set to true.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraCharts.RotationType.UseMouseStandard">
       <summary>
         <para>The 3D chart is rotated at design time with the Ctrl+mouse pointer (at runtime only the mouse pointer should be used); and the rotation is based upon the standard rotation algorithm. In this instance the chart diagram is rotated around the X&#0045;axis and Y&#0045;axis of the chart’s diagram.</para>
         <para>For instance, to start rotating a 3D chart at design time you need to press the Ctrl button, then left-click the chart’s diagram and start moving the mouse pointer.</para>
-        <para>To start rotating a 3D chart at runtime, you need to simply left&#0045;click the chart’s diagram and start moving the mouse pointer. Note that in this instance, the RuntimeRotation property must be set to true.</para>
+        <para>To start rotating a 3D chart at runtime, you need to simply left&#0045;click the chart’s diagram and start moving the mouse pointer. Note that in this instance, the <see cref="P:DevExpress.XtraCharts.ChartControl.RuntimeRotation"/> property must be set to true.</para>
       </summary>
     </member>
     <member name="N:DevExpress.XtraCharts.Sankey">
@@ -21353,7 +21332,7 @@ If null (Nothing in Visual Basic), then a <see cref="T:System.ArgumentNullExcept
       <summary>
         <para>Gets or sets the offset of grid lines and major tickmarks.</para>
       </summary>
-      <value>The grid offset.</value>
+      <value>The grid offset, in units specified by <see cref="P:DevExpress.XtraCharts.NumericScaleOptions.MeasureUnit"/>(<see cref="P:DevExpress.XtraCharts.DateTimeScaleOptions.MeasureUnit"/>)</value>
     </member>
     <member name="P:DevExpress.XtraCharts.ScaleGridOptionsBase.GridSpacing">
       <summary>

@@ -640,12 +640,12 @@
     </member>
     <member name="N:DevExpress.XtraEditors">
       <summary>
-        <para>Contains editor classes that implement the functionality for corresponding controls.</para>
+        <para>Contains editor classes. They provide the functionality for corresponding controls.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraEditors.AreaChartRangeControlClientView">
       <summary>
-        <para>The Area view of the chart range control client.</para>
+        <para>Represents the Area view of the chart range control client.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.AreaChartRangeControlClientView.#ctor">
@@ -667,7 +667,7 @@
     </member>
     <member name="T:DevExpress.XtraEditors.AutoCloseOptions">
       <summary>
-        <para>Allows you to create messages and dialogs that automatically close when a timer expires. See the <see cref="P:DevExpress.XtraEditors.XtraBaseArgs.AutoCloseOptions"/> property for examples.</para>
+        <para>Provides members that allow you to create messages and dialogs that automatically close when a timer expires. See the <see cref="P:DevExpress.XtraEditors.XtraBaseArgs.AutoCloseOptions"/> property for examples.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.AutoCloseOptions.#ctor">
@@ -951,7 +951,7 @@
     </member>
     <member name="T:DevExpress.XtraEditors.BaseCheckEdit">
       <summary>
-        <para>The base class for <see cref="T:DevExpress.XtraEditors.CheckEdit"/> and <see cref="T:DevExpress.XtraEditors.ToggleSwitch"/>.</para>
+        <para>The base class for editors that support two or three check states.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.BaseCheckEdit.#ctor">
@@ -1345,7 +1345,7 @@
     </member>
     <member name="T:DevExpress.XtraEditors.BaseDateControl">
       <summary>
-        <para>The base class for controls that implement the ability to edit date-time values.</para>
+        <para>Represents the base class for controls which provide the ability to edit datetime values.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.BaseDateControl.#ctor">
@@ -2497,7 +2497,7 @@
     </member>
     <member name="T:DevExpress.XtraEditors.BaseSpinEdit">
       <summary>
-        <para>Serves as the base for editors with spin buttons used to modify edit values.</para>
+        <para>Serves as the base for editors that provide spin buttons used to modify edit values.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.BaseSpinEdit.#ctor">
@@ -2564,7 +2564,7 @@
     </member>
     <member name="T:DevExpress.XtraEditors.BaseStyleControl">
       <summary>
-        <para>Serves as the base for controls that cannot be used as in-place editors and supports a common style management mechanism.</para>
+        <para>Serves as the base for controls which cannot be used as inplace editors and supports a common style management mechanism.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.BaseStyleControl.#ctor">
@@ -2633,7 +2633,7 @@
     </member>
     <member name="T:DevExpress.XtraEditors.BlobBaseEdit">
       <summary>
-        <para>The base class for editors that work with binary large object (BLOB) data.</para>
+        <para>Represents the base class for editors that work with binary large object (BLOB) data.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.BlobBaseEdit.#ctor">
@@ -2660,7 +2660,7 @@
     </member>
     <member name="T:DevExpress.XtraEditors.BreadCrumbEdit">
       <summary>
-        <para>The Microsoft Windows Explorer-inspired navigation bar that allows end users to navigate through a hierarchical tree of nodes.</para>
+        <para>The MS Windows Explorer-inspired navigation bar that allows end-users to navigate through a hierarchical tree of nodes.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.BreadCrumbEdit.#ctor">
@@ -2979,7 +2979,7 @@
     </member>
     <member name="T:DevExpress.XtraEditors.BreadCrumbMode">
       <summary>
-        <para>Exposes members used to label corresponding <see cref="T:DevExpress.XtraEditors.BreadCrumbEdit"/> modes.</para>
+        <para>Provides members used to label corresponding <see cref="T:DevExpress.XtraEditors.BreadCrumbEdit"/> modes.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.BreadCrumbMode.Edit">
@@ -3226,7 +3226,7 @@
     </member>
     <member name="T:DevExpress.XtraEditors.BreadCrumbNodeCollection">
       <summary>
-        <para>A <see cref="T:DevExpress.XtraEditors.BreadCrumbNode"/> collection.</para>
+        <para>A <see cref="T:DevExpress.XtraEditors.BreadCrumbNode"/>s collection.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.BreadCrumbNodeCollection.#ctor">
@@ -4199,7 +4199,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.ChartRangeControlClientBase">
       <summary>
-        <para>The base class for all chart clients of the range control.</para>
+        <para>Represents the base class for all chart clients of the range control.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.ChartRangeControlClientBase.#ctor(DevExpress.Sparkline.Core.SparklineScaleType,DevExpress.XtraEditors.ChartRangeControlClientGridOptions,DevExpress.XtraEditors.ChartRangeControlClientRange)">
@@ -4253,7 +4253,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.ChartRangeControlClientDataProvider">
       <summary>
-        <para>The class that is used to supply data to a chart range control client.</para>
+        <para>The class that is used to provide data to a chart range control client.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.ChartRangeControlClientDataProvider.ArgumentDataMember">
@@ -4304,7 +4304,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.ChartRangeControlClientGridOptions">
       <summary>
-        <para>The base class for grid settings of the date-time and numeric chart clients of the range control.</para>
+        <para>Represents the base class for grid settings of the date-time and numeric chart clients of the range control.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.ChartRangeControlClientGridOptions.#ctor">
@@ -4356,7 +4356,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.ChartRangeControlClientRange">
       <summary>
-        <para>The base class for defining the range for all chart clients (date-time and numeric chart clients) of the range control.</para>
+        <para>Represents the base class for defining the range for all chart clients (date-time and numeric chart clients) of the range control.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.ChartRangeControlClientRange.Auto">
@@ -4373,7 +4373,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.ChartRangeControlClientView">
       <summary>
-        <para>The base class for all chart views of the chart range control client.</para>
+        <para>Represents the base class for all chart views of the chart range control cliient.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.ChartRangeControlClientView.#ctor(DevExpress.Sparkline.SparklineViewBase)">
@@ -4396,7 +4396,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.CheckButton">
       <summary>
-        <para>A button that supports two states - elevated and depressed. It is possible to prevent the button from receiving focus on click. Multiple buttons can be combined into a radio group, in which only one button is checked at a time.</para>
+        <para>The button that supports two states - elevated and depressed. It is possible to prevent the button from receiving focus on a click. Multiple buttons can be combined into a radio group, in which only a single button is checked simultaneously.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.CheckButton.#ctor">
@@ -4633,7 +4633,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.CheckEdit">
       <summary>
-        <para>Allows an end user to select among the unchecked, checked, and indeterminate state (optional). Multiple check boxes can be combined into a radio group.</para>
+        <para>Allows an end-user to select between the unchecked, checked and (optionally) indeterminate state. Multiple check boxes can be combined into a radio group.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.CheckEdit.#ctor">
@@ -4876,7 +4876,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.ColorPickEdit">
       <summary>
-        <para>An advanced drop-down color picker that supports multiple palettes (a predefined Web and System color palette) from which to choose colors.</para>
+        <para>An advanced dropdown color picker that supports multiple palettes (a predefined color palette, Web and System) to choose colors from.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.ColorPickEdit.#ctor">
@@ -4996,7 +4996,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.ComboBox">
       <summary>
-        <para>A combo box editor that enables users to edit values by selecting items from a drop-down list.</para>
+        <para>Represents a combo box editor which enables editing values by selecting items from the dropdown list.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.ComboBox.#ctor">
@@ -5298,7 +5298,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.ControlNavigatorButtonCollection">
       <summary>
-        <para>The ControlNavigator‘s button collection.</para>
+        <para>Represents the ControlNavigator‘s button collection.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.ControlNavigatorButtonCollection.#ctor(DevExpress.XtraEditors.NavigatorButtonsBase)">
@@ -5309,7 +5309,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.ControlNavigatorButtons">
       <summary>
-        <para>A collection of buttons displayed in the ControlNavigator.</para>
+        <para>Represents buttons displayed in the ControlNavigator.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.ControlNavigatorButtons.#ctor(DevExpress.XtraEditors.INavigatorOwner)">
@@ -14554,7 +14554,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.DataNavigatorButtonCollection">
       <summary>
-        <para>The DataNavigator‘s button collection.</para>
+        <para>Represents the DataNavigator‘s button collection.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.DataNavigatorButtonCollection.#ctor(DevExpress.XtraEditors.NavigatorButtonsBase)">
@@ -14653,7 +14653,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.DateControl">
       <summary>
-        <para>The base class for controls that allow users to edit date-time values.</para>
+        <para>Represents the base class for controls which provide the ability to edit datetime values.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.DateControl.#ctor">
@@ -16327,7 +16327,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.FormatConditionCollectionBase">
       <summary>
-        <para>Serves as a base for collections of style conditions.</para>
+        <para>Serves as a base for classes that represent a collection of style conditions.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.FormatConditionCollectionBase.#ctor">
@@ -16459,7 +16459,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.FormatConditionIconSet">
       <summary>
-        <para>A class that exposes an icon set for the <see cref="T:DevExpress.XtraEditors.FormatConditionRuleIconSet"/> format.</para>
+        <para>A class that provides an icon set for the <see cref="T:DevExpress.XtraEditors.FormatConditionRuleIconSet"/> format.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.FormatConditionIconSet.#ctor">
@@ -16762,7 +16762,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.FormatConditionRuleContains">
       <summary>
-        <para>Applies a format if a value matches one of the specified values.</para>
+        <para>Applies a format if a value matches one of constants.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.FormatConditionRuleContains.#ctor">
@@ -16915,7 +16915,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.FormatConditionRuleExpression">
       <summary>
-        <para>Applies a format if cell values meet a specific expression.</para>
+        <para>Applies a format if a cell value(s) meets a specific expression.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.FormatConditionRuleExpression.#ctor">
@@ -16970,7 +16970,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.FormatConditionRuleMinMaxBase">
       <summary>
-        <para>A base class for classes that implement conditional formatting rules based on minimum and maximum thresholds.</para>
+        <para>A base class for classes that provide conditional formatting rules based on minimum and maximum thresholds.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.FormatConditionRuleMinMaxBase.#ctor">
@@ -18100,7 +18100,7 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="P:DevExpress.XtraEditors.HyperlinkLabelControl.AllowHtmlString">
       <summary>
-        <para>This property is not supported by the <see cref="T:DevExpress.XtraEditors.HyperlinkLabelControl"/>.</para>
+        <para>This property is not supported by the <see cref="T:DevExpress.XtraEditors.HyperlinkLabelControl"/>. The HTML Text Formatting feature is always enabled for this control.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.HyperlinkLabelControl.Appearance">
@@ -18141,7 +18141,7 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.HyperlinkLabelControlAppearanceObject">
       <summary>
-        <para>Contains appearance settings that paint a <see cref="T:DevExpress.XtraEditors.HyperlinkLabelControl"/>.</para>
+        <para>Provides appearance settings used to paint a <see cref="T:DevExpress.XtraEditors.HyperlinkLabelControl"/>.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.HyperlinkLabelControlAppearanceObject.#ctor">
@@ -18181,7 +18181,7 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.HyperlinkLabelControlAppearanceOptions">
       <summary>
-        <para>Contains appearance options that paint a <see cref="T:DevExpress.XtraEditors.HyperlinkLabelControl"/>.</para>
+        <para>Provides the appearance options used to paint a <see cref="T:DevExpress.XtraEditors.HyperlinkLabelControl"/>.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.HyperlinkLabelControlAppearanceOptions.#ctor">
@@ -18537,7 +18537,7 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.LabelAutoSizeMode">
       <summary>
-        <para>Lists values that specify how the label is automatically resized to display its entire contents.</para>
+        <para>LIsts values that specify how the label is automatically resized to display its entire contents.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.LabelAutoSizeMode.Default">
@@ -18925,7 +18925,7 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.LineChartRangeControlClientView">
       <summary>
-        <para>The Line view of the chart range control client.</para>
+        <para>Represents the Line view of the chart range control client.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.LineChartRangeControlClientView.#ctor">
@@ -18992,7 +18992,7 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.ListBoxDrawItemEventArgs">
       <summary>
-        <para>Supplies data for the <see cref="E:DevExpress.XtraEditors.BaseListBoxControl.DrawItem"/> event.</para>
+        <para>Provides data for the <see cref="E:DevExpress.XtraEditors.BaseListBoxControl.DrawItem"/> event.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.ListBoxDrawItemEventArgs.#ctor(DevExpress.Utils.Drawing.GraphicsCache,DevExpress.Utils.AppearanceObject,System.Drawing.Rectangle,System.Object,System.Int32,System.Windows.Forms.DrawItemState,System.Boolean)">
@@ -19045,14 +19045,14 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.ListBoxDrawItemEventHandler">
       <summary>
-        <para>A method that handles the <see cref="E:DevExpress.XtraEditors.BaseListBoxControl.DrawItem"/> event.</para>
+        <para>Represents a method that will handle the <see cref="E:DevExpress.XtraEditors.BaseListBoxControl.DrawItem"/> event.</para>
       </summary>
       <param name="sender">The event sender (typically the list box control).</param>
       <param name="e">A <see cref="T:DevExpress.XtraEditors.ListBoxDrawItemEventArgs"/> object that contains data related to the event.</param>
     </member>
     <member name="T:DevExpress.XtraEditors.LookUpEdit">
       <summary>
-        <para>A text box editor with a dropdown panel that displays data in a simple table layout.</para>
+        <para>An editor control that enables lookup functionality using a lightweight grid in a drop-down window.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.LookUpEdit.#ctor">
@@ -19106,11 +19106,6 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     <member name="E:DevExpress.XtraEditors.LookUpEdit.CustomDrawRow">
       <summary>
         <para>Provides the capability to perform custom painting of grid rows in the drop-down.</para>
-      </summary>
-    </member>
-    <member name="E:DevExpress.XtraEditors.LookUpEdit.DataSourceChanged">
-      <summary>
-        <para>Occurs after the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEditBase.DataSource"/> property has been changed.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.LookUpEdit.EditorTypeName">
@@ -19191,14 +19186,8 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.LookUpEditBase">
       <summary>
-        <para>The base class for lookup editors.</para>
+        <para>Represents the base class for lookup editors.</para>
       </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.LookUpEditBase.CancelInvalidLookUpEditValue">
-      <summary>
-        <para>The DefaultBoolean.Default value.</para>
-      </summary>
-      <value>The DefaultBoolean.Default value.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.LookUpEditBase.CascadingOwner">
       <summary>
@@ -19692,7 +19681,7 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.NavigatorButton">
       <summary>
-        <para>An individual button displayed within the DataNavigator or ControlNavigator .</para>
+        <para>Represents an individual button displayed within the DataNavigator or ControlNavigator .</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.NavigatorButton.#ctor(DevExpress.XtraEditors.NavigatorButtonHelper)">
@@ -19816,7 +19805,7 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.NavigatorButtonClickEventArgs">
       <summary>
-        <para>Supplies data for the <see cref="E:DevExpress.XtraEditors.NavigatorBase.ButtonClick"/> event.</para>
+        <para>Provides data for the <see cref="E:DevExpress.XtraEditors.NavigatorBase.ButtonClick"/> event.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.NavigatorButtonClickEventArgs.#ctor(DevExpress.XtraEditors.NavigatorButtonBase)">
@@ -19839,7 +19828,7 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.NavigatorButtonClickEventHandler">
       <summary>
-        <para>A method that handles the <see cref="E:DevExpress.XtraEditors.NavigatorBase.ButtonClick"/> event.</para>
+        <para>Represents a method that will handle the <see cref="E:DevExpress.XtraEditors.NavigatorBase.ButtonClick"/> event.</para>
       </summary>
       <param name="sender">The event sender (typically the <see cref="T:DevExpress.XtraEditors.NavigatorBase"/> descendant).</param>
       <param name="e">A <see cref="T:DevExpress.XtraEditors.NavigatorButtonClickEventArgs"/> object containing event data.</param>
@@ -20188,7 +20177,7 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.NavigatorExceptionEventArgs">
       <summary>
-        <para>Supplies data for the <see cref="E:DevExpress.XtraEditors.NavigatorBase.NavigatorException"/> event.</para>
+        <para>Provides data for the <see cref="E:DevExpress.XtraEditors.NavigatorBase.NavigatorException"/> event.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.NavigatorExceptionEventArgs.#ctor(System.String,System.Exception,DevExpress.XtraEditors.NavigatorButton)">
@@ -20217,9 +20206,9 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.NavigatorExceptionEventHandler">
       <summary>
-        <para>A method that handles the <see cref="E:DevExpress.XtraEditors.NavigatorBase.NavigatorException"/> event of data navigators.</para>
+        <para>Represents a method for handling the <see cref="E:DevExpress.XtraEditors.NavigatorBase.NavigatorException"/> event of data navigators.</para>
       </summary>
-      <param name="sender">The data navigator control.</param>
+      <param name="sender">The event source. This represents the data navigator control.</param>
       <param name="e">A <see cref="T:DevExpress.XtraEditors.NavigatorExceptionEventArgs"/> object that contains event data.</param>
     </member>
     <member name="T:DevExpress.XtraEditors.NumericChartRangeControlClient">
@@ -20306,7 +20295,7 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.PickImage">
       <summary>
-        <para>An image combo box editor.</para>
+        <para>Represents an image combo box editor.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.PickImage.#ctor">
@@ -20573,7 +20562,7 @@ To enable DirectX hardware acceleration, call the static <see cref="M:DevExpress
     </member>
     <member name="T:DevExpress.XtraEditors.PopupBaseAutoSearchEdit">
       <summary>
-        <para>The base class for dropdown editors that support the automatic search functionality.</para>
+        <para>Represents the base class for dropdown editors that support the automatic search functionality.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.PopupBaseAutoSearchEdit.AutoSearchText">
@@ -20873,7 +20862,7 @@ To enable DirectX hardware acceleration, call the static <see cref="M:DevExpress
     </member>
     <member name="T:DevExpress.XtraEditors.PopupPanelOptions">
       <summary>
-        <para>Contains settings that allow you to customize the behavior of a peek panel, assigned to the <see cref="T:DevExpress.XtraEditors.TokenEdit"/> control.</para>
+        <para>Provides properties that allow you to customize the behavior of a peek panel, assigned to the <see cref="T:DevExpress.XtraEditors.TokenEdit"/> control.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.PopupPanelOptions.#ctor(DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit)">
@@ -21002,7 +20991,7 @@ To enable DirectX hardware acceleration, call the static <see cref="M:DevExpress
     </member>
     <member name="T:DevExpress.XtraEditors.QueryIsSearchColumnEventArgs">
       <summary>
-        <para>Contains data for the <see cref="E:DevExpress.XtraEditors.SearchControl.QueryIsSearchColumn"/> and <see cref="E:DevExpress.XtraEditors.Repository.RepositoryItemSearchControl.QueryIsSearchColumn"/> events.</para>
+        <para>Contains data for the @<see cref="E:DevExpress.XtraEditors.SearchControl.QueryIsSearchColumn"/> and <see cref="E:DevExpress.XtraEditors.Repository.RepositoryItemSearchControl.QueryIsSearchColumn"/> events.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.QueryIsSearchColumnEventArgs.#ctor">
@@ -21401,7 +21390,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.RatingControl">
       <summary>
-        <para>The control to rate specific content.</para>
+        <para>The control to rate a specific content.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.RatingControl.#ctor">
@@ -25671,7 +25660,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.AcceptEditorTextAsNewValue">
       <summary>
-        <para>Gets or sets whether a custom value (a value that is not present in the lookup data source) that is entered in the edit box is accepted by the editor (when the value is validated and editor loses focus). This property supports ComboBox mode for the lookup editor.</para>
+        <para>Gets or sets whether a custom value (a value that is not present in the lookup data source) that is entered in the edit box is accepted by the editor (when the value is validated and editor loses focus). This property supports Combobox mode for the lookup editor.</para>
       </summary>
       <value>A value that specifies if custom values are accepted by the editor. The DefaultBoolean.Default property value is equivalent to True.</value>
     </member>
@@ -25761,11 +25750,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.CustomDrawRow">
       <summary>
         <para>Provides the capability to perform custom painting of grid rows in the drop-down.</para>
-      </summary>
-    </member>
-    <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.DataSourceChanged">
-      <summary>
-        <para>Occurs after the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEditBase.DataSource"/> property has been changed.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.DropDownItemHeight">
@@ -26011,12 +25995,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <value>The zero-based column index against which data is sorted.</value>
     </member>
-    <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.TextEditStyle">
-      <summary>
-        <para>Gets or sets a value that specifies whether users can type in the lookup’s text box.</para>
-      </summary>
-      <value>A TextEditStyles enumeration value.</value>
-    </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.UseDropDownRowsAsMaxCount">
       <summary>
         <para>Gets or sets whether the number of visible data rows limits the height of the dropdown window.</para>
@@ -26085,12 +26063,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Gets or sets a string that specifies a key field (or multiple key fields) used for business object identification (when a lookup editor is bound to a business object).</para>
       </summary>
       <value>A string that specifies a key field or multiple key fields delimited by the ‘;’ character.</value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEditBase.OwnerEdit">
-      <summary>
-        <para>Gets the editor which owns the current repository item object.</para>
-      </summary>
-      <value>A <see cref="T:DevExpress.XtraEditors.LookUpEditBase"/> descendant that owns the repository item.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEditBase.PopupSizeable">
       <summary>
@@ -29621,7 +29593,7 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
     </member>
     <member name="T:DevExpress.XtraEditors.SimpleButton">
       <summary>
-        <para>A button that can display text and image. Supports DevExpress Application Skins.</para>
+        <para>A button that can display text along with a custom image. You can specify whether the button receives focus on a click.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SimpleButton.#ctor">
@@ -29769,7 +29741,7 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
     </member>
     <member name="T:DevExpress.XtraEditors.SparklineEdit">
       <summary>
-        <para>Visualizes data in a highly condensed way, allowing end users to understand and compare values from different sources.</para>
+        <para>Visualizes data in a highly condensed way, allowing end-users to quickly understand and compare values from different sources.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SparklineEdit.#ctor">
@@ -30177,7 +30149,7 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
     </member>
     <member name="T:DevExpress.XtraEditors.StepProgressBarItem">
       <summary>
-        <para>An item that visualizes a progress milestone or step. A <see cref="T:DevExpress.XtraEditors.StepProgressBar"/> control stores progress items in the <see cref="P:DevExpress.XtraEditors.StepProgressBar.Items"/> collection.</para>
+        <para>An item that visualizes a progress milestone or step. Instances of this class are used by <see cref="T:DevExpress.XtraEditors.StepProgressBar"/> controls that store them in the <see cref="P:DevExpress.XtraEditors.StepProgressBar.Items"/> collections.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.StepProgressBarItem.#ctor">
@@ -30339,7 +30311,7 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
     </member>
     <member name="T:DevExpress.XtraEditors.StepProgressBarItemHyperlinkClickEventArgs">
       <summary>
-        <para>Supplies data for the <see cref="E:DevExpress.XtraEditors.StepProgressBar.ItemHyperlinkClick"/> event.</para>
+        <para>Provides data for the <see cref="E:DevExpress.XtraEditors.StepProgressBar.ItemHyperlinkClick"/> event.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.StepProgressBarItemHyperlinkClickEventArgs.#ctor(DevExpress.XtraEditors.ViewInfo.StepProgressBarHitInfo,DevExpress.Utils.Text.Internal.StringBlock,System.Windows.Forms.MouseEventArgs)">
@@ -30373,7 +30345,7 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
     </member>
     <member name="T:DevExpress.XtraEditors.StepProgressBarItemOptions">
       <summary>
-        <para>Stores item settings. These settings affect one individual item (if you access them from the StepProgressBarItem.Options property), or all items owned by this control (StepProgressBar.ItemOptions).</para>
+        <para>Stores item settings. These settings affect one individual item (if you access them via the StepProgressBarItem.Options property), or all items owned by this control (StepProgressBar.ItemOptions).</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBarItemOptions.ConnectorOffset">
@@ -30516,7 +30488,7 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
     </member>
     <member name="T:DevExpress.XtraEditors.StyleFormatConditionBase">
       <summary>
-        <para>Serves as a base for classes that implement style conditions.</para>
+        <para>Serves as a base for classes that represent style conditions.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.StyleFormatConditionBase.#ctor">
@@ -30715,11 +30687,6 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
         <para>This property isn’t used.</para>
       </summary>
     </member>
-    <member name="T:DevExpress.XtraEditors.TextEdit.Block">
-      <summary>
-        <para>A text block.</para>
-      </summary>
-    </member>
     <member name="M:DevExpress.XtraEditors.TextEdit.Block.#ctor(System.Int32,System.Int32)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.TextEdit.Block"/> class with specified settings.</para>
@@ -30864,7 +30831,7 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
     </member>
     <member name="T:DevExpress.XtraEditors.TextEdit.QueryAdvancedModeEventArgs">
       <summary>
-        <para>Supplies data for the <see cref="E:DevExpress.XtraEditors.TextEdit.QueryAdvancedMode"/> event.</para>
+        <para>Provides data for the <see cref="E:DevExpress.XtraEditors.TextEdit.QueryAdvancedMode"/> event.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.TextEdit.Reset">
@@ -30880,11 +30847,6 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
     <member name="M:DevExpress.XtraEditors.TextEdit.ScrollToCaret">
       <summary>
         <para>Scrolls the editor’s content to the current caret position.</para>
-      </summary>
-    </member>
-    <member name="T:DevExpress.XtraEditors.TextEdit.Segment">
-      <summary>
-        <para>For internal use.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.TextEdit.Segment.#ctor">
@@ -31845,7 +31807,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TileControlImageToTextAlignment">
       <summary>
-        <para>Exposes members that specify how a tile item glyph is arranged relative to text content.</para>
+        <para>Provides members that specify how a tile item glyph is arranged related to text content.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.TileControlImageToTextAlignment.Bottom">
@@ -31880,7 +31842,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TileControlScrollMode">
       <summary>
-        <para>Exposes members that specify a <see cref="T:DevExpress.XtraEditors.TileControl"/>‘s scroll mode.</para>
+        <para>Provides members that specify a <see cref="T:DevExpress.XtraEditors.TileControl"/>‘s scrolling mode.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.TileControlScrollMode.Default">
@@ -31910,7 +31872,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TileGroup">
       <summary>
-        <para>Implements the functionality of tile groups.</para>
+        <para>Provides the functionality of tile groups.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.TileGroup.#ctor">
@@ -31982,7 +31944,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TileGroupCollection">
       <summary>
-        <para>A collection of <see cref="T:DevExpress.XtraEditors.TileGroup"/> objects.</para>
+        <para>Provides a collection for the <see cref="T:DevExpress.XtraEditors.TileGroup"/> class objects.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.TileGroupCollection.#ctor(DevExpress.XtraEditors.ITileControl)">
@@ -32512,7 +32474,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TileItemAppearances">
       <summary>
-        <para>Exposes the appearance settings used to paint items in the <see cref="T:DevExpress.XtraEditors.TileControl"/> and <see cref="T:DevExpress.XtraBars.Navigation.OfficeNavigationBar"/> in different visual states.</para>
+        <para>Provides members that specify the appearance settings used to paint items in the <see cref="T:DevExpress.XtraEditors.TileControl"/> and <see cref="T:DevExpress.XtraBars.Navigation.OfficeNavigationBar"/> in different visual states.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.TileItemAppearances.#ctor">
@@ -32600,7 +32562,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TileItemCheckMode">
       <summary>
-        <para>Exposes members that specify check options of tile items.</para>
+        <para>Provides members that specify tile items check options.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.TileItemCheckMode.Multiple">
@@ -32620,14 +32582,14 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TileItemClickEventHandler">
       <summary>
-        <para>A method for handling events that take a <see cref="T:DevExpress.XtraEditors.TileItemEventArgs"/> object as a parameter.</para>
+        <para>Represents the method for handling events which take a <see cref="T:DevExpress.XtraEditors.TileItemEventArgs"/> object as a parameter.</para>
       </summary>
-      <param name="sender">The event source that identifies the TileItem that fires the event.</param>
+      <param name="sender">The event source. This identifies the TileItem which fires the event.</param>
       <param name="e">A <see cref="T:DevExpress.XtraEditors.TileItemEventArgs"/> object that contains data for the event.</param>
     </member>
     <member name="T:DevExpress.XtraEditors.TileItemCollection">
       <summary>
-        <para>A collection with <see cref="T:DevExpress.XtraEditors.TileItem"/> objects.</para>
+        <para>Provides a collection for the <see cref="T:DevExpress.XtraEditors.TileItem"/> class objects.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.TileItemCollection.#ctor(DevExpress.XtraEditors.TileGroup)">
@@ -32703,7 +32665,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TileItemContentAlignment">
       <summary>
-        <para>Exposes members to specify tile content alignment.</para>
+        <para>Provides members to specify tile content alignment.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter">
@@ -32763,7 +32725,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TileItemDragEventArgs">
       <summary>
-        <para>Supplies data for the <see cref="E:DevExpress.XtraEditors.TileControl.StartItemDragging"/> and <see cref="E:DevExpress.XtraEditors.TileControl.EndItemDragging"/> events.</para>
+        <para>Provides data for the <see cref="E:DevExpress.XtraEditors.TileControl.StartItemDragging"/> and <see cref="E:DevExpress.XtraEditors.TileControl.EndItemDragging"/> events.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.TileItemDragEventArgs.#ctor">
@@ -32785,9 +32747,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TileItemDragEventHandler">
       <summary>
-        <para>A method for handling events that take a <see cref="T:DevExpress.XtraEditors.TileItemDragEventArgs"/> object as a parameter.</para>
+        <para>Represents the method for handling events which take a <see cref="T:DevExpress.XtraEditors.TileItemDragEventArgs"/> object as a parameter.</para>
       </summary>
-      <param name="sender">The event source that identifies the TileItem that fires the event.</param>
+      <param name="sender">The event source. This identifies the TileItem which fires the event.</param>
       <param name="e">A <see cref="T:DevExpress.XtraEditors.TileItemDragEventArgs"/> object that contains data for the event.</param>
     </member>
     <member name="T:DevExpress.XtraEditors.TileItemElement">
@@ -33048,7 +33010,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TileItemElementCollection">
       <summary>
-        <para>A collection with <see cref="T:DevExpress.XtraEditors.TileItemElement"/> objects.</para>
+        <para>Provides a collection to store <see cref="T:DevExpress.XtraEditors.TileItemElement"/>s.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.TileItemElementCollection.#ctor(DevExpress.XtraEditors.INotifyElementPropertiesChanged)">
@@ -33159,7 +33121,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TileItemFrame">
       <summary>
-        <para>Implements the functionality of tile frames.</para>
+        <para>Provides the functionality of tile frames.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.TileItemFrame.#ctor">
@@ -33275,7 +33237,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TileItemFrameCollection">
       <summary>
-        <para>A collection of <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> objects.</para>
+        <para>Provides a collection for the <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> class objects.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.TileItemFrameCollection.#ctor(DevExpress.XtraEditors.ITileItem)">
@@ -33339,7 +33301,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TileItemImageScaleMode">
       <summary>
-        <para>Exposes members that specify a <see cref="T:DevExpress.XtraEditors.TileItem"/> glyph’s stretch mode.</para>
+        <para>Provides members that specify a <see cref="T:DevExpress.XtraEditors.TileItem"/> glyph’s stretching mode.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.TileItemImageScaleMode.Default">
@@ -33414,7 +33376,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TimeEdit">
       <summary>
-        <para>An editor that allows end users to display and edit time.</para>
+        <para>The editor to edit time values using spin buttons or dropdown calendar.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.TimeEdit.#ctor">
@@ -34014,7 +33976,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.TrackBarControl">
       <summary>
-        <para>Displays a scale with tick marks. Users can drag a thumb to change the current value.</para>
+        <para>Displays a scale with tickmarks. Users can drag a thumb to change the current value.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.TrackBarControl.#ctor">
@@ -34272,7 +34234,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.XtraBaseArgs">
       <summary>
-        <para>Exposes members common to dialogs and message boxes, whose event arguments derive from this class.</para>
+        <para>Provides members common to dialogs and message boxes, whose event arguments derive from this class.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.XtraBaseArgs.#ctor(DevExpress.LookAndFeel.UserLookAndFeel,System.Windows.Forms.IWin32Window,System.String,System.Windows.Forms.DialogResult[],System.Int32,DevExpress.Utils.DefaultBoolean,DevExpress.XtraEditors.MessageBeepSound)">
@@ -34846,7 +34808,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.XtraInputBox">
       <summary>
-        <para>A skinable dialog with one editor (<see cref="T:DevExpress.XtraEditors.TextEdit"/>) and OK/Cancel buttons to accept or reject the current value of this editor.</para>
+        <para>A skinable dialog with one editor (a <see cref="T:DevExpress.XtraEditors.TextEdit"/> by default) and OK/Cancel buttons to accept or reject the current value of this editor.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.XtraInputBox.AllowCustomLookAndFeel">
@@ -35709,7 +35671,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.XtraMessageBoxClosedArgs">
       <summary>
-        <para>Supplies data for the <see cref="E:DevExpress.XtraEditors.XtraMessageBoxArgs.Closed"/> event.</para>
+        <para>Provides data for the <see cref="E:DevExpress.XtraEditors.XtraMessageBoxArgs.Closed"/> event.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.XtraMessageBoxClosedArgs.#ctor(DevExpress.XtraEditors.XtraMessageBoxArgs)">
@@ -35725,7 +35687,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.XtraMessageBoxEventArgs">
       <summary>
-        <para>Supplies data for the <see cref="E:DevExpress.XtraEditors.XtraMessageBoxArgs.Load"/> and <see cref="E:DevExpress.XtraEditors.XtraMessageBoxArgs.Closed"/> events.</para>
+        <para>Provides data for the <see cref="E:DevExpress.XtraEditors.XtraMessageBoxArgs.Load"/> and <see cref="E:DevExpress.XtraEditors.XtraMessageBoxArgs.Closed"/> events.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.XtraMessageBoxEventArgs.#ctor(DevExpress.XtraEditors.XtraMessageBoxArgs)">
@@ -35754,7 +35716,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.XtraMessageBoxLoadArgs">
       <summary>
-        <para>Supplies data for the <see cref="E:DevExpress.XtraEditors.XtraMessageBoxArgs.Load"/> event.</para>
+        <para>Provides data for the <see cref="E:DevExpress.XtraEditors.XtraMessageBoxArgs.Load"/> event.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.XtraMessageBoxLoadArgs.#ctor(DevExpress.XtraEditors.XtraMessageBoxArgs)">

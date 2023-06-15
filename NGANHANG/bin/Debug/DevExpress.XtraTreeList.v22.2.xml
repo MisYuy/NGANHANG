@@ -6,7 +6,7 @@
   <members>
     <member name="N:DevExpress.XtraEditors">
       <summary>
-        <para>Contains editor classes that implement the functionality for corresponding controls.</para>
+        <para>Contains editor classes. They provide the functionality for corresponding controls.</para>
       </summary>
     </member>
     <member name="N:DevExpress.XtraEditors.Repository">
@@ -138,7 +138,7 @@
     </member>
     <member name="T:DevExpress.XtraEditors.TreeListLookUpEdit">
       <summary>
-        <para>The data-aware editor that implements lookup functionality using a dropdown <see cref="T:DevExpress.XtraTreeList.TreeList"/> control. This editor cannot operate if no data source is connected to it.</para>
+        <para>The data-aware editor that provides lookup functionality using a dropdown <see cref="T:DevExpress.XtraTreeList.TreeList"/> control. This editor cannot operate without a data source connected to it.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.TreeListLookUpEdit.#ctor">
@@ -1966,12 +1966,6 @@
         <para>Gets or sets whether or not end-users can utilize incremental search to find required records.</para>
       </summary>
       <value>true if end-users can utilize incremental search to find required records; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.AllowMruItems">
-      <summary>
-        <para>Gets or sets whether the Find Panel keeps the history of recently used search items. Users can access and re-apply search items from a dropdown list.</para>
-      </summary>
-      <value>true, to allow users to apply recently used search items; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.AlwaysVisible">
       <summary>
@@ -4252,12 +4246,6 @@
         <para>Checks the current node and all its nested nodes (including all their children).</para>
       </summary>
     </member>
-    <member name="P:DevExpress.XtraTreeList.Nodes.TreeListNode.CheckBoxStyle">
-      <summary>
-        <para>Gets the style of check boxes displayed in the node.</para>
-      </summary>
-      <value>A value that indicates whether the node displays a check box, radio button, or neither.</value>
-    </member>
     <member name="P:DevExpress.XtraTreeList.Nodes.TreeListNode.Checked">
       <summary>
         <para>Gets or sets whether the node is checked.</para>
@@ -5876,15 +5864,26 @@
         <para>Converts objects from the <see cref="P:DevExpress.XtraTreeList.TreeList.FormatConditions"/> collection to <see cref="T:DevExpress.XtraTreeList.StyleFormatConditions.TreeListFormatRule"/> objects and adds them to the <see cref="P:DevExpress.XtraTreeList.TreeList.FormatRules"/> collection.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.XtraTreeList.TreeList.CopyNode(DevExpress.XtraTreeList.Nodes.TreeListNode,DevExpress.XtraTreeList.Nodes.TreeListNode,System.Boolean,System.Int32)">
+    <member name="M:DevExpress.XtraTreeList.TreeList.CopyNode(DevExpress.XtraTreeList.Nodes.TreeListNode,DevExpress.XtraTreeList.Nodes.TreeListNode,System.Boolean,System.Boolean,System.Int32)">
       <summary>
-        <para>Copies the specified node to the specified position in the collection of child nodes of another node. Use this method in unbound mode.</para>
+        <para>Copies the specified node to the specified node’s child collection. This method does not update the data source and is intended for use in unbound mode.</para>
       </summary>
-      <param name="sourceNode">The node to copy.</param>
-      <param name="destinationNode">The target node to which the source node is copied.</param>
-      <param name="cloneChildren">true to copy child nodes of the source node; otherwise false.</param>
-      <param name="position">A zero-based integer that specifies the position among the child nodes of the target node to insert the source node.</param>
-      <returns>A copy of the original (source) node.</returns>
+      <param name="sourceNode">A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> object representing the node to be copied.</param>
+      <param name="destinationNode">A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> object representing the node to whose child collection the node is copied.</param>
+      <param name="cloneChildren">true if child nodes of the node being copied must be cloned; otherwise false.</param>
+      <param name="modifySource">true if the destination node’s key field value is assigned to the parent field of the source node and all its copies; otherwise false.</param>
+      <param name="position">An Int32 value that specifies the position that the moved node occupies within the destination collection.</param>
+      <returns>A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> object representing the copy of the specified node.</returns>
+    </member>
+    <member name="M:DevExpress.XtraTreeList.TreeList.CopyNode(DevExpress.XtraTreeList.Nodes.TreeListNode,DevExpress.XtraTreeList.Nodes.TreeListNode,System.Boolean,System.Boolean)">
+      <summary>
+        <para>Copies the specified node to the specified node’s child collection. This method does not update the data source and is intended for use in unbound mode.</para>
+      </summary>
+      <param name="sourceNode">A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> object representing the node to be copied.</param>
+      <param name="destinationNode">A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> object representing the node to whose child collection the node is copied.</param>
+      <param name="cloneChildren">true if child nodes of the node being copied must be cloned; otherwise false.</param>
+      <param name="modifySource">true if the destination node’s key field value is assigned to the parent field of the source node and all its copies; otherwise false.</param>
+      <returns>A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> object representing the copy of the specified node.</returns>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.CopyNode(DevExpress.XtraTreeList.Nodes.TreeListNode,DevExpress.XtraTreeList.Nodes.TreeListNode,System.Boolean)">
       <summary>
@@ -5895,15 +5894,16 @@
       <param name="cloneChildren">true if child nodes of the node being copied must be cloned; otherwise false.</param>
       <returns>A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> object representing the copy of the specified node.</returns>
     </member>
-    <member name="M:DevExpress.XtraTreeList.TreeList.CopyNodes(System.Collections.Generic.IEnumerable{DevExpress.XtraTreeList.Nodes.TreeListNode},DevExpress.XtraTreeList.Nodes.TreeListNode,System.Boolean,System.Int32)">
+    <member name="M:DevExpress.XtraTreeList.TreeList.CopyNodes(System.Collections.Generic.IEnumerable{DevExpress.XtraTreeList.Nodes.TreeListNode},DevExpress.XtraTreeList.Nodes.TreeListNode,System.Boolean,System.Boolean,System.Int32)">
       <summary>
-        <para>Copies the specified nodes to the specified position in the collection of child nodes of another node. Use this method in unbound mode.</para>
+        <para>Copies the specified nodes to the specified node’s child collection. This method does not update the data source and is intended for use in unbound mode.</para>
       </summary>
-      <param name="sourceNodes">The nodes to copy.</param>
-      <param name="destinationNode">The target node to which the source node is copied.</param>
-      <param name="cloneChildren">true to copy child nodes of source nodes; otherwise false.</param>
-      <param name="position">A zero-based integer that specifies the position among the child nodes of the target node to insert the source nodes.</param>
-      <returns>The copies of the original (source) nodes.</returns>
+      <param name="sourceNodes">A collection of <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> objects representing the nodes to be copied.</param>
+      <param name="destinationNode">A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> object representing the node to whose child collection the node is copied.</param>
+      <param name="cloneChildren">true if child nodes of the node being copied must be cloned; otherwise, false.</param>
+      <param name="modifySource">true if the destination node’s key field value is assigned to the parent field of the source node and all its copies; otherwise, false.</param>
+      <param name="position">An Int32 value that specifies the position that the moved node occupies within the destination collection.</param>
+      <returns>A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> object representing the copy of the specified node.</returns>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.CopyToClipboard">
       <summary>
@@ -6055,7 +6055,7 @@
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomizeNewNodeFromOuterData">
       <summary>
-        <para>Allows you to initialize a new node when a user drops the node from another TreeList control onto the current TreeList control.</para>
+        <para>Fires when a node from another TreeList control is dropped onto the current TreeList control and thus, a new node in the current TreeList is about to be created. The event allows you to provide data for the new node that is to be created.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomNodeCellEdit">
@@ -6221,14 +6221,8 @@
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.EndCurrentEdit">
       <summary>
-        <para>Posts the focused node’s values to the data source. Set the <see cref="M:DevExpress.XtraTreeList.TreeList.EndCurrentEdit(System.Boolean)"/> parameter to true to re-sort and re-filter the tree after saving changes.</para>
+        <para>Posts the focused node’s values to the data source.</para>
       </summary>
-    </member>
-    <member name="M:DevExpress.XtraTreeList.TreeList.EndCurrentEdit(System.Boolean)">
-      <summary>
-        <para>Posts the focused node’s values to the data source and optionally re-sorts and re-filters the tree.</para>
-      </summary>
-      <param name="updateSortingAndFiltering">true to re-sort and re-filter the tree; otherwise, false.</param>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.EndDelete">
       <summary>
@@ -7637,7 +7631,7 @@
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.PopulateColumns">
       <summary>
-        <para>Creates columns for all public fields in the bound data source.</para>
+        <para>Creates columns for all fields in the bound data source.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.PopupMenuShowing">
@@ -7799,7 +7793,7 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to r
       <summary>
         <para>Gets or sets the value that identifies root records in the data source. The root records must have the RootValue in the field the ParentFieldName property specifies.</para>
       </summary>
-      <value>An object the root nodes contain in the field specified by the <see cref="P:DevExpress.XtraTreeList.TreeList.ParentFieldName"/> property. By default, an integer 0 value.</value>
+      <value>An object the root nodes contain in the field specified by the <see cref="P:DevExpress.XtraTreeList.TreeList.ParentFieldName"/> property.</value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.RowCellClick">
       <summary>

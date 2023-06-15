@@ -8947,7 +8947,7 @@
     </member>
     <member name="P:DevExpress.XtraReports.UI.Band.SubBands">
       <summary>
-        <para>Use the SubBands property to access the collection of sub-bands for the current report band.</para>
+        <para>Provides access to the band’s collection of sub-bands.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraReports.UI.SubBandCollection"/> object.</value>
     </member>
@@ -13017,7 +13017,7 @@
     </member>
     <member name="T:DevExpress.XtraReports.UI.ProcessHiddenCellMode">
       <summary>
-        <para>Lists modes used to specify how to fill the gap of a hidden cell in the <see cref="T:DevExpress.XtraReports.UI.XRTable"/> control.</para>
+        <para>Lists the available modes for processing hidden cells in the <see cref="T:DevExpress.XtraReports.UI.XRTable"/> control.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraReports.UI.ProcessHiddenCellMode.DecreaseTableWidth">
@@ -13671,7 +13671,7 @@
     </member>
     <member name="T:DevExpress.XtraReports.UI.SubBand">
       <summary>
-        <para>A report band that is a copy of the source band located above it.</para>
+        <para>A report band that provides a functional copy of the source band below which it is located.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraReports.UI.SubBand.#ctor">
@@ -15574,7 +15574,7 @@
     </member>
     <member name="M:DevExpress.XtraReports.UI.XRChart.ResetLegendPointOptions">
       <summary>
-        <para>Cancels the changes applied to the SeriesBase.LegendPointOptions for each series, and makes it equal to the SeriesBase.PointOptions.</para>
+        <para>Cancels the changes applied to the <see cref="P:DevExpress.XtraCharts.SeriesBase.LegendPointOptions"/> for each series, and makes it equal to the <see cref="P:DevExpress.XtraCharts.SeriesBase.PointOptions"/>.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraReports.UI.XRChart.ResetLegendTextPattern">
@@ -16415,9 +16415,8 @@
     </member>
     <member name="P:DevExpress.XtraReports.UI.XRControl.ProcessDuplicatesTarget">
       <summary>
-        <para>Specifies whether the data field value or the Tag property value is used to identify duplicate values in the report.</para>
+        <para>For internal use.</para>
       </summary>
-      <value>The enumeration member <see cref="T:DevExpress.XtraReports.UI.ProcessDuplicatesTarget"/>, which determines which value is considered to be a duplicate.</value>
     </member>
     <member name="P:DevExpress.XtraReports.UI.XRControl.ProcessNullValues">
       <summary>

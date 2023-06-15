@@ -3733,13 +3733,13 @@
     </member>
     <member name="P:DevExpress.DashboardWin.DashboardParameterDescriptor.Name">
       <summary>
-        <para>Gets the parameter name.</para>
+        <para>Gets a parameter name.</para>
       </summary>
       <value>A <see cref="T:System.String"/> that is the parameter name.</value>
     </member>
     <member name="P:DevExpress.DashboardWin.DashboardParameterDescriptor.SelectedValue">
       <summary>
-        <para>Gets or sets the currently selected parameter value.</para>
+        <para>Gets or sets a currently selected parameter value.</para>
       </summary>
       <value>A currently selected parameter value.</value>
     </member>
@@ -3751,7 +3751,7 @@
     </member>
     <member name="P:DevExpress.DashboardWin.DashboardParameterDescriptor.Type">
       <summary>
-        <para>Gets the parameter type.</para>
+        <para>Gets a parameter type.</para>
       </summary>
       <value>A <see cref="T:DevExpress.DashboardWin.ParameterValueType"/> enumeration value that is the type of a dashboard parameter value.</value>
     </member>

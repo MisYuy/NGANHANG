@@ -87,7 +87,7 @@ namespace NGANHANG.View
                 cmbChiNhanh.SelectedIndex = 0;
             }
             else cmbChiNhanh.SelectedIndex = 1;
-            if (Program.group == "NGANHANG")
+            if (Program.group == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
                 btnAdd.Enabled = btnConvert.Enabled = btnDelete.Enabled = btnEdit.Enabled = btnUndo.Enabled = btnSave.Enabled = false;

@@ -7185,7 +7185,7 @@
     </member>
     <member name="P:DevExpress.DataAccess.Sql.ConnectionOptions.DbCommandTimeout">
       <summary>
-        <para>Specifies the wait time (in seconds) before terminating the attempt to execute a query and generating an error.</para>
+        <para>Specifies the wait time before terminating the attempt to execute a query and generating an error.</para>
       </summary>
       <value>A nullable integer value, specifying the time in seconds to wait for the query to execute. The null value (Nothing in Visual Basic) indicates the use of the provider’s default setting. A zero value indicates unlimited timeout.</value>
     </member>

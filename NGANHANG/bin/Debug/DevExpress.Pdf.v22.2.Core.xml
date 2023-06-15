@@ -199,14 +199,14 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Office.DigitalSignatures.OcspClient"/> class with specified settings.</para>
       </summary>
-      <param name="uri">An OCSP server URI. If not specified, the certificate data is used.</param>
+      <param name="uri">An OCSP server URI.</param>
       <param name="hashAlgorithm">The hashing algorithm used to hash the issuer name and issuer public key. Default value is <see cref="F:DevExpress.Office.DigitalSignatures.HashAlgorithmType.SHA1"/>.</param>
     </member>
     <member name="M:DevExpress.Office.DigitalSignatures.OcspClient.#ctor(System.Uri)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Office.DigitalSignatures.OcspClient"/> class with specified settings.</para>
       </summary>
-      <param name="uri">An OCSP server URI. If not specified, the certificate data is used.</param>
+      <param name="uri">An OCSP server URI.</param>
     </member>
     <member name="M:DevExpress.Office.DigitalSignatures.OcspClient.GetEncoded(System.Byte[],System.Byte[])">
       <summary>
@@ -4014,7 +4014,7 @@
       <summary>
         <para>Indicates the page layout of the opened document.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.Pdf.PdfPageLayout"/> enumeration value.</value>
+      <value>A <see cref="T:DevExpress.Pdf.PdfPageLayout"/> enumeration value. The default value is <see cref="F:DevExpress.Pdf.PdfPageLayout.OneColumn"/>.</value>
     </member>
     <member name="P:DevExpress.Pdf.PdfDocument.PageMode">
       <summary>
@@ -4092,7 +4092,7 @@
       <summary>
         <para>Gets or sets the document display options.</para>
       </summary>
-      <value>An object that contains viewer preferences.</value>
+      <value>A DevExpress.Pdf.PdfViewerPreferences object.</value>
     </member>
     <member name="T:DevExpress.Pdf.PdfDocumentActions">
       <summary>
@@ -5346,14 +5346,14 @@
       <summary>
         <para>A generic form field facade class that allows you to retrieve the annotation widget properties.</para>
       </summary>
-      <typeparam name="TWidget">A <see cref="T:DevExpress.Pdf.PdfWidgetFacade"/> object that provides the class descendant (the <see cref="T:DevExpress.Pdf.PdfFormFieldFacade"/> class) with access to the form field widget.</typeparam>
-      <typeparam name="TField">A PdfInteractiveFormField object that provides the class descendant (the <see cref="T:DevExpress.Pdf.PdfFormFieldFacade"/> class) with access to inner form field properties.</typeparam>
+      <typeparam name="T">A <see cref="T:DevExpress.Pdf.PdfWidgetFacade"/> object that provides the class descendant (the <see cref="T:DevExpress.Pdf.PdfFormFieldFacade"/> class) with access to the form field widget.</typeparam>
+      <typeparam name="V">A PdfInteractiveFormField object that provides the class descendant (the <see cref="T:DevExpress.Pdf.PdfFormFieldFacade"/> class) with access to inner form field properties.</typeparam>
     </member>
     <member name="P:DevExpress.Pdf.PdfFormFieldFacade`2.Field">
       <summary>
         <para>Retrieves field’s inner properties.</para>
       </summary>
-      <value>A PdfInteractiveFormField descendant object that contains inner field properties.</value>
+      <value>A PdfInteractiveFormField descendant that contains inner field properties.</value>
     </member>
     <member name="M:DevExpress.Pdf.PdfFormFieldFacade`2.GetEnumerator">
       <summary>
@@ -7822,8 +7822,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfPageInfo"/> class with specified settings.</para>
       </summary>
-      <param name="cropBox">The page’s crop box in the user coordinate system.</param>
-      <param name="rotationAngle">The page rotation angle (in degrees).</param>
     </member>
     <member name="P:DevExpress.Pdf.PdfPageInfo.CropBox">
       <summary>
