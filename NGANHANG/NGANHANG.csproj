@@ -96,6 +96,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NGANHANG_NHANVIEN.xsd</DependentUpon>
     </Compile>
+    <Compile Include="View\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmConvert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     <Compile Include="View\frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmConvert.resx">
       <DependentUpon>frmConvert.cs</DependentUpon>
     </EmbeddedResource>

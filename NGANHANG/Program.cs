@@ -12,11 +12,11 @@ namespace NGANHANG
     static class Program
     {
         // Program variables
-        public static String connPublisherString = "Data Source = ADMIN; Initial Catalog = NGANHANG; Integrated Security = True";
         public static SqlConnection conn = new SqlConnection();
         public static string connString = null;
         public static String serverName = "";
         public static String database = "NGANHANG";
+        public static String connPublisherString = "Data Source = ADMIN; Initial Catalog =" +database+"; Integrated Security = True";
         public static String login = "";
         public static String userName = "";
         public static String password = "";
@@ -93,7 +93,28 @@ namespace NGANHANG
             }
         }
 
-
+        public static int ConnectSqlNotUser()
+        {
+            if (conn != null || Program.conn.State == System.Data.ConnectionState.Open)
+            {
+                Program.conn.Close();
+            }
+            try
+            {
+                connString = "Data Source=" + Program.serverName
+                    + ";Initial Catalog=" + Program.database
+                    + "; Integrated Security = True";
+                Program.conn.ConnectionString = connString;
+                Program.conn.Open();
+                return 1;
+            }
+            catch (SqlException ex)
+            {
+                connString = null;
+                MessageBox.Show("Kết nối thất bại: "+ex.Message);
+                return 0;
+            }
+        }
 
         public static void LogOut()
         {

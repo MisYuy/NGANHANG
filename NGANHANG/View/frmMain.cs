@@ -142,7 +142,17 @@ namespace NGANHANG
 
         private void btnChangePassword_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            Form f = this.checkExists(typeof(frmChangePassword));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                f = new frmChangePassword();
+                f.MdiParent = this;
+                f.Show();
+            }
         }
 
         private void btnCustomer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

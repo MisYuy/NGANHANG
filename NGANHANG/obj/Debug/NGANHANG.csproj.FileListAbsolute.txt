@@ -406,3 +406,4 @@ D:\BAOCAO_CSDLPT\CSDLPT_NganHang\NGANHANG\bin\Debug\DevExpress.Pdf.v22.2.Drawing
 D:\BAOCAO_CSDLPT\CSDLPT_NganHang\NGANHANG\bin\Debug\DevExpress.XtraVerticalGrid.v22.2.xml
 D:\BAOCAO_CSDLPT\CSDLPT_NganHang\NGANHANG\bin\Debug\DevExpress.XtraNavBar.v22.2.xml
 D:\BAOCAO_CSDLPT\CSDLPT_NganHang\NGANHANG\obj\Debug\NGANHANG.csproj.CopyComplete
+D:\BAOCAO_CSDLPT\CSDLPT_NganHang\NGANHANG\obj\Debug\NGANHANG.View.frmChangePassword.resources

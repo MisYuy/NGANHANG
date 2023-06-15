@@ -407,7 +407,7 @@
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 34);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(6);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1127, 100);
             this.panelControl1.TabIndex = 4;
@@ -467,7 +467,7 @@
             this.gcNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.gcNhanVien.Location = new System.Drawing.Point(0, 134);
             this.gcNhanVien.MainView = this.gridView1;
-            this.gcNhanVien.Margin = new System.Windows.Forms.Padding(6);
+            this.gcNhanVien.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.gcNhanVien.MenuManager = this.barManager1;
             this.gcNhanVien.Name = "gcNhanVien";
             this.gcNhanVien.Size = new System.Drawing.Size(1127, 220);
@@ -494,84 +494,84 @@
             // colMANV
             // 
             this.colMANV.FieldName = "MANV";
-            this.colMANV.MinWidth = 30;
+            this.colMANV.MinWidth = 37;
             this.colMANV.Name = "colMANV";
             this.colMANV.Visible = true;
             this.colMANV.VisibleIndex = 0;
-            this.colMANV.Width = 112;
+            this.colMANV.Width = 137;
             // 
             // colHO
             // 
             this.colHO.FieldName = "HO";
-            this.colHO.MinWidth = 30;
+            this.colHO.MinWidth = 37;
             this.colHO.Name = "colHO";
             this.colHO.Visible = true;
             this.colHO.VisibleIndex = 1;
-            this.colHO.Width = 112;
+            this.colHO.Width = 137;
             // 
             // colTEN
             // 
             this.colTEN.FieldName = "TEN";
-            this.colTEN.MinWidth = 30;
+            this.colTEN.MinWidth = 37;
             this.colTEN.Name = "colTEN";
             this.colTEN.Visible = true;
             this.colTEN.VisibleIndex = 2;
-            this.colTEN.Width = 112;
+            this.colTEN.Width = 137;
             // 
             // colCMND
             // 
             this.colCMND.FieldName = "CMND";
-            this.colCMND.MinWidth = 30;
+            this.colCMND.MinWidth = 37;
             this.colCMND.Name = "colCMND";
             this.colCMND.Visible = true;
             this.colCMND.VisibleIndex = 3;
-            this.colCMND.Width = 112;
+            this.colCMND.Width = 137;
             // 
             // colDIACHI
             // 
             this.colDIACHI.FieldName = "DIACHI";
-            this.colDIACHI.MinWidth = 30;
+            this.colDIACHI.MinWidth = 37;
             this.colDIACHI.Name = "colDIACHI";
             this.colDIACHI.Visible = true;
             this.colDIACHI.VisibleIndex = 4;
-            this.colDIACHI.Width = 112;
+            this.colDIACHI.Width = 137;
             // 
             // colPHAI
             // 
             this.colPHAI.FieldName = "PHAI";
-            this.colPHAI.MinWidth = 30;
+            this.colPHAI.MinWidth = 37;
             this.colPHAI.Name = "colPHAI";
             this.colPHAI.Visible = true;
             this.colPHAI.VisibleIndex = 5;
-            this.colPHAI.Width = 112;
+            this.colPHAI.Width = 137;
             // 
             // colSODT
             // 
             this.colSODT.FieldName = "SODT";
-            this.colSODT.MinWidth = 30;
+            this.colSODT.MinWidth = 37;
             this.colSODT.Name = "colSODT";
             this.colSODT.Visible = true;
             this.colSODT.VisibleIndex = 6;
-            this.colSODT.Width = 112;
+            this.colSODT.Width = 137;
             // 
             // colMACN
             // 
             this.colMACN.FieldName = "MACN";
-            this.colMACN.MinWidth = 30;
+            this.colMACN.MinWidth = 37;
             this.colMACN.Name = "colMACN";
             this.colMACN.Visible = true;
             this.colMACN.VisibleIndex = 7;
-            this.colMACN.Width = 112;
+            this.colMACN.Width = 137;
             // 
             // TrangThaiXoa
             // 
             this.TrangThaiXoa.Caption = "TrangThaiXoa";
             this.TrangThaiXoa.FieldName = "TrangThaiXoa";
-            this.TrangThaiXoa.MinWidth = 30;
+            this.TrangThaiXoa.MinWidth = 37;
             this.TrangThaiXoa.Name = "TrangThaiXoa";
             this.TrangThaiXoa.Visible = true;
             this.TrangThaiXoa.VisibleIndex = 8;
-            this.TrangThaiXoa.Width = 112;
+            this.TrangThaiXoa.Width = 137;
             // 
             // groupBox
             // 

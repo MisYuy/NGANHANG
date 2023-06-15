@@ -81,26 +81,30 @@ namespace NGANHANG.View
             }
             if (Program.ConnectSql() == 1)
             {
-                SqlDataReader myReader = Program.ExecSqlDataReader("EXEC SP_DANGNHAP '" + Program.login + "'");
-                if (myReader.Read())
-                {
-                    Program.group = myReader.GetString(2);
-                    if (Program.group != "NGANHANG" && Program.group != "CHINHANH" && Program.group != "KHACHHANG")
-                    {
-                        MessageBox.Show("Lỗi không thể lấy được thông tin tài khoản");
-                        myReader.Close();
-                        return;
-                    }
-                    Program.userName = myReader.GetString(0);
-                    Program.name = myReader.GetString(1);
-                    Program.branch = cmbChiNhanh.SelectedIndex;
-                    Program.loginLogin = Program.login;
-                    Program.loginPassword = Program.password;
-                }
-                myReader.Close ();
-                Program.f.SetWorkingSpace(Program.group);
                 MessageBox.Show("Đăng nhập thành công");
-                this.Dispose();
+                SqlDataReader myReader = Program.ExecSqlDataReader("EXEC SP_DANGNHAP '" + Program.login + "'");
+                if (myReader != null)
+                {
+                    if (myReader.Read())
+                    {
+                        Program.group = myReader.GetString(2);
+                        if (Program.group != "NGANHANG" && Program.group != "CHINHANH" && Program.group != "KHACHHANG")
+                        {
+                            MessageBox.Show("Lỗi không thể lấy được thông tin tài khoản");
+                            myReader.Close();
+                            return;
+                        }
+                        Program.userName = myReader.GetString(0);
+                        Program.name = myReader.GetString(1);
+                        Program.branch = cmbChiNhanh.SelectedIndex;
+                        Program.loginLogin = Program.login;
+                        Program.loginPassword = Program.password;
+                        Program.f.SetWorkingSpace(Program.group);
+                        this.Dispose();
+                    }
+                    myReader.Close();
+                }
+                else MessageBox.Show("Không thể đọc thông tin đăng nhập");
             }
         }
 
