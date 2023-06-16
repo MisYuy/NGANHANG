@@ -40,7 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.nGANHANGDataSet_ADMIN = new NGANHANG.NGANHANGDataSet1();
-            this.vIEW_TAIKHOANBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bdsVIEW_TAIKHOAN = new System.Windows.Forms.BindingSource(this.components);
             this.vIEW_TAIKHOANTableAdapter = new NGANHANG.NGANHANGDataSet1TableAdapters.VIEW_TAIKHOANTableAdapter();
             this.tableAdapterManager = new NGANHANG.NGANHANGDataSet1TableAdapters.TableAdapterManager();
             this.vIEW_TAIKHOANGridControl = new DevExpress.XtraGrid.GridControl();
@@ -57,52 +57,56 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSet_ADMIN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vIEW_TAIKHOANBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsVIEW_TAIKHOAN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEW_TAIKHOANGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSoTaiKhoan
             // 
-            this.txtSoTaiKhoan.Location = new System.Drawing.Point(274, 49);
-            this.txtSoTaiKhoan.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.txtSoTaiKhoan.Location = new System.Drawing.Point(308, 61);
+            this.txtSoTaiKhoan.Margin = new System.Windows.Forms.Padding(17, 19, 17, 19);
             this.txtSoTaiKhoan.Name = "txtSoTaiKhoan";
             this.txtSoTaiKhoan.Properties.ReadOnly = true;
-            this.txtSoTaiKhoan.Size = new System.Drawing.Size(424, 22);
+            this.txtSoTaiKhoan.Size = new System.Drawing.Size(477, 26);
             this.txtSoTaiKhoan.TabIndex = 0;
             // 
             // dateBatDau
             // 
             this.dateBatDau.EditValue = null;
-            this.dateBatDau.Location = new System.Drawing.Point(274, 175);
-            this.dateBatDau.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.dateBatDau.Location = new System.Drawing.Point(308, 159);
+            this.dateBatDau.Margin = new System.Windows.Forms.Padding(17, 19, 17, 19);
             this.dateBatDau.Name = "dateBatDau";
             this.dateBatDau.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateBatDau.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateBatDau.Size = new System.Drawing.Size(261, 22);
+            this.dateBatDau.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dateBatDau.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateBatDau.Size = new System.Drawing.Size(294, 26);
             this.dateBatDau.TabIndex = 1;
             // 
             // dateKetThuc
             // 
             this.dateKetThuc.EditValue = null;
-            this.dateKetThuc.Location = new System.Drawing.Point(880, 180);
-            this.dateKetThuc.Margin = new System.Windows.Forms.Padding(19, 19, 19, 19);
+            this.dateKetThuc.Location = new System.Drawing.Point(308, 229);
+            this.dateKetThuc.Margin = new System.Windows.Forms.Padding(21, 24, 21, 24);
             this.dateKetThuc.Name = "dateKetThuc";
             this.dateKetThuc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateKetThuc.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateKetThuc.Size = new System.Drawing.Size(261, 22);
+            this.dateKetThuc.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dateKetThuc.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateKetThuc.Size = new System.Drawing.Size(294, 26);
             this.dateKetThuc.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(18, 288);
-            this.button1.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.button1.Location = new System.Drawing.Point(102, 362);
+            this.button1.Margin = new System.Windows.Forms.Padding(14, 15, 14, 15);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(302, 76);
+            this.button1.Size = new System.Drawing.Size(340, 95);
             this.button1.TabIndex = 3;
             this.button1.Text = "Xem";
             this.button1.UseVisualStyleBackColor = true;
@@ -110,10 +114,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(514, 298);
-            this.button2.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.button2.Location = new System.Drawing.Point(613, 362);
+            this.button2.Margin = new System.Windows.Forms.Padding(14, 15, 14, 15);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(355, 68);
+            this.button2.Size = new System.Drawing.Size(399, 95);
             this.button2.TabIndex = 4;
             this.button2.Text = "Thoát";
             this.button2.UseVisualStyleBackColor = true;
@@ -122,30 +126,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 52);
-            this.label1.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.label1.Location = new System.Drawing.Point(189, 68);
+            this.label1.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 16);
+            this.label1.Size = new System.Drawing.Size(97, 19);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Nhập số tài khoản";
+            this.label1.Text = "Số tài khoản";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 185);
-            this.label2.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.label2.Location = new System.Drawing.Point(218, 162);
+            this.label2.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.Size = new System.Drawing.Size(68, 19);
             this.label2.TabIndex = 6;
             this.label2.Text = "Từ ngày";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(680, 185);
-            this.label3.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.label3.Location = new System.Drawing.Point(210, 232);
+            this.label3.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 16);
+            this.label3.Size = new System.Drawing.Size(76, 19);
             this.label3.TabIndex = 7;
             this.label3.Text = "Đến ngày";
             // 
@@ -157,7 +161,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(475, 33);
+            this.label4.Size = new System.Drawing.Size(574, 37);
             this.label4.TabIndex = 8;
             this.label4.Text = "SAO KÊ GIAO DỊCH CỦA TÀI KHOẢN";
             // 
@@ -171,12 +175,12 @@
             this.panelControl1.Controls.Add(this.dateBatDau);
             this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Controls.Add(this.dateKetThuc);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelControl1.Location = new System.Drawing.Point(0, 253);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.panelControl1.Location = new System.Drawing.Point(0, 235);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(17, 19, 17, 19);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1372, 394);
+            this.panelControl1.Size = new System.Drawing.Size(1544, 574);
             this.panelControl1.TabIndex = 9;
             // 
             // nGANHANGDataSet_ADMIN
@@ -184,10 +188,10 @@
             this.nGANHANGDataSet_ADMIN.DataSetName = "NGANHANGDataSet_ADMIN";
             this.nGANHANGDataSet_ADMIN.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // vIEW_TAIKHOANBindingSource
+            // bdsVIEW_TAIKHOAN
             // 
-            this.vIEW_TAIKHOANBindingSource.DataMember = "VIEW_TAIKHOAN";
-            this.vIEW_TAIKHOANBindingSource.DataSource = this.nGANHANGDataSet_ADMIN;
+            this.bdsVIEW_TAIKHOAN.DataMember = "VIEW_TAIKHOAN";
+            this.bdsVIEW_TAIKHOAN.DataSource = this.nGANHANGDataSet_ADMIN;
             // 
             // vIEW_TAIKHOANTableAdapter
             // 
@@ -201,14 +205,14 @@
             // 
             // vIEW_TAIKHOANGridControl
             // 
-            this.vIEW_TAIKHOANGridControl.DataSource = this.vIEW_TAIKHOANBindingSource;
+            this.vIEW_TAIKHOANGridControl.DataSource = this.bdsVIEW_TAIKHOAN;
             this.vIEW_TAIKHOANGridControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.vIEW_TAIKHOANGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
-            this.vIEW_TAIKHOANGridControl.Location = new System.Drawing.Point(0, 33);
+            this.vIEW_TAIKHOANGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(14, 15, 14, 15);
+            this.vIEW_TAIKHOANGridControl.Location = new System.Drawing.Point(0, 37);
             this.vIEW_TAIKHOANGridControl.MainView = this.gridView2;
-            this.vIEW_TAIKHOANGridControl.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.vIEW_TAIKHOANGridControl.Margin = new System.Windows.Forms.Padding(14, 15, 14, 15);
             this.vIEW_TAIKHOANGridControl.Name = "vIEW_TAIKHOANGridControl";
-            this.vIEW_TAIKHOANGridControl.Size = new System.Drawing.Size(1372, 570);
+            this.vIEW_TAIKHOANGridControl.Size = new System.Drawing.Size(1544, 198);
             this.vIEW_TAIKHOANGridControl.TabIndex = 11;
             this.vIEW_TAIKHOANGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -221,54 +225,55 @@
             this.colHOTEN,
             this.colSOTK,
             this.colSODU});
-            this.gridView2.DetailHeight = 1065;
+            this.gridView2.DetailHeight = 1331;
             this.gridView2.GridControl = this.vIEW_TAIKHOANGridControl;
             this.gridView2.Name = "gridView2";
             // 
             // colCMND
             // 
             this.colCMND.FieldName = "CMND";
-            this.colCMND.MinWidth = 76;
+            this.colCMND.MinWidth = 85;
             this.colCMND.Name = "colCMND";
             this.colCMND.Visible = true;
             this.colCMND.VisibleIndex = 0;
-            this.colCMND.Width = 284;
+            this.colCMND.Width = 319;
             // 
             // colHOTEN
             // 
             this.colHOTEN.FieldName = "HOTEN";
-            this.colHOTEN.MinWidth = 76;
+            this.colHOTEN.MinWidth = 85;
             this.colHOTEN.Name = "colHOTEN";
             this.colHOTEN.Visible = true;
             this.colHOTEN.VisibleIndex = 1;
-            this.colHOTEN.Width = 284;
+            this.colHOTEN.Width = 319;
             // 
             // colSOTK
             // 
             this.colSOTK.FieldName = "SOTK";
-            this.colSOTK.MinWidth = 76;
+            this.colSOTK.MinWidth = 85;
             this.colSOTK.Name = "colSOTK";
             this.colSOTK.Visible = true;
             this.colSOTK.VisibleIndex = 2;
-            this.colSOTK.Width = 284;
+            this.colSOTK.Width = 319;
             // 
             // colSODU
             // 
             this.colSODU.FieldName = "SODU";
-            this.colSODU.MinWidth = 76;
+            this.colSODU.MinWidth = 85;
             this.colSODU.Name = "colSODU";
             this.colSODU.Visible = true;
             this.colSODU.VisibleIndex = 3;
-            this.colSODU.Width = 284;
+            this.colSODU.Width = 319;
             // 
             // frmSaoKeGiaoDich
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1372, 647);
-            this.Controls.Add(this.vIEW_TAIKHOANGridControl);
+            this.ClientSize = new System.Drawing.Size(1544, 809);
             this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.vIEW_TAIKHOANGridControl);
             this.Controls.Add(this.label4);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmSaoKeGiaoDich";
             this.Text = "frmSaoKeGiaoDich";
             this.Load += new System.EventHandler(this.frmSaoKeGiaoDich_Load);
@@ -281,7 +286,7 @@
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSet_ADMIN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vIEW_TAIKHOANBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsVIEW_TAIKHOAN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEW_TAIKHOANGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
@@ -302,7 +307,7 @@
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private NGANHANGDataSet1 nGANHANGDataSet_ADMIN;
-        private System.Windows.Forms.BindingSource vIEW_TAIKHOANBindingSource;
+        private System.Windows.Forms.BindingSource bdsVIEW_TAIKHOAN;
         private NGANHANGDataSet1TableAdapters.VIEW_TAIKHOANTableAdapter vIEW_TAIKHOANTableAdapter;
         private NGANHANGDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private DevExpress.XtraGrid.GridControl vIEW_TAIKHOANGridControl;

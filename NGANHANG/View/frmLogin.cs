@@ -81,14 +81,14 @@ namespace NGANHANG.View
             }
             if (Program.ConnectSql() == 1)
             {
-                MessageBox.Show("Đăng nhập thành công");
+                
                 SqlDataReader myReader = Program.ExecSqlDataReader("EXEC SP_DANGNHAP '" + Program.login + "'");
                 if (myReader != null)
                 {
                     if (myReader.Read())
                     {
                         Program.group = myReader.GetString(2);
-                        if (Program.group != "NGANHANG" && Program.group != "CHINHANH" && Program.group != "KHACHHANG")
+                        if (Program.group != "NganHang" && Program.group != "ChiNhanh" && Program.group != "KhachHang")
                         {
                             MessageBox.Show("Lỗi không thể lấy được thông tin tài khoản");
                             myReader.Close();
@@ -101,6 +101,7 @@ namespace NGANHANG.View
                         Program.loginLogin = Program.login;
                         Program.loginPassword = Program.password;
                         Program.f.SetWorkingSpace(Program.group);
+                        MessageBox.Show("Đăng nhập thành công");
                         this.Dispose();
                     }
                     myReader.Close();

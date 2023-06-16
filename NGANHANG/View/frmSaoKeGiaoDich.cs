@@ -22,6 +22,7 @@ namespace NGANHANG.View
         private void frmSaoKeGiaoDich_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'nGANHANGDataSet_ADMIN.VIEW_TAIKHOAN' table. You can move, or remove it, as needed.
+            this.vIEW_TAIKHOANTableAdapter.Connection.ConnectionString = Program.connString;
             this.vIEW_TAIKHOANTableAdapter.Fill(this.nGANHANGDataSet_ADMIN.VIEW_TAIKHOAN);
 
         }
@@ -51,9 +52,8 @@ namespace NGANHANG.View
                 return;
             }
 
-            string ngayBD = ngayBatDau.ToString("ddMMyyyy");
-            string ngayKT = ngayKetThuc.ToString("ddMMyyyy");
-
+            string ngayBD = ngayBatDau.ToString("yyyy/MM/dd");
+            string ngayKT = ngayKetThuc.ToString("yyyy/MM/dd");
 
 
 

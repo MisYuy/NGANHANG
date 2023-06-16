@@ -30,8 +30,6 @@ namespace NGANHANG.View
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.hyperlinkLabelControl2 = new DevExpress.XtraEditors.HyperlinkLabelControl();
-            this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPassword = new DevExpress.XtraEditors.TextEdit();
@@ -49,8 +47,6 @@ namespace NGANHANG.View
             // groupControl1
             // 
             this.groupControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupControl1.Controls.Add(this.hyperlinkLabelControl2);
-            this.groupControl1.Controls.Add(this.hyperlinkLabelControl1);
             this.groupControl1.Controls.Add(this.cmbChiNhanh);
             this.groupControl1.Controls.Add(this.label3);
             this.groupControl1.Controls.Add(this.txtPassword);
@@ -63,22 +59,6 @@ namespace NGANHANG.View
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
-            // 
-            // hyperlinkLabelControl2
-            // 
-            this.hyperlinkLabelControl2.Location = new System.Drawing.Point(32, 224);
-            this.hyperlinkLabelControl2.Name = "hyperlinkLabelControl2";
-            this.hyperlinkLabelControl2.Size = new System.Drawing.Size(109, 19);
-            this.hyperlinkLabelControl2.TabIndex = 10;
-            this.hyperlinkLabelControl2.Text = "Quên mật khẩu";
-            // 
-            // hyperlinkLabelControl1
-            // 
-            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(238, 224);
-            this.hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
-            this.hyperlinkLabelControl1.Size = new System.Drawing.Size(58, 19);
-            this.hyperlinkLabelControl1.TabIndex = 9;
-            this.hyperlinkLabelControl1.Text = "Đăng ký";
             // 
             // cmbChiNhanh
             // 
@@ -184,8 +164,6 @@ namespace NGANHANG.View
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton btnLogin;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
-        private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl2;
-        private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl1;
         public System.Windows.Forms.ComboBox cmbChiNhanh;
         public DevExpress.XtraEditors.TextEdit txtPassword;
         public DevExpress.XtraEditors.TextEdit txtUserName;

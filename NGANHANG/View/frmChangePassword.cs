@@ -46,9 +46,10 @@ namespace NGANHANG.View
                     if (excute == 0)
                     {
                         MessageBox.Show("Đổi mật khẩu thành công, vui lòng đăng nhập lại", "Thông báo");
-                        Program.LogOut();
+                        
                         Program.conn.ConnectionString = Program.connPublisherString;
                         Program.conn.Open();
+                        Program.LogOut();
                         this.Dispose();
                     }
                     else

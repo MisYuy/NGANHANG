@@ -47,7 +47,7 @@ namespace NGANHANG
                 this.btnCustomer.Enabled = false;
                 
             }
-            else if (role == "CHINHANH" || role == "NGANHANG")
+            else if (role == "ChiNhanh" || role == "NganHang")
             {
                 this.MaNV.Text = Program.userName;
                 this.HoTen.Text = Program.name;
@@ -59,7 +59,7 @@ namespace NGANHANG
                 this.btnEmployee.Enabled = true;
                 this.btnCustomer.Enabled = true;
             }
-            else if (role == "KHACHHANG")
+            else if (role == "KhachHang")
             {
                 this.MaNV.Text = Program.userName;
                 this.HoTen.Text = Program.name;
