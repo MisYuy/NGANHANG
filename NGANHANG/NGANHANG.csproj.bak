@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v22.2" />
     <Reference Include="DevExpress.Charts.v22.2.Core, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Dashboard.v22.2.Core, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Dashboard.v22.2.Win, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.Desktop.v22.2" />
@@ -87,10 +88,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>KhachHang_BENTHANH.xsd</DependentUpon>
     </Compile>
+    <Compile Include="NGANHANGDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NGANHANGDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NGANHANG_ChiNhanh.cs">
+      <DependentUpon>NGANHANG_ChiNhanh.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NGANHANG_ChiNhanh.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NGANHANG_ChiNhanh.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NGANHANGDataSetkhachhang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NGANHANGDataSetkhachhang.xsd</DependentUpon>
     </Compile>
     <Compile Include="NGANHANG_NHANVIEN.cs">
       <DependentUpon>NGANHANG_NHANVIEN.xsd</DependentUpon>
@@ -120,11 +134,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TAIKHOANDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="View\frmCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmCustomer.Designer.cs">
-      <DependentUpon>frmCustomer.cs</DependentUpon>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="View\frmChangePassword.cs">
       <SubType>Form</SubType>
@@ -138,11 +151,29 @@
     <Compile Include="View\frmConvert.Designer.cs">
       <DependentUpon>frmConvert.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmEmployee.designer.cs">
+    <Compile Include="View\frmEmployee.Designer.cs">
       <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmLietKeKhachHangTheoChiNhanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmLietKeKhachHangTheoChiNhanh.Designer.cs">
+      <DependentUpon>frmLietKeKhachHangTheoChiNhanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmLietKeTaiKhoanMocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmLietKeTaiKhoanMocs.Designer.cs">
+      <DependentUpon>frmLietKeTaiKhoanMocs.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmLogin.cs">
       <SubType>Form</SubType>
@@ -156,26 +187,56 @@
     <Compile Include="View\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmSaoKeGiaoDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmSaoKeGiaoDich.Designer.cs">
+      <DependentUpon>frmSaoKeGiaoDich.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmService.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmService.Designer.cs">
       <DependentUpon>frmService.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\rpt_LietKeKhachHangTheoChiNhanh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\rpt_LietKeKhachHangTheoChiNhanh.Designer.cs">
+      <DependentUpon>rpt_LietKeKhachHangTheoChiNhanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\rpt_SaoKeGiaoDichTaiKhoan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\rpt_SaoKeGiaoDichTaiKhoan.Designer.cs">
+      <DependentUpon>rpt_SaoKeGiaoDichTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\rpt_TaiKhoanMoTatCaChiNhanh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\rpt_TaiKhoanMoTatCaChiNhanh.Designer.cs">
+      <DependentUpon>rpt_TaiKhoanMoTatCaChiNhanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\rpt_TaiKhoanMo_1_ChiNhanh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\rpt_TaiKhoanMo_1_ChiNhanh.Designer.cs">
+      <DependentUpon>rpt_TaiKhoanMo_1_ChiNhanh.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmCustomer.resx">
-      <DependentUpon>frmCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <Compile Include="View\frmRegister.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmRegister.Designer.cs">
-      <DependentUpon>frmRegister.cs</DependentUpon>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="View\frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
@@ -183,27 +244,48 @@
     <EmbeddedResource Include="View\frmConvert.resx">
       <DependentUpon>frmConvert.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmEmployee.resx">
       <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmLietKeKhachHangTheoChiNhanh.resx">
+      <DependentUpon>frmLietKeKhachHangTheoChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmLietKeTaiKhoanMocs.resx">
+      <DependentUpon>frmLietKeTaiKhoanMocs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="View\frmService.resx">
-      <DependentUpon>frmService.cs</DependentUpon>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="View\frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmSaoKeGiaoDich.resx">
+      <DependentUpon>frmSaoKeGiaoDich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmService.resx">
+      <DependentUpon>frmService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\rpt_LietKeKhachHangTheoChiNhanh.resx">
+      <DependentUpon>rpt_LietKeKhachHangTheoChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\rpt_SaoKeGiaoDichTaiKhoan.resx">
+      <DependentUpon>rpt_SaoKeGiaoDichTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\rpt_TaiKhoanMoTatCaChiNhanh.resx">
+      <DependentUpon>rpt_TaiKhoanMoTatCaChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\rpt_TaiKhoanMo_1_ChiNhanh.resx">
+      <DependentUpon>rpt_TaiKhoanMo_1_ChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="App.config" />
     <None Include="KhachHang_BENTHANH.xsc">
       <DependentUpon>KhachHang_BENTHANH.xsd</DependentUpon>
@@ -216,6 +298,17 @@
     <None Include="KhachHang_BENTHANH.xss">
       <DependentUpon>KhachHang_BENTHANH.xsd</DependentUpon>
     </None>
+    <None Include="NGANHANGDataSet1.xsc">
+      <DependentUpon>NGANHANGDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="NGANHANGDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NGANHANGDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NGANHANGDataSet1.xss">
+      <DependentUpon>NGANHANGDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="NGANHANG_ChiNhanh.xsc">
       <DependentUpon>NGANHANG_ChiNhanh.xsd</DependentUpon>
     </None>
@@ -226,6 +319,17 @@
     </None>
     <None Include="NGANHANG_ChiNhanh.xss">
       <DependentUpon>NGANHANG_ChiNhanh.xsd</DependentUpon>
+    </None>
+    <None Include="NGANHANGDataSetkhachhang.xsc">
+      <DependentUpon>NGANHANGDataSetkhachhang.xsd</DependentUpon>
+    </None>
+    <None Include="NGANHANGDataSetkhachhang.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NGANHANGDataSetkhachhang.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NGANHANGDataSetkhachhang.xss">
+      <DependentUpon>NGANHANGDataSetkhachhang.xsd</DependentUpon>
     </None>
     <None Include="NGANHANG_TANDINH.xsc">
       <DependentUpon>NGANHANG_TANDINH.xsd</DependentUpon>

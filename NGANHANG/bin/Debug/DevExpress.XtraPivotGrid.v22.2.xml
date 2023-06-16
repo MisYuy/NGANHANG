@@ -5495,19 +5495,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <value>true if a menu used to open an Expression Editor for unbound fields is available; otherwise, false.</value>
     </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridField.CollapseAllAsync">
-      <summary>
-        <para>Collapses all columns or rows of the specified Pivot Grid field asynchronously.</para>
-      </summary>
-      <returns>An asynchronous operation that returns true in case of success.</returns>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridField.CollapseValueAsync(System.Object)">
-      <summary>
-        <para>Collapses the specified column or row of the Pivot Grid field asynchronously.</para>
-      </summary>
-      <param name="value">An array of field values that identify the column/row to be collapsed.</param>
-      <returns>An asynchronous operation that returns true in case of success.</returns>
-    </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridField.CustomTotals">
       <summary>
         <para>Gets the current field’s custom total collection.</para>
@@ -5525,19 +5512,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Gets or sets the width and height of the field’s filter dropdown.</para>
       </summary>
       <value>A <see cref="T:System.Drawing.Size"/> structure that specifies the width and height (in pixels) of the field’s filter dropdown.</value>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridField.ExpandAllAsync">
-      <summary>
-        <para>Expands all columns or rows of the specified Pivot Grid field asynchronously.</para>
-      </summary>
-      <returns>An asynchronous operation that returns true in case of success.</returns>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridField.ExpandValueAsync(System.Object)">
-      <summary>
-        <para>Expands the specified column or row of the Pivot Grid field asynchronously.</para>
-      </summary>
-      <param name="value">An array of field values that identify the column/row to be expanded.</param>
-      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridField.FieldEdit">
       <summary>

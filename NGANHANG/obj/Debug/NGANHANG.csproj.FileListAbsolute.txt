@@ -528,3 +528,10 @@ D:\phân tán\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.rpt_LietKeKhachHangTheoC
 D:\phân tán\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.rpt_SaoKeGiaoDichTaiKhoan.resources
 D:\phân tán\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.rpt_TaiKhoanMoTatCaChiNhanh.resources
 D:\phân tán\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.rpt_TaiKhoanMo_1_ChiNhanh.resources
+D:\NGANHANG\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.frmLietKeKhachHangTheoChiNhanh.resources
+D:\NGANHANG\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.frmLietKeTaiKhoanMocs.resources
+D:\NGANHANG\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.frmSaoKeGiaoDich.resources
+D:\NGANHANG\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.rpt_LietKeKhachHangTheoChiNhanh.resources
+D:\NGANHANG\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.rpt_SaoKeGiaoDichTaiKhoan.resources
+D:\NGANHANG\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.rpt_TaiKhoanMoTatCaChiNhanh.resources
+D:\NGANHANG\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.rpt_TaiKhoanMo_1_ChiNhanh.resources

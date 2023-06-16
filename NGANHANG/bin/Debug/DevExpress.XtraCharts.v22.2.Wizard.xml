@@ -836,7 +836,7 @@
     </member>
     <member name="P:DevExpress.XtraCharts.Designer.AxisTitleModel.Visible">
       <summary>
-        <para>Gets or sets the value of the AxisTitle.Visible within the model.</para>
+        <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.AxisTitle.Visible"/> within the model.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraCharts.Designer.AxisTitleModel.WordWrap">
@@ -3391,7 +3391,7 @@
     </member>
     <member name="P:DevExpress.XtraCharts.Designer.DockableTitleModel.Visible">
       <summary>
-        <para>Gets or sets the value of the DockableTitle.Visible property within the model.</para>
+        <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.DockableTitle.Visible"/> within the model.</para>
       </summary>
       <value>true if the dockable title is visible; otherwise false.</value>
     </member>
@@ -4192,9 +4192,9 @@
     </member>
     <member name="P:DevExpress.XtraCharts.Designer.GridPaneLayoutModel.Direction">
       <summary>
-        <para>Gets or sets the GridPaneLayout.Direction property value within the model.</para>
+        <para>Gets or sets the <see cref="P:DevExpress.XtraCharts.GridPaneLayout.Direction"/> property value within the model.</para>
       </summary>
-      <value>A PaneLayoutDirection enumeration value.</value>
+      <value>A <see cref="T:DevExpress.XtraCharts.PaneLayoutDirection"/> enumeration value.</value>
     </member>
     <member name="P:DevExpress.XtraCharts.Designer.GridPaneLayoutModel.RowDefinitions">
       <summary>
@@ -4549,12 +4549,6 @@
         <para>Specifies the value of the <see cref="P:DevExpress.XtraCharts.LegendBase.DXFont"/> property within the model.</para>
       </summary>
       <value>The font used to display the legend’s contents.</value>
-    </member>
-    <member name="P:DevExpress.XtraCharts.Designer.LegendBaseModel.TextOffset">
-      <summary>
-        <para>Gets or sets the <see cref="P:DevExpress.XtraCharts.LegendBase.TextOffset"/> property value within the model.</para>
-      </summary>
-      <value>An integer value that specifies the indent between a legend marker and its text, in pixels.</value>
     </member>
     <member name="T:DevExpress.XtraCharts.Designer.LegendCollectionModel">
       <summary>
@@ -5043,12 +5037,6 @@
         <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.NumericScaleOptions.GridAlignment"/> within the model.</para>
       </summary>
       <value>The measurement unit to which gridlines and labels should be aligned.</value>
-    </member>
-    <member name="P:DevExpress.XtraCharts.Designer.NumericScaleOptionsModel.GridAlignmentStartPoint">
-      <summary>
-        <para>Specifies the value of the GridAlignmentStartPoint property within the model.</para>
-      </summary>
-      <value>The start point for aligning the scale along the x-axis.</value>
     </member>
     <member name="P:DevExpress.XtraCharts.Designer.NumericScaleOptionsModel.IntervalOptions">
       <summary>
@@ -9894,13 +9882,13 @@
     </member>
     <member name="P:DevExpress.XtraCharts.Designer.XYDiagramPaneBaseModel.SizeInPixels">
       <summary>
-        <para>Gets or sets the value of the XYDiagramPaneBase.SizeInPixels within the model.</para>
+        <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.XYDiagramPaneBase.SizeInPixels"/> within the model.</para>
       </summary>
       <value>The pane size in pixels.</value>
     </member>
     <member name="P:DevExpress.XtraCharts.Designer.XYDiagramPaneBaseModel.SizeMode">
       <summary>
-        <para>Gets or sets the value of the XYDiagramPaneBase.SizeMode within the model.</para>
+        <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.XYDiagramPaneBase.SizeMode"/> within the model.</para>
       </summary>
       <value>The pane size mode.</value>
     </member>
@@ -9924,13 +9912,13 @@
     </member>
     <member name="P:DevExpress.XtraCharts.Designer.XYDiagramPaneBaseModel.Visible">
       <summary>
-        <para>Gets or sets the value of the Visible property within the model.</para>
+        <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.XYDiagramPaneBase.Visible"/> within the model.</para>
       </summary>
       <value>true if the pane is visible; otherwise false.</value>
     </member>
     <member name="P:DevExpress.XtraCharts.Designer.XYDiagramPaneBaseModel.Weight">
       <summary>
-        <para>Gets or sets the value of the XYDiagramPaneBase.Weight within the model.</para>
+        <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.XYDiagramPaneBase.Weight"/> within the model.</para>
       </summary>
       <value>The pane size, in relation to other panes.</value>
     </member>

@@ -856,7 +856,7 @@
     </member>
     <member name="M:DevExpress.XtraCharts.ChartControl.ResetLegendPointOptions">
       <summary>
-        <para>Cancels the changes applied to the SeriesBase.LegendPointOptions for each series and makes it equal to the SeriesBase.PointOptions.</para>
+        <para>Cancels the changes applied to the <see cref="P:DevExpress.XtraCharts.SeriesBase.LegendPointOptions"/> for each series and makes it equal to the <see cref="P:DevExpress.XtraCharts.SeriesBase.PointOptions"/>.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraCharts.ChartControl.ResetLegendTextPattern">

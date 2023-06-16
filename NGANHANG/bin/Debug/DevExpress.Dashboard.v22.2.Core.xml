@@ -6510,15 +6510,15 @@
     </member>
     <member name="P:DevExpress.DashboardCommon.DashboardParameter.Description">
       <summary>
-        <para>Gets or sets the dashboard parameter’s description displayed for users.</para>
+        <para>Gets or sets the parameter’s description displayed to an end-user.</para>
       </summary>
-      <value>A <see cref="T:System.String"/> that specifies the dashboard parameter’s description displayed to an user.</value>
+      <value>A <see cref="T:System.String"/> that specifies the parameter’s description displayed to an end-user.</value>
     </member>
     <member name="P:DevExpress.DashboardCommon.DashboardParameter.LookUpSettings">
       <summary>
-        <para>Gets or sets the look-up settings of the dashboard parameter.</para>
+        <para>Gets or sets the look-up editor settings of the parameter.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.DashboardCommon.ParameterLookUpSettings"/> descendant that specifies the look-up settings of the dashboard parameter.</value>
+      <value>A <see cref="T:DevExpress.DashboardCommon.ParameterLookUpSettings"/> descendant that specifies the look-up editor settings of the parameter.</value>
     </member>
     <member name="P:DevExpress.DashboardCommon.DashboardParameter.SelectAllValues">
       <summary>
@@ -6528,9 +6528,9 @@
     </member>
     <member name="P:DevExpress.DashboardCommon.DashboardParameter.Visible">
       <summary>
-        <para>Gets or sets whether the dashboard parameter is visible the Dashboard Parameters dialog.</para>
+        <para>Gets or sets whether a parameter’s editor is visible within the Dashboard Parameters dialog.</para>
       </summary>
-      <value>true to display the dashboard parameter in the Dashboard Parameters dialog; otherwise, false.</value>
+      <value>true to display a parameter’s editor within the Dashboard Parameters dialog; otherwise, false.</value>
     </member>
     <member name="T:DevExpress.DashboardCommon.DashboardParameterCollection">
       <summary>
@@ -9896,15 +9896,15 @@
     </member>
     <member name="P:DevExpress.DashboardCommon.DynamicListLookUpSettings.DataMember">
       <summary>
-        <para>Gets or sets a specific data member in a dashboard data source for a dashboard parameter.</para>
+        <para>Gets or sets a specific data member in a dashboard data source.</para>
       </summary>
-      <value>A <see cref="T:System.String"/> value that specifies a data member in a dashboard data source for a dashboard parameter.</value>
+      <value>A <see cref="T:System.String"/> value that specifies a data member in a dashboard data source.</value>
     </member>
     <member name="P:DevExpress.DashboardCommon.DynamicListLookUpSettings.DataSource">
       <summary>
         <para>Gets or sets the data source for the dashboard parameter.</para>
       </summary>
-      <value>An object implementing the <see cref="T:DevExpress.DashboardCommon.IDashboardDataSource"/> interface that specifies the data source for the dashboard parameter.</value>
+      <value>An object implementing the <see cref="T:DevExpress.DashboardCommon.IDashboardDataSource"/> interface that specifies a data source data source for the dashboard parameter.</value>
     </member>
     <member name="P:DevExpress.DashboardCommon.DynamicListLookUpSettings.DataSourceName">
       <summary>
@@ -9919,13 +9919,13 @@
     </member>
     <member name="P:DevExpress.DashboardCommon.DynamicListLookUpSettings.SortByMember">
       <summary>
-        <para>Gets or sets the data member whose values are used to apply sorting to displayed dashboard parameter values.</para>
+        <para>Gets or sets the data member whose values are used to apply sorting to displayed parameter values.</para>
       </summary>
-      <value>A <see cref="T:System.String"/> that specifies the data member whose values are used to apply sorting to displayed  dashboard parameter values.</value>
+      <value>A <see cref="T:System.String"/> that specifies the data member whose values are used to apply sorting to displayed parameter values.</value>
     </member>
     <member name="P:DevExpress.DashboardCommon.DynamicListLookUpSettings.SortOrder">
       <summary>
-        <para>Gets or sets the sort order of dashboard parameter values.</para>
+        <para>Gets or sets the sort order of parameter values.</para>
       </summary>
       <value>A <see cref="T:DevExpress.DashboardCommon.DimensionSortOrder"/> enumeration value that specifies the sort order of parameter values.</value>
     </member>
@@ -21548,15 +21548,15 @@
     </member>
     <member name="P:DevExpress.DataAccess.Parameter.AllowMultiselect">
       <summary>
-        <para>Gets or sets whether multi-selection is enabled for the dashboard parameter.</para>
+        <para>Gets or sets whether multi-selection is enabled for the current parameter.</para>
       </summary>
-      <value>true to allow end-users to select the multiple parameter values; otherwise, false.</value>
+      <value>true, to allow end-users to use the multiple parameter values; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.DataAccess.Parameter.AllowNull">
       <summary>
-        <para>Gets or sets whether or a not null value can be passed as a dashboard parameter value.</para>
+        <para>Gets or sets whether or a not null value can be passed as a parameter value.</para>
       </summary>
-      <value>true to allow end-users to pass a null value as a dashboard parameter value; otherwise, false.</value>
+      <value>true, to allow end-users to pass a null value as a parameter value; otherwise, false.</value>
     </member>
     <member name="M:DevExpress.DataAccess.Parameter.Clone">
       <summary>
@@ -21566,27 +21566,27 @@
     </member>
     <member name="P:DevExpress.DataAccess.Parameter.Name">
       <summary>
-        <para>Gets of sets the dashboard parameter name.</para>
+        <para>Gets of sets the parameter name.</para>
       </summary>
-      <value>A <see cref="T:System.String"/> value that specifies the dashboard parameter name.</value>
+      <value>A <see cref="T:System.String"/> value that specifies the parameter name.</value>
     </member>
     <member name="P:DevExpress.DataAccess.Parameter.SelectAllValues">
       <summary>
-        <para>Gets or sets whether all parameter values should be selected in the initial state of the dashboard.</para>
+        <para>Gets or sets whether all parameter values should be selected in the initial state of the Dashboard Viewer.</para>
       </summary>
-      <value>true to select all parameter values in the initial state of the dashboard; otherwise, false.</value>
+      <value>true, to select all parameter values by default; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.DataAccess.Parameter.Type">
       <summary>
-        <para>Gets or sets the dashboard parameter type.</para>
+        <para>Gets or sets the parameter type.</para>
       </summary>
-      <value>A <see cref="T:System.Type"/> object that specifies the dashboard parameter type.</value>
+      <value>A <see cref="T:System.Type"/> object that specifies the parameter type.</value>
     </member>
     <member name="P:DevExpress.DataAccess.Parameter.Value">
       <summary>
-        <para>Gets or sets the default dashboard parameter value(s).</para>
+        <para>Gets or sets the default parameter value.</para>
       </summary>
-      <value>The default dashboard parameter value(s).</value>
+      <value>The default parameter value.</value>
     </member>
     <member name="T:DevExpress.DataAccess.UniqueItemCollection`1">
       <summary>

@@ -8,11 +8,6 @@ namespace NGANHANG.View
 {
     public partial class rpt_LietKeKhachHangTheoChiNhanh : DevExpress.XtraReports.UI.XtraReport
     {
-        public rpt_LietKeKhachHangTheoChiNhanh()
-        {
-            
-        }
-
         public rpt_LietKeKhachHangTheoChiNhanh(string machinnhanh)
         {
             InitializeComponent();
@@ -20,6 +15,6 @@ namespace NGANHANG.View
             this.sqlDataSource1.Queries[0].Parameters[0].Value = machinnhanh;
             this.sqlDataSource1.Fill();
         }
-
+        public rpt_LietKeKhachHangTheoChiNhanh() { }
     }
 }
