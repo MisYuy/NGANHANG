@@ -52,7 +52,8 @@ namespace NGANHANG
                 this.MaNV.Text = Program.userName;
                 this.HoTen.Text = Program.name;
                 this.Nhom.Text = Program.group;
-                this.QuanTriPage.Visible = this.NghiepVuPage.Visible = this.ThongKePage.Visible = true;
+                this.QuanTriPage.Visible = this.ThongKePage.Visible = true;
+                this.NghiepVuPage.Visible = (role == "ChiNhanh");
                 this.btnLogin.Enabled = false;
                 this.btnChangePassword.Enabled = true;
                 this.btnLogout.Enabled = true;

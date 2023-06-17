@@ -1161,7 +1161,7 @@
     </member>
     <member name="P:DevExpress.PivotGrid.Printing.PrintAppearanceObject.BackColor2">
       <summary>
-        <para>Overrides the <see cref="P:DevExpress.Utils.AppearanceObject.BackColor2"/> property to hide it.</para>
+        <para>Overrides the AppearanceObject.BackColor2 property to hide it.</para>
       </summary>
       <value>A <see cref="T:System.Drawing.Color"/> structure.</value>
     </member>
@@ -1199,11 +1199,11 @@
       <summary>
         <para>Specifies the background gradient’s direction.</para>
       </summary>
-      <value>A <see cref="T:System.Drawing.Drawing2D.LinearGradientMode"/> enumeration value</value>
+      <value>A <see cref="T:System.Drawing.Drawing2D.LinearGradientMode"/> enumeration value.</value>
     </member>
     <member name="P:DevExpress.PivotGrid.Printing.PrintAppearanceObject.Image">
       <summary>
-        <para>Overrides the <see cref="P:DevExpress.Utils.AppearanceObject.Image"/> property to hide it.</para>
+        <para>Overrides the AppearanceObject.Image property to hide it.</para>
       </summary>
       <value>An <see cref="T:System.Drawing.Image"/> object.</value>
     </member>

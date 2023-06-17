@@ -16,7 +16,7 @@ namespace NGANHANG
         public static String connString = null;
         public static String serverName = "";
         public static String database = "NGANHANG";
-        public static String connPublisherString = "Data Source = ADMIN; Initial Catalog =" +database+"; Integrated Security = True";
+        public static String connPublisherString = "Data Source = MSI; Initial Catalog =" +database+"; Integrated Security = True";
         public static String login = "";
         public static String userName = "";
         public static String password = "";

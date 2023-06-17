@@ -3551,6 +3551,42 @@
       </summary>
       <param name="container">An IContainer object, which is the owner container of the created ExplicitUnitOfWork instance.</param>
     </member>
+    <member name="M:DevExpress.Xpo.ExplicitUnitOfWork.#ctor(System.IServiceProvider,DevExpress.Xpo.IDataLayer,System.IDisposable[])">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.ExplicitUnitOfWork"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the <see cref="P:DevExpress.Xpo.Session.ServiceProvider"/> property.</param>
+      <param name="layer">An object which implements the <see cref="T:DevExpress.Xpo.IDataLayer"/> interface. This value is assigned to the <see cref="P:DevExpress.Xpo.Session.DataLayer"/> property.</param>
+      <param name="disposeOnDisconnect">An array of objects that implement the System.IDisposable interface. These objects are automatically disposed of when the session is disconnected.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.ExplicitUnitOfWork.#ctor(System.IServiceProvider,DevExpress.Xpo.IObjectLayer,System.IDisposable[])">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.ExplicitUnitOfWork"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the <see cref="P:DevExpress.Xpo.Session.ServiceProvider"/> property.</param>
+      <param name="layer">An object which implements the <see cref="T:DevExpress.Xpo.IObjectLayer"/> interface. This value is assigned to the <see cref="P:DevExpress.Xpo.Session.ObjectLayer"/> property.</param>
+      <param name="disposeOnDisconnect">An array of objects that implement the System.IDisposable interface. These objects are automatically disposed of when the session is disconnected.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.ExplicitUnitOfWork.#ctor(System.IServiceProvider,DevExpress.Xpo.Metadata.XPDictionary)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.ExplicitUnitOfWork"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the <see cref="P:DevExpress.Xpo.Session.ServiceProvider"/> property.</param>
+      <param name="dictionary">An <see cref="T:DevExpress.Xpo.Metadata.XPDictionary"/> descendant that provides metadata on persistent objects in a data store.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.ExplicitUnitOfWork.#ctor(System.IServiceProvider,System.ComponentModel.IContainer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.ExplicitUnitOfWork"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the <see cref="P:DevExpress.Xpo.Session.ServiceProvider"/> property.</param>
+      <param name="container">An IContainer object, which is the owner container of the created UnitOfWork instance.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.ExplicitUnitOfWork.#ctor(System.IServiceProvider)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.ExplicitUnitOfWork"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the <see cref="P:DevExpress.Xpo.Session.ServiceProvider"/> property.</param>
+    </member>
     <member name="M:DevExpress.Xpo.ExplicitUnitOfWork.BeginTransaction">
       <summary>
         <para>Marks the starting point of a database level transaction.</para>
@@ -7887,6 +7923,42 @@
       </summary>
       <param name="container">An IContainer object, which is the owner container of the created Session instance.</param>
     </member>
+    <member name="M:DevExpress.Xpo.Session.#ctor(System.IServiceProvider,DevExpress.Xpo.IDataLayer,System.IDisposable[])">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.Session"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the <see cref="P:DevExpress.Xpo.Session.ServiceProvider"/> property.</param>
+      <param name="layer">An object which implements the <see cref="T:DevExpress.Xpo.IDataLayer"/> interface. This value is assigned to the <see cref="P:DevExpress.Xpo.Session.DataLayer"/> property.</param>
+      <param name="disposeOnDisconnect">An array of objects that implement the System.IDisposable interface. These objects are automatically disposed of when the session is disconnected.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.Session.#ctor(System.IServiceProvider,DevExpress.Xpo.IObjectLayer,System.IDisposable[])">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.Session"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the <see cref="P:DevExpress.Xpo.Session.ServiceProvider"/> property.</param>
+      <param name="layer">An object which implements the <see cref="T:DevExpress.Xpo.IObjectLayer"/> interface. This value is assigned to the <see cref="P:DevExpress.Xpo.Session.ObjectLayer"/> property.</param>
+      <param name="disposeOnDisconnect">An array of objects that implement the System.IDisposable interface. These objects are automatically disposed of when the session is disconnected.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.Session.#ctor(System.IServiceProvider,DevExpress.Xpo.Metadata.XPDictionary)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.Session"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the <see cref="P:DevExpress.Xpo.Session.ServiceProvider"/> property.</param>
+      <param name="dictionary">An <see cref="T:DevExpress.Xpo.Metadata.XPDictionary"/> object, which is the metadata provider to be used by the newly instantiated session. This value is assigned to the <see cref="P:DevExpress.Xpo.Session.Dictionary"/> property.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.Session.#ctor(System.IServiceProvider,System.ComponentModel.IContainer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.Session"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the <see cref="P:DevExpress.Xpo.Session.ServiceProvider"/> property.</param>
+      <param name="container">An IContainer object, which is the owner container of the created Session instance.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.Session.#ctor(System.IServiceProvider)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.Session"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the <see cref="P:DevExpress.Xpo.Session.ServiceProvider"/> property.</param>
+    </member>
     <member name="E:DevExpress.Xpo.Session.AfterBeginTrackingChanges">
       <summary>
         <para>Occurs after a transaction (a database level transaction in an explicit unit of work) has been started tracking changes made to persistent objects.</para>
@@ -11030,6 +11102,12 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
       <param name="cancellationToken">A CancellationToken object that delivers a cancellation notice to the running operation.</param>
       <returns>A Task that returns a list of object arrays. These object arrays represent object properties retrieved from a session.</returns>
     </member>
+    <member name="P:DevExpress.Xpo.Session.ServiceProvider">
+      <summary>
+        <para>Gets the service provider used by the current session to access service objects.</para>
+      </summary>
+      <value>An object that implements the <see cref="T:System.IServiceProvider"/> interface.</value>
+    </member>
     <member name="M:DevExpress.Xpo.Session.SetAsyncRequestPriority(System.Object,DevExpress.Xpo.Helpers.AsyncRequestPriority)">
       <summary>
         <para>This method is intended for internal use.</para>
@@ -12138,6 +12216,42 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
       </summary>
       <param name="container">An IContainer object, which is the owner container of the created UnitOfWork instance.</param>
     </member>
+    <member name="M:DevExpress.Xpo.UnitOfWork.#ctor(System.IServiceProvider,DevExpress.Xpo.IDataLayer,System.IDisposable[])">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.UnitOfWork"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the <see cref="P:DevExpress.Xpo.Session.ServiceProvider"/> property.</param>
+      <param name="layer">An object which implements the <see cref="T:DevExpress.Xpo.IDataLayer"/> interface. This value is assigned to the <see cref="P:DevExpress.Xpo.Session.DataLayer"/> property.</param>
+      <param name="disposeOnDisconnect">An array of objects that implement the <see cref="T:System.IDisposable"/> interface. These objects are automatically disposed of when the unit of work is disconnected.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.UnitOfWork.#ctor(System.IServiceProvider,DevExpress.Xpo.IObjectLayer,System.IDisposable[])">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.UnitOfWork"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the <see cref="P:DevExpress.Xpo.Session.ServiceProvider"/> property.</param>
+      <param name="layer">An object which implements the <see cref="T:DevExpress.Xpo.IObjectLayer"/> interface. This value is assigned to the <see cref="P:DevExpress.Xpo.Session.ObjectLayer"/> property.</param>
+      <param name="disposeOnDisconnect">An array of objects that implement the <see cref="T:System.IDisposable"/> interface. These objects are automatically disposed of when the unit of work is disconnected.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.UnitOfWork.#ctor(System.IServiceProvider,DevExpress.Xpo.Metadata.XPDictionary)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.UnitOfWork"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the <see cref="P:DevExpress.Xpo.Session.ServiceProvider"/> property.</param>
+      <param name="dictionary">An <see cref="T:DevExpress.Xpo.Metadata.XPDictionary"/> object, which is the metadata provider to be used by the newly instantiated session. This value is assigned to the <see cref="P:DevExpress.Xpo.Session.Dictionary"/> property.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.UnitOfWork.#ctor(System.IServiceProvider,System.ComponentModel.IContainer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.UnitOfWork"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the <see cref="P:DevExpress.Xpo.Session.ServiceProvider"/> property.</param>
+      <param name="container">An IContainer object, which is the owner container of the created Session instance.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.UnitOfWork.#ctor(System.IServiceProvider)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.UnitOfWork"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the <see cref="P:DevExpress.Xpo.Session.ServiceProvider"/> property.</param>
+    </member>
     <member name="M:DevExpress.Xpo.UnitOfWork.CommitChanges">
       <summary>
         <para>Commits all the changes made to persistent objects to a data store.</para>
@@ -12751,6 +12865,19 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
         <para>Initializes a new <see cref="T:DevExpress.Xpo.XPBindingSource"/> instance and adds this instance to container.</para>
       </summary>
       <param name="container">A container that is the owner of the created XPBindingSource.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPBindingSource.#ctor(System.IServiceProvider,System.ComponentModel.IContainer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPBindingSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPBindingSource’s default session.</param>
+      <param name="container">A container that is the owner of the created XPBindingSource.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPBindingSource.#ctor(System.IServiceProvider)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPBindingSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPBindingSource’s default session.</param>
     </member>
     <member name="P:DevExpress.Xpo.XPBindingSource.BindingBehavior">
       <summary>
@@ -13820,6 +13947,137 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
       </summary>
       <param name="container">An IContainer object, which is the owner container of the created XPInstantFeedbackSource instance.</param>
     </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,DevExpress.Xpo.Metadata.XPClassInfo,System.String,DevExpress.Data.Filtering.CriteriaOperator,System.Action{DevExpress.Xpo.ResolveSessionEventArgs},System.Action{DevExpress.Xpo.ResolveSessionEventArgs})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackSource’s default session.</param>
+      <param name="classInfo">An <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> object that identifies the persistent class describing the target database table.</param>
+      <param name="displayableProperties">A string that is a list of displayable properties, containing property paths separated by semicolons. This parameter value is used to initialize the <see cref="P:DevExpress.Xpo.XPInstantFeedbackSource.DisplayableProperties"/> property.</param>
+      <param name="fixedCriteria">A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> object specifying the filter expression applied to data on the data store side.</param>
+      <param name="resolveSession">A System.Action&lt;ResolveSessionEventArgs&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Xpo.XPInstantFeedbackSource.ResolveSession"/> event. The specified delegate is attached to the ResolveSession event.</param>
+      <param name="dismissSession">A System.Action&lt;ResolveSessionEventArgs&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Xpo.XPInstantFeedbackSource.DismissSession"/> event. The specified delegate is attached to the DismissSession event.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,DevExpress.Xpo.Metadata.XPClassInfo,System.String,DevExpress.Data.Filtering.CriteriaOperator,System.EventHandler{DevExpress.Xpo.ResolveSessionEventArgs},System.EventHandler{DevExpress.Xpo.ResolveSessionEventArgs})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackSource’s default session.</param>
+      <param name="classInfo">An <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> object that identifies the persistent class describing the target database table.</param>
+      <param name="displayableProperties">A string that is a list of displayable properties, containing property paths separated by semicolons. This parameter value is used to initialize the <see cref="P:DevExpress.Xpo.XPInstantFeedbackSource.DisplayableProperties"/> property.</param>
+      <param name="fixedCriteria">A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> object specifying the filter expression applied to data on the data store side.</param>
+      <param name="resolveSession">An EventHandler&lt;ResolveSessionEventArgs&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Xpo.XPInstantFeedbackSource.ResolveSession"/> event. The specified delegate is attached to the ResolveSession event.</param>
+      <param name="dismissSession">An EventHandler&lt;ResolveSessionEventArgs&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Xpo.XPInstantFeedbackSource.DismissSession"/> event. The specified delegate is attached to the DismissSession event.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,DevExpress.Xpo.Metadata.XPClassInfo,System.String,DevExpress.Data.Filtering.CriteriaOperator)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackSource’s default session.</param>
+      <param name="classInfo">An <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> object that identifies the persistent class describing the target database table.</param>
+      <param name="displayableProperties">A string that is a list of displayable properties, containing property paths separated by semicolons. This parameter value is used to initialize the <see cref="P:DevExpress.Xpo.XPInstantFeedbackSource.DisplayableProperties"/> property.</param>
+      <param name="fixedCriteria">A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> object specifying the filter expression applied to data on the data store side.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,DevExpress.Xpo.Metadata.XPClassInfo)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackSource’s default session.</param>
+      <param name="classInfo">An <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> object that identifies the persistent class describing the target database table.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.ComponentModel.IContainer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackSource’s default session.</param>
+      <param name="container">An IContainer object, which is the owner container of the created XPInstantFeedbackSource instance.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.String,System.String,System.String,DevExpress.Data.Filtering.CriteriaOperator,System.Action{DevExpress.Xpo.ResolveSessionEventArgs},System.Action{DevExpress.Xpo.ResolveSessionEventArgs})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackSource’s default session.</param>
+      <param name="assemblyName">A string containing the name of the assembly where a persistent class describing the target database table is declared.</param>
+      <param name="typeName">A string containing the name of a persistent class describing the target database table.</param>
+      <param name="displayableProperties">A string that is a list of displayable properties, containing property paths separated by semicolons. This parameter value is used to initialize the <see cref="P:DevExpress.Xpo.XPInstantFeedbackSource.DisplayableProperties"/> property.</param>
+      <param name="fixedCriteria">A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> object specifying the filter expression applied to data on the data store side.</param>
+      <param name="resolveSession">A System.Action&lt;ResolveSessionEventArgs&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Xpo.XPInstantFeedbackSource.ResolveSession"/> event. The specified delegate is attached to the ResolveSession event.</param>
+      <param name="dismissSession">A System.Action&lt;ResolveSessionEventArgs&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Xpo.XPInstantFeedbackSource.DismissSession"/> event. The specified delegate is attached to the DismissSession event.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.String,System.String,System.String,DevExpress.Data.Filtering.CriteriaOperator,System.EventHandler{DevExpress.Xpo.ResolveSessionEventArgs},System.EventHandler{DevExpress.Xpo.ResolveSessionEventArgs})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackSource’s default session.</param>
+      <param name="assemblyName">A string containing the name of the assembly where a persistent class describing the target database table is declared.</param>
+      <param name="typeName">A string containing the name of a persistent class describing the target database table.</param>
+      <param name="displayableProperties">A string that is a list of displayable properties, containing property paths separated by semicolons. This parameter value is used to initialize the <see cref="P:DevExpress.Xpo.XPInstantFeedbackSource.DisplayableProperties"/> property.</param>
+      <param name="fixedCriteria">A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> object specifying the filter expression applied to data on the data store side.</param>
+      <param name="resolveSession">An EventHandler&lt;ResolveSessionEventArgs&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Xpo.XPInstantFeedbackSource.ResolveSession"/> event. The specified delegate is attached to the ResolveSession event.</param>
+      <param name="dismissSession">An EventHandler&lt;ResolveSessionEventArgs&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Xpo.XPInstantFeedbackSource.DismissSession"/> event. The specified delegate is attached to the DismissSession event.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.String,System.String,System.String,DevExpress.Data.Filtering.CriteriaOperator)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackSource’s default session.</param>
+      <param name="assemblyName">A string containing the name of the assembly where a persistent class describing the target database table is declared.</param>
+      <param name="typeName">A string containing the name of a persistent class describing the target database table.</param>
+      <param name="displayableProperties">A string that is a list of displayable properties, containing property paths separated by semicolons. This parameter value is used to initialize the <see cref="P:DevExpress.Xpo.XPInstantFeedbackSource.DisplayableProperties"/> property.</param>
+      <param name="fixedCriteria">A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> object specifying the filter expression applied to data on the data store side.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.String,System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackSource’s default session.</param>
+      <param name="assemblyName">A string containing the name of the assembly where a persistent class describing the target database table is declared.</param>
+      <param name="typeName">A string containing the name of a persistent class describing the target database table.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.Type,System.String,DevExpress.Data.Filtering.CriteriaOperator,System.Action{DevExpress.Xpo.ResolveSessionEventArgs},System.Action{DevExpress.Xpo.ResolveSessionEventArgs})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackSource’s default session.</param>
+      <param name="objectType">A <see cref="T:System.Type"/> object that specifies the type of a persistent class describing the target data table. This value is used to initialize the <see cref="P:DevExpress.Xpo.XPInstantFeedbackSource.ObjectType"/> property.</param>
+      <param name="displayableProperties">A string that is a list of displayable properties, containing property paths separated by semicolons. This parameter value is used to initialize the <see cref="P:DevExpress.Xpo.XPInstantFeedbackSource.DisplayableProperties"/> property.</param>
+      <param name="fixedCriteria">A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> object specifying the filter expression applied to data on the data store side.</param>
+      <param name="resolveSession">A System.Action&lt;ResolveSessionEventArgs&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Xpo.XPInstantFeedbackSource.ResolveSession"/> event. The specified delegate is attached to the ResolveSession event.</param>
+      <param name="dismissSession">A System.Action&lt;ResolveSessionEventArgs&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Xpo.XPInstantFeedbackSource.DismissSession"/> event. The specified delegate is attached to the DismissSession event.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.Type,System.String,DevExpress.Data.Filtering.CriteriaOperator,System.EventHandler{DevExpress.Xpo.ResolveSessionEventArgs},System.EventHandler{DevExpress.Xpo.ResolveSessionEventArgs})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackSource’s default session.</param>
+      <param name="objectType">A <see cref="T:System.Type"/> object that specifies the type of a persistent class describing the target data table. This value is used to initialize the <see cref="P:DevExpress.Xpo.XPInstantFeedbackSource.ObjectType"/> property.</param>
+      <param name="displayableProperties">A string that is a list of displayable properties, containing property paths separated by semicolons. This parameter value is used to initialize the <see cref="P:DevExpress.Xpo.XPInstantFeedbackSource.DisplayableProperties"/> property.</param>
+      <param name="fixedCriteria">A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> object specifying the filter expression applied to data on the data store side.</param>
+      <param name="resolveSession">An EventHandler&lt;ResolveSessionEventArgs&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Xpo.XPInstantFeedbackSource.ResolveSession"/> event. The specified delegate is attached to the ResolveSession event.</param>
+      <param name="dismissSession">An EventHandler&lt;ResolveSessionEventArgs&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Xpo.XPInstantFeedbackSource.DismissSession"/> event. The specified delegate is attached to the DismissSession event.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.Type,System.String,DevExpress.Data.Filtering.CriteriaOperator)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackSource’s default session.</param>
+      <param name="objectType">A <see cref="T:System.Type"/> object that specifies the type of a persistent class describing the target data table. This value is used to initialize the <see cref="P:DevExpress.Xpo.XPInstantFeedbackSource.ObjectType"/> property.</param>
+      <param name="displayableProperties">A string that is a list of displayable properties, containing property paths separated by semicolons. This parameter value is used to initialize the <see cref="P:DevExpress.Xpo.XPInstantFeedbackSource.DisplayableProperties"/> property.</param>
+      <param name="fixedCriteria">A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> object specifying the filter expression applied to data on the data store side.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider,System.Type)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackSource’s default session.</param>
+      <param name="objectType">A <see cref="T:System.Type"/> object that specifies the type of a persistent class describing the target data table. This value is used to initialize the <see cref="P:DevExpress.Xpo.XPInstantFeedbackSource.ObjectType"/> property.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.IServiceProvider)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackSource’s default session.</param>
+    </member>
     <member name="M:DevExpress.Xpo.XPInstantFeedbackSource.#ctor(System.String,System.String,System.String,DevExpress.Data.Filtering.CriteriaOperator,System.Action{DevExpress.Xpo.ResolveSessionEventArgs},System.Action{DevExpress.Xpo.ResolveSessionEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackSource"/> class for the specified persistent class, with the specified settings.</para>
@@ -13986,11 +14244,24 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
       </summary>
       <param name="classInfo">The <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> metadata that describes the target data table in the data store.</param>
     </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackView.#ctor(System.ComponentModel.IContainer,System.IServiceProvider)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackView"/> class with specified settings.</para>
+      </summary>
+      <param name="container">A container that is the owner of the created XPInstantFeedbackView.</param>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackView’s default session.</param>
+    </member>
     <member name="M:DevExpress.Xpo.XPInstantFeedbackView.#ctor(System.ComponentModel.IContainer)">
       <summary>
         <para>Initializes a new <see cref="T:DevExpress.Xpo.XPInstantFeedbackView"/> instance and adds it to a container.</para>
       </summary>
       <param name="container">A container that is the owner of the created XPInstantFeedbackView.</param>
+    </member>
+    <member name="M:DevExpress.Xpo.XPInstantFeedbackView.#ctor(System.IServiceProvider)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.XPInstantFeedbackView"/> class with specified settings.</para>
+      </summary>
+      <param name="serviceProvider">An object that implements the <see cref="T:System.IServiceProvider"/> interface. This object is assigned to the ServiceProvider property of the XPInstantFeedbackView’s default session.</param>
     </member>
     <member name="M:DevExpress.Xpo.XPInstantFeedbackView.#ctor(System.String,System.String,DevExpress.Xpo.ServerViewProperty[],DevExpress.Data.Filtering.CriteriaOperator,System.Action{DevExpress.Xpo.ResolveSessionEventArgs},System.Action{DevExpress.Xpo.ResolveSessionEventArgs})">
       <summary>

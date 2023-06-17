@@ -238,6 +238,7 @@
             this.colCMND.FieldName = "CMND";
             this.colCMND.MinWidth = 85;
             this.colCMND.Name = "colCMND";
+            this.colCMND.OptionsColumn.ReadOnly = true;
             this.colCMND.Visible = true;
             this.colCMND.VisibleIndex = 0;
             this.colCMND.Width = 319;
@@ -247,6 +248,7 @@
             this.colHOTEN.FieldName = "HOTEN";
             this.colHOTEN.MinWidth = 85;
             this.colHOTEN.Name = "colHOTEN";
+            this.colHOTEN.OptionsColumn.ReadOnly = true;
             this.colHOTEN.Visible = true;
             this.colHOTEN.VisibleIndex = 1;
             this.colHOTEN.Width = 319;
@@ -256,6 +258,7 @@
             this.colSOTK.FieldName = "SOTK";
             this.colSOTK.MinWidth = 85;
             this.colSOTK.Name = "colSOTK";
+            this.colSOTK.OptionsColumn.ReadOnly = true;
             this.colSOTK.Visible = true;
             this.colSOTK.VisibleIndex = 2;
             this.colSOTK.Width = 319;
@@ -265,6 +268,7 @@
             this.colSODU.FieldName = "SODU";
             this.colSODU.MinWidth = 85;
             this.colSODU.Name = "colSODU";
+            this.colSODU.OptionsColumn.ReadOnly = true;
             this.colSODU.Visible = true;
             this.colSODU.VisibleIndex = 3;
             this.colSODU.Width = 319;
