@@ -57,9 +57,10 @@
             // 
             this.cmbChiNhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbChiNhanh.FormattingEnabled = true;
-            this.cmbChiNhanh.Location = new System.Drawing.Point(231, 146);
+            this.cmbChiNhanh.Location = new System.Drawing.Point(260, 182);
+            this.cmbChiNhanh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbChiNhanh.Name = "cmbChiNhanh";
-            this.cmbChiNhanh.Size = new System.Drawing.Size(260, 24);
+            this.cmbChiNhanh.Size = new System.Drawing.Size(292, 28);
             this.cmbChiNhanh.TabIndex = 0;
             this.cmbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChiNhanh_SelectedIndexChanged);
             // 
@@ -80,9 +81,10 @@
             // 
             // btnXem
             // 
-            this.btnXem.Location = new System.Drawing.Point(143, 263);
+            this.btnXem.Location = new System.Drawing.Point(161, 329);
+            this.btnXem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(115, 41);
+            this.btnXem.Size = new System.Drawing.Size(129, 51);
             this.btnXem.TabIndex = 1;
             this.btnXem.Text = "XEM";
             this.btnXem.UseVisualStyleBackColor = true;
@@ -90,9 +92,10 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(411, 263);
+            this.btnThoat.Location = new System.Drawing.Point(462, 329);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(116, 41);
+            this.btnThoat.Size = new System.Drawing.Size(130, 51);
             this.btnThoat.TabIndex = 2;
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -101,18 +104,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 154);
+            this.label1.Location = new System.Drawing.Point(70, 192);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 16);
+            this.label1.Size = new System.Drawing.Size(148, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "CHỌN CHI NHÁNH";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(214, 49);
+            this.label2.Location = new System.Drawing.Point(241, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(264, 16);
+            this.label2.Size = new System.Drawing.Size(320, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "LIỆT KÊ KHÁCH HÀNG THEO CHI NHÁNH";
             // 
@@ -150,16 +153,17 @@
             // 
             // frmLietKeKhachHangTheoChiNhanh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 450);
+            this.ClientSize = new System.Drawing.Size(1073, 562);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXem);
             this.Controls.Add(this.cmbChiNhanh);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLietKeKhachHangTheoChiNhanh";
-            this.Text = "frmLietKeKhachHangTheoChiNhanh";
+            this.Text = "Liệt kê khách hàng";
             this.Load += new System.EventHandler(this.frmLietKeKhachHangTheoChiNhanh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.getSubscribesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSet1BindingSource)).EndInit();

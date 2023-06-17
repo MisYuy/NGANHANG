@@ -38,7 +38,7 @@ namespace NGANHANG.View
                 MessageBox.Show("Nhân viên hiện không còn ở chi nhánh của bạn nữa\n", "", MessageBoxButtons.OK);
                 return;
             }
-            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Trim().Equals(Program.userName))
+            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Equals(Program.userName))
             {
                 MessageBox.Show("Bạn không được chuyển bản thân\n", "", MessageBoxButtons.OK);
                 return;
@@ -329,6 +329,12 @@ namespace NGANHANG.View
 
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Equals(Program.userName))
+            {
+                MessageBox.Show("Bạn không được edit bản thân\n", "", MessageBoxButtons.OK);
+                return;
+            }
+
             if (((DataRowView)bdsNV[bdsNV.Position])["TrangThaiXoa"].ToString().Equals("1"))
             {
                 MessageBox.Show("Nhân viên hiện không còn ở chi nhánh của bạn nữa");
@@ -389,7 +395,7 @@ namespace NGANHANG.View
                 MessageBox.Show("Nhân viên hiện không còn ở chi nhánh của bạn nữa\n", "", MessageBoxButtons.OK);
                 return;
             }
-            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Trim().Equals(Program.userName))
+            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Equals(Program.userName))
             {
                 MessageBox.Show("Bạn không được xóa bản thân\n", "", MessageBoxButtons.OK);
                 return;
@@ -447,7 +453,7 @@ namespace NGANHANG.View
                 MessageBox.Show("Nhân viên hiện không còn ở chi nhánh của bạn nữa\n", "", MessageBoxButtons.OK);
                 return;
             }
-            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Trim().Equals(Program.userName))
+            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Equals(Program.userName))
             {
                 MessageBox.Show("Bạn đã có tài khoản\n", "", MessageBoxButtons.OK);
                 return;
@@ -472,7 +478,7 @@ namespace NGANHANG.View
                 MessageBox.Show("Nhân viên hiện không còn ở chi nhánh của bạn nữa\n", "", MessageBoxButtons.OK);
                 return;
             }
-            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Trim().Equals(Program.userName))
+            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Equals(Program.userName))
             {
                 MessageBox.Show("Bạn không được xóa tài khoản bản thân\n", "", MessageBoxButtons.OK);
                 return;

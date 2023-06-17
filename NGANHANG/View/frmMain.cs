@@ -58,13 +58,19 @@ namespace NGANHANG
                 this.btnLogout.Enabled = true;
                 this.btnEmployee.Enabled = true;
                 this.btnCustomer.Enabled = true;
+                this.PGSK.Visible = this.PGKH.Visible = this.PGTK.Visible = true;
             }
             else if (role == "KhachHang")
             {
                 this.MaNV.Text = Program.userName;
                 this.HoTen.Text = Program.name;
                 this.Nhom.Text = Program.group;
-
+                this.btnLogin.Enabled = false;
+                this.btnChangePassword.Enabled = true;
+                this.btnLogout.Enabled = true;
+                this.ThongKePage.Visible = true;
+                this.PGSK.Visible = true;
+                this.PGKH.Visible = this.PGTK.Visible = false;
             }
             
             else

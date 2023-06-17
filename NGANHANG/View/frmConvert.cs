@@ -24,12 +24,14 @@ namespace NGANHANG.View
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có xác nhận chuyển nhân viên?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("Bạn có xác nhận chuyển nhân viên? Hành động sau có thể xóa tài khoản của nhân viên", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 int excute = Program.ExecSqlNonQuery("EXEC SP_CHUYENNHANVIEN '" + manv + "','" + macn + "'");
                 if (excute == 0)
                 {
                     MessageBox.Show("Chuyển thành công");
+                    excute = Program.ExecSqlNonQuery("EXEC Xoa_Login '" + manv + "','" + manv + "'");
+                    if (excute == 0) MessageBox.Show("Xóa tài khoản thành công");
                 }
                 this.Dispose();
             }

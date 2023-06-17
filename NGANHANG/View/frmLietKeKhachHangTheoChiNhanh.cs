@@ -77,7 +77,7 @@ namespace NGANHANG.View
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.branch;
-            if(Program.group=="NGANHANG")
+            if(Program.group=="NganHang")
             {
                 cmbChiNhanh.Enabled = true;
             }

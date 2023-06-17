@@ -65,9 +65,9 @@ namespace NGANHANG
             this.NghiepVuPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ThongKePage = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.PGKH = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.PGTK = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.PGSK = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
@@ -118,7 +118,7 @@ namespace NGANHANG
             this.barButtonItem1,
             this.barButtonItem2});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonControl1.MaxItemId = 32;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 495;
@@ -327,13 +327,19 @@ namespace NGANHANG
             // 
             this.btnLietKeKhachHangTheoChiNhanh.Caption = "Liệt Kê Khách Hàng Theo Chi Nhánh";
             this.btnLietKeKhachHangTheoChiNhanh.Id = 29;
+            this.btnLietKeKhachHangTheoChiNhanh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLietKeKhachHangTheoChiNhanh.ImageOptions.Image")));
+            this.btnLietKeKhachHangTheoChiNhanh.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLietKeKhachHangTheoChiNhanh.ImageOptions.LargeImage")));
             this.btnLietKeKhachHangTheoChiNhanh.Name = "btnLietKeKhachHangTheoChiNhanh";
+            this.btnLietKeKhachHangTheoChiNhanh.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.btnLietKeKhachHangTheoChiNhanh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick_1);
             // 
             // barButtonItem1
             // 
             this.barButtonItem1.Caption = "Liệt Kê Tài Khoản Mở";
             this.barButtonItem1.Id = 30;
+            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick_2);
             // 
@@ -341,6 +347,8 @@ namespace NGANHANG
             // 
             this.barButtonItem2.Caption = "Sao Kê Giao Dịch Tài Khoản";
             this.barButtonItem2.Id = 31;
+            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
@@ -379,7 +387,7 @@ namespace NGANHANG
             this.ribbonPageGroup2.ItemLinks.Add(this.btnEmployee);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnCustomer);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Nhân viên";
+            this.ribbonPageGroup2.Text = "Đối tượng";
             // 
             // NghiepVuPage
             // 
@@ -397,27 +405,27 @@ namespace NGANHANG
             // ThongKePage
             // 
             this.ThongKePage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup6,
-            this.ribbonPageGroup7,
-            this.ribbonPageGroup8});
+            this.PGKH,
+            this.PGTK,
+            this.PGSK});
             this.ThongKePage.Name = "ThongKePage";
             this.ThongKePage.Text = "Thống kê";
             this.ThongKePage.Visible = false;
             // 
-            // ribbonPageGroup6
+            // PGKH
             // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.btnLietKeKhachHangTheoChiNhanh);
-            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            this.PGKH.ItemLinks.Add(this.btnLietKeKhachHangTheoChiNhanh);
+            this.PGKH.Name = "PGKH";
             // 
-            // ribbonPageGroup7
+            // PGTK
             // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.PGTK.ItemLinks.Add(this.barButtonItem1);
+            this.PGTK.Name = "PGTK";
             // 
-            // ribbonPageGroup8
+            // PGSK
             // 
-            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.PGSK.ItemLinks.Add(this.barButtonItem2);
+            this.PGSK.Name = "PGSK";
             // 
             // ribbonStatusBar1
             // 
@@ -502,7 +510,7 @@ namespace NGANHANG
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
             this.StatusBar = this.ribbonStatusBar1;
@@ -559,15 +567,15 @@ namespace NGANHANG
         private DevExpress.XtraBars.BarButtonItem btnCustomer;
         private DevExpress.XtraBars.Ribbon.RibbonPage NghiepVuPage;
         private DevExpress.XtraBars.Ribbon.RibbonPage ThongKePage;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup PGKH;
         private DevExpress.XtraBars.BarButtonItem btnAccount;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem btnTransaction;
         private DevExpress.XtraBars.BarButtonItem btnLietKeKhachHangTheoChiNhanh;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup PGTK;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup PGSK;
     }
 }
 

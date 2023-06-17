@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,12 +55,17 @@ namespace NGANHANG.View
 
             string ngayBD = ngayBatDau.ToString("yyyy/MM/dd");
             string ngayKT = ngayKetThuc.ToString("yyyy/MM/dd");
+            DateTime ngayBD2 = ngayBatDau.Date;
+            DateTime ngayKT2 = ngayKetThuc.Date;
 
 
 
             rpt_SaoKeGiaoDichTaiKhoan rpt = new rpt_SaoKeGiaoDichTaiKhoan(txtSoTaiKhoan.Text, ngayBD, ngayKT);
             rpt.lbTieuDe.Text = "SAO KÊ GIAO DỊCH TÀI KHOẢN TỪ " + ngayBatDau.ToString("dd/MM/yyyy") +
                 " ĐẾN NGÀY " + ngayKetThuc.ToString("dd/MM/yyyy");
+            ReportPrintTool print = new ReportPrintTool(rpt);
+            print.ShowPreviewDialog();
+
         }
 
         private void vIEW_TAIKHOANGridControl_Click(object sender, EventArgs e)

@@ -83,6 +83,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateBatDau.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
             this.dateBatDau.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateBatDau.Properties.EditFormat.FormatString = "dd/MM/yyyy";
+            this.dateBatDau.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateBatDau.Size = new System.Drawing.Size(294, 26);
             this.dateBatDau.TabIndex = 1;
             // 
@@ -98,6 +100,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateKetThuc.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
             this.dateKetThuc.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateKetThuc.Properties.EditFormat.FormatString = "dd/MM/yyyy";
+            this.dateKetThuc.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateKetThuc.Size = new System.Drawing.Size(294, 26);
             this.dateKetThuc.TabIndex = 2;
             // 
@@ -185,7 +189,7 @@
             // 
             // nGANHANGDataSet_ADMIN
             // 
-            this.nGANHANGDataSet_ADMIN.DataSetName = "NGANHANGDataSet_ADMIN";
+            this.nGANHANGDataSet_ADMIN.DataSetName = "nGANHANGDataSet_ADMIN";
             this.nGANHANGDataSet_ADMIN.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bdsVIEW_TAIKHOAN
@@ -275,7 +279,7 @@
             this.Controls.Add(this.label4);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmSaoKeGiaoDich";
-            this.Text = "frmSaoKeGiaoDich";
+            this.Text = "Sao kê giao dịch";
             this.Load += new System.EventHandler(this.frmSaoKeGiaoDich_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTaiKhoan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBatDau.Properties.CalendarTimeProperties)).EndInit();

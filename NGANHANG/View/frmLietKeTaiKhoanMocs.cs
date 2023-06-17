@@ -93,16 +93,16 @@ namespace NGANHANG.View
             string chiNhanh = cmbChiNhanh.Text;
             string chiNhanhCode = chiNhanh.Equals("BẾN THÀNH") ? "BENTHANH" : "TANDINH";
             dateKT.Properties.MaxValue = DateTime.Today;
-            if (!DateTime.TryParseExact(dateBD.Text, "ddMMyyyy", null, DateTimeStyles.None, out DateTime ngayBatDau))
+            if (!DateTime.TryParseExact(dateBD.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out DateTime ngayBatDau))
             {
-                MessageBox.Show("Ngày bắt đầu không hợp lệ. Vui lòng nhập đúng định dạng ddMMyyyy", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ngày bắt đầu không hợp lệ. Vui lòng nhập đúng định dạng dd/MM/yyyy", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             DateTime ngayKetThuc;
-            if (!DateTime.TryParseExact(dateKT.Text, "ddMMyyyy", null, DateTimeStyles.None, out ngayKetThuc))
+            if (!DateTime.TryParseExact(dateKT.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out ngayKetThuc))
             {
-                MessageBox.Show("Ngày kết thúc không hợp lệ. Vui lòng nhập đúng định dạng ddMMyyyy", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ngày kết thúc không hợp lệ. Vui lòng nhập đúng định dạng dd/MM/yyyy", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -119,8 +119,8 @@ namespace NGANHANG.View
                 return;
             }
 
-            string ngayBD = ngayBatDau.ToString("MMddyyyy");
-            string ngayKT = ngayKetThuc.ToString("MMddyyyy");
+            string ngayBD = ngayBatDau.ToString("yyyy/MM/dd");
+            string ngayKT = ngayKetThuc.ToString("yyyy/MM/dd");
             rpt_TaiKhoanMo_1_ChiNhanh rpt = new rpt_TaiKhoanMo_1_ChiNhanh(chiNhanhCode, ngayBD, ngayKT);
            
             rpt.lbTieuDe.Text = "DANH SÁCH  TÀI KHOẢN MỞ Ở "+chiNhanh +" TỪ " + ngayBatDau.ToString("dd/MM/yyyy") +
@@ -135,16 +135,16 @@ namespace NGANHANG.View
         private void btnXemTatCa_Click(object sender, EventArgs e)
         {
             dateKT.Properties.MaxValue = DateTime.Today;
-            if (!DateTime.TryParseExact(dateBD.Text, "MMddyyyy", null, DateTimeStyles.None, out DateTime ngayBatDau))
+            if (!DateTime.TryParseExact(dateBD.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out DateTime ngayBatDau))
             {
-                MessageBox.Show("Ngày bắt đầu không hợp lệ. Vui lòng nhập đúng định dạng MMddyyyy", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ngày bắt đầu không hợp lệ. Vui lòng nhập đúng định dạng dd/MM/yyyy", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             DateTime ngayKetThuc;
-            if (!DateTime.TryParseExact(dateKT.Text, "MMddyyyy", null, DateTimeStyles.None, out ngayKetThuc))
+            if (!DateTime.TryParseExact(dateKT.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out ngayKetThuc))
             {
-                MessageBox.Show("Ngày kết thúc không hợp lệ. Vui lòng nhập đúng định dạng MMddyyyy", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ngày kết thúc không hợp lệ. Vui lòng nhập đúng định dạng dd/MM/yyyy", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -161,8 +161,8 @@ namespace NGANHANG.View
                 return;
             }
 
-            string ngayBD = ngayBatDau.ToString("MMddyyyy");
-            string ngayKT = ngayKetThuc.ToString("MMddyyyy");
+            string ngayBD = ngayBatDau.ToString("yyyy/MM/dd");
+            string ngayKT = ngayKetThuc.ToString("yyyy/MM/dd");
 
             rpt_TaiKhoanMoTatCaChiNhanh rpt = new rpt_TaiKhoanMoTatCaChiNhanh(ngayBD, ngayKT);
             rpt.lbTieuDe.Text = "DANH SÁCH TẤT CẢ TÀI KHOẢN MỞ TỪ " + ngayBatDau.ToString("MMddyyyy") +
@@ -182,7 +182,7 @@ namespace NGANHANG.View
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.branch;
-            if (Program.group == "NGANHANG")
+            if (Program.group == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
                 btnXemTatCa.Enabled = true;

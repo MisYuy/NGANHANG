@@ -47,38 +47,39 @@
             // cmbChiNhanh
             // 
             this.cmbChiNhanh.FormattingEnabled = true;
-            this.cmbChiNhanh.Location = new System.Drawing.Point(245, 231);
+            this.cmbChiNhanh.Location = new System.Drawing.Point(344, 359);
+            this.cmbChiNhanh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbChiNhanh.Name = "cmbChiNhanh";
-            this.cmbChiNhanh.Size = new System.Drawing.Size(242, 24);
+            this.cmbChiNhanh.Size = new System.Drawing.Size(272, 28);
             this.cmbChiNhanh.TabIndex = 0;
             this.cmbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChiNhanh_SelectedIndexChanged);
             // 
             // btnXem
             // 
-            this.btnXem.Location = new System.Drawing.Point(306, 672);
-            this.btnXem.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnXem.Location = new System.Drawing.Point(322, 591);
+            this.btnXem.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
             this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(185, 56);
+            this.btnXem.Size = new System.Drawing.Size(208, 70);
             this.btnXem.TabIndex = 1;
             this.btnXem.Text = "Xem";
             this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(844, 658);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.btnThoat.Location = new System.Drawing.Point(761, 591);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(231, 70);
+            this.btnThoat.Size = new System.Drawing.Size(217, 70);
             this.btnThoat.TabIndex = 2;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnXemTatCa
             // 
-            this.btnXemTatCa.Location = new System.Drawing.Point(1080, 249);
-            this.btnXemTatCa.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.btnXemTatCa.Location = new System.Drawing.Point(747, 316);
+            this.btnXemTatCa.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
             this.btnXemTatCa.Name = "btnXemTatCa";
-            this.btnXemTatCa.Size = new System.Drawing.Size(342, 70);
+            this.btnXemTatCa.Size = new System.Drawing.Size(385, 88);
             this.btnXemTatCa.TabIndex = 3;
             this.btnXemTatCa.Text = "XEM TẤT CẢ CHI NHÁNH";
             this.btnXemTatCa.Click += new System.EventHandler(this.btnXemTatCa_Click);
@@ -86,53 +87,62 @@
             // dateBD
             // 
             this.dateBD.EditValue = null;
-            this.dateBD.Location = new System.Drawing.Point(356, 468);
-            this.dateBD.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.dateBD.Location = new System.Drawing.Point(344, 474);
+            this.dateBD.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
             this.dateBD.Name = "dateBD";
             this.dateBD.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateBD.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateBD.Size = new System.Drawing.Size(244, 22);
+            this.dateBD.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dateBD.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateBD.Properties.EditFormat.FormatString = "dd/MM/yyyy";
+            this.dateBD.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateBD.Size = new System.Drawing.Size(274, 26);
             this.dateBD.TabIndex = 4;
             // 
             // dateKT
             // 
             this.dateKT.EditValue = null;
-            this.dateKT.Location = new System.Drawing.Point(1022, 472);
-            this.dateKT.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.dateKT.Location = new System.Drawing.Point(836, 474);
+            this.dateKT.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
             this.dateKT.Name = "dateKT";
             this.dateKT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateKT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateKT.Size = new System.Drawing.Size(305, 22);
+            this.dateKT.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dateKT.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateKT.Properties.EditFormat.FormatString = "dd/MM/yyyy";
+            this.dateKT.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateKT.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
+            this.dateKT.Size = new System.Drawing.Size(343, 26);
             this.dateKT.TabIndex = 5;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(170, 294);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.labelControl1.Location = new System.Drawing.Point(191, 368);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(88, 16);
+            this.labelControl1.Size = new System.Drawing.Size(111, 19);
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "Chọn chi nhánh";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(119, 478);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.labelControl2.Location = new System.Drawing.Point(213, 481);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(47, 16);
+            this.labelControl2.Size = new System.Drawing.Size(59, 19);
             this.labelControl2.TabIndex = 7;
             this.labelControl2.Text = "Từ ngày";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(789, 478);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.labelControl3.Location = new System.Drawing.Point(747, 481);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(54, 16);
+            this.labelControl3.Size = new System.Drawing.Size(67, 19);
             this.labelControl3.TabIndex = 8;
             this.labelControl3.Text = "Đến ngày";
             // 
@@ -142,18 +152,18 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(456, 122);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.labelControl4.Location = new System.Drawing.Point(513, 152);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(565, 33);
+            this.labelControl4.Size = new System.Drawing.Size(691, 37);
             this.labelControl4.TabIndex = 9;
             this.labelControl4.Text = "TÀI KHOẢN MỞ TRONG KHOẢNG THỜI GIAN";
             // 
             // frmLietKeTaiKhoanMocs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 700);
+            this.ClientSize = new System.Drawing.Size(1295, 875);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
@@ -164,8 +174,9 @@
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXem);
             this.Controls.Add(this.cmbChiNhanh);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLietKeTaiKhoanMocs";
-            this.Text = "frmLietKeTaiKhoanMocs";
+            this.Text = "Liệt kê tài khoản mở";
             this.Load += new System.EventHandler(this.frmLietKeTaiKhoanMocs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dateBD.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBD.Properties)).EndInit();
