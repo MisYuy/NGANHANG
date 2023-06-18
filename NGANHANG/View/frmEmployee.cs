@@ -78,7 +78,8 @@ namespace NGANHANG.View
             // TODO: This line of code loads data into the 'NGANHANG_NHANVIEN.GD_CHUYENTIEN' table. You can move, or remove it, as needed.
             this.GD_CHUYENTIENTableAdapter.Connection.ConnectionString = Program.connString;
             this.GD_CHUYENTIENTableAdapter.Fill(this.NGANHANG_NHANVIEN.GD_CHUYENTIEN);
-            macn = ((DataRowView)bdsNV[0])["MACN"].ToString();//*
+            //macn = ((DataRowView)bdsNV[0])["MACN"].ToString();
+            macn = (Program.branch == 0 ? "BENTHANH" : "TANDINH");
             cmbChiNhanh.DataSource = Program.bds_dspm;
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";

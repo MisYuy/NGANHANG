@@ -407,7 +407,7 @@
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 34);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(6);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1127, 100);
             this.panelControl1.TabIndex = 4;
@@ -415,6 +415,7 @@
             // 
             // cmbChiNhanh
             // 
+            this.cmbChiNhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbChiNhanh.FormattingEnabled = true;
             this.cmbChiNhanh.Location = new System.Drawing.Point(100, 33);
             this.cmbChiNhanh.Name = "cmbChiNhanh";
@@ -467,7 +468,7 @@
             this.gcNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.gcNhanVien.Location = new System.Drawing.Point(0, 134);
             this.gcNhanVien.MainView = this.gridView1;
-            this.gcNhanVien.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gcNhanVien.Margin = new System.Windows.Forms.Padding(6);
             this.gcNhanVien.MenuManager = this.barManager1;
             this.gcNhanVien.Name = "gcNhanVien";
             this.gcNhanVien.Size = new System.Drawing.Size(1127, 220);
@@ -496,6 +497,7 @@
             this.colMANV.FieldName = "MANV";
             this.colMANV.MinWidth = 37;
             this.colMANV.Name = "colMANV";
+            this.colMANV.OptionsColumn.ReadOnly = true;
             this.colMANV.Visible = true;
             this.colMANV.VisibleIndex = 0;
             this.colMANV.Width = 137;
@@ -505,6 +507,7 @@
             this.colHO.FieldName = "HO";
             this.colHO.MinWidth = 37;
             this.colHO.Name = "colHO";
+            this.colHO.OptionsColumn.ReadOnly = true;
             this.colHO.Visible = true;
             this.colHO.VisibleIndex = 1;
             this.colHO.Width = 137;
@@ -514,6 +517,7 @@
             this.colTEN.FieldName = "TEN";
             this.colTEN.MinWidth = 37;
             this.colTEN.Name = "colTEN";
+            this.colTEN.OptionsColumn.ReadOnly = true;
             this.colTEN.Visible = true;
             this.colTEN.VisibleIndex = 2;
             this.colTEN.Width = 137;
@@ -523,6 +527,7 @@
             this.colCMND.FieldName = "CMND";
             this.colCMND.MinWidth = 37;
             this.colCMND.Name = "colCMND";
+            this.colCMND.OptionsColumn.ReadOnly = true;
             this.colCMND.Visible = true;
             this.colCMND.VisibleIndex = 3;
             this.colCMND.Width = 137;
@@ -532,6 +537,7 @@
             this.colDIACHI.FieldName = "DIACHI";
             this.colDIACHI.MinWidth = 37;
             this.colDIACHI.Name = "colDIACHI";
+            this.colDIACHI.OptionsColumn.ReadOnly = true;
             this.colDIACHI.Visible = true;
             this.colDIACHI.VisibleIndex = 4;
             this.colDIACHI.Width = 137;
@@ -541,6 +547,7 @@
             this.colPHAI.FieldName = "PHAI";
             this.colPHAI.MinWidth = 37;
             this.colPHAI.Name = "colPHAI";
+            this.colPHAI.OptionsColumn.ReadOnly = true;
             this.colPHAI.Visible = true;
             this.colPHAI.VisibleIndex = 5;
             this.colPHAI.Width = 137;
@@ -550,6 +557,7 @@
             this.colSODT.FieldName = "SODT";
             this.colSODT.MinWidth = 37;
             this.colSODT.Name = "colSODT";
+            this.colSODT.OptionsColumn.ReadOnly = true;
             this.colSODT.Visible = true;
             this.colSODT.VisibleIndex = 6;
             this.colSODT.Width = 137;
@@ -559,6 +567,7 @@
             this.colMACN.FieldName = "MACN";
             this.colMACN.MinWidth = 37;
             this.colMACN.Name = "colMACN";
+            this.colMACN.OptionsColumn.ReadOnly = true;
             this.colMACN.Visible = true;
             this.colMACN.VisibleIndex = 7;
             this.colMACN.Width = 137;
@@ -569,6 +578,7 @@
             this.TrangThaiXoa.FieldName = "TrangThaiXoa";
             this.TrangThaiXoa.MinWidth = 37;
             this.TrangThaiXoa.Name = "TrangThaiXoa";
+            this.TrangThaiXoa.OptionsColumn.ReadOnly = true;
             this.TrangThaiXoa.Visible = true;
             this.TrangThaiXoa.VisibleIndex = 8;
             this.TrangThaiXoa.Width = 137;
