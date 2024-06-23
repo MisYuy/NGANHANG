@@ -50,7 +50,7 @@ namespace NGANHANG.View
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            String sql = string.Format("EXEC SP_LayThongTinChuTaiKhoan '{0}'", txtSoTk.Text);
+            String sql = string.Format("EXEC SP_LAYTHONGTINCHUTAIKHOAN '{0}'", txtSoTk.Text);
             SqlDataReader reader = Program.ExecSqlDataReader(sql);
             try
             {
@@ -149,7 +149,7 @@ namespace NGANHANG.View
             }
             if(MessageBox.Show("Xác nhận rút " + sodu + " ?","Xác nhận",MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                String sql = string.Format("EXEC SP_RUTTIEN '{0}', '{1}'", txtSoTk.Text, inputTien);
+                String sql = string.Format("EXEC SP_RUT_TIEN_TU_TAIKHOAN '{0}', '{1}'", txtSoTk.Text, inputTien);
                 if(Program.ExecSqlNonQuery(sql) == 0)
                 {
                     MessageBox.Show("Giao dịch rút tiền thành công");
@@ -174,7 +174,7 @@ namespace NGANHANG.View
             }
             if(MessageBox.Show("Xác nhận gửi vào tài khoản " + inputTien + " ?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                String sql = string.Format("EXEC SP_GOITIEN '{0}', '{1}'", txtSoTk.Text, inputTien);
+                String sql = string.Format("EXEC SP_GUI_TIEN_VAO_TAIKHOAN '{0}', '{1}'", txtSoTk.Text, inputTien);
                 if (Program.ExecSqlNonQuery(sql) == 0)
                 {
                     MessageBox.Show("Giao dịch gửi tiền thành công");
@@ -212,7 +212,7 @@ namespace NGANHANG.View
                 MessageBox.Show("Không thể chuyển cho tài khoản hiện tại");
                 return;
             }
-            String sql = string.Format("EXEC SP_LayThongTinChuTaiKhoan '{0}'", txtSoTKThuHuong.Text);
+            String sql = string.Format("EXEC SP_LAYTHONGTINCHUTAIKHOAN '{0}'", txtSoTKThuHuong.Text);
             SqlDataReader reader = Program.ExecSqlDataReader(sql);
             try
             {
@@ -264,7 +264,7 @@ namespace NGANHANG.View
 
             if (MessageBox.Show("Xác nhận chuyển khoản " + inputTien + " ?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                String sql = string.Format("EXEC SP_CHUYENTIEN '{0}', '{1}', '{2}'", txtSoTk.Text, txtSoTKThuHuong.Text, inputTien);
+                String sql = string.Format("EXEC SP_CHUYEN_TIEN '{0}', '{1}', '{2}'", txtSoTk.Text, txtSoTKThuHuong.Text, inputTien);
                 if (Program.ExecSqlNonQuery(sql) == 0)
                 {
                     MessageBox.Show("Giao dịch chuyển tiền thành công");
