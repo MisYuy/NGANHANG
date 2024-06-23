@@ -257,13 +257,13 @@
             // 
             this.sqlDataSource1.ConnectionName = "NGANHANG.Properties.Settings.NGANHANG_khachhangConnectionString1";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            storedProcQuery1.Name = "sp_LietKeKhachHangTheoChiNhanh";
-            queryParameter1.Name = "@machinhanh";
+            storedProcQuery1.Name = "SP_LIET_KE_KHACH_HANG_THEO_CHI_NHANH";
+            queryParameter1.Name = "@MACN";
             queryParameter1.Type = typeof(string);
             queryParameter1.ValueInfo = "BENTHANH";
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1});
-            storedProcQuery1.StoredProcName = "sp_LietKeKhachHangTheoChiNhanh";
+            storedProcQuery1.StoredProcName = "SP_LIET_KE_KHACH_HANG_THEO_CHI_NHANH";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
@@ -334,7 +334,7 @@
             this.Detail});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1});
-            this.DataMember = "sp_LietKeKhachHangTheoChiNhanh";
+            this.DataMember = "SP_LIET_KE_KHACH_HANG_THEO_CHI_NHANH";
             this.DataSource = this.sqlDataSource1;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
