@@ -1,13 +1,6 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NGANHANG.View
@@ -19,7 +12,8 @@ namespace NGANHANG.View
             SqlConnection conn = new SqlConnection();
             try
             {
-                conn.ConnectionString = Program.connPublisherString;
+                conn.ConnectionString = "Data Source=DESKTOP-KL0DTTA\\NGANHANG;Initial Catalog=NGANHANG;Persist Security Info=True;User ID=HTKN;Password=123";
+                Program.connPublisherString = conn.ConnectionString;
                 return conn;
             }
             catch(SqlException e)
@@ -43,7 +37,7 @@ namespace NGANHANG.View
                 cmbChiNhanh.DisplayMember = "TENCN";
                 cmbChiNhanh.ValueMember = "TENSERVER";
                 conn.Close();
-                cmbChiNhanh.SelectedIndex = 1; cmbChiNhanh.SelectedIndex = 0;
+                cmbChiNhanh.SelectedIndex = 0;
                 return true;
             }
             catch(Exception e)
@@ -71,36 +65,36 @@ namespace NGANHANG.View
         private void btnLogin_Click(object sender, EventArgs e)
         {
             
-            Program.login = this.txtUserName.Text.Trim();
+            Program.loginName = this.txtUserName.Text.Trim();
             Program.password = this.txtPassword.Text.Trim();
             Program.serverName = this.cmbChiNhanh.SelectedValue.ToString().Trim();
-            if (Program.login.Length == 0 || Program.password.Length == 0)
+            if (Program.loginName.Length == 0 || Program.password.Length == 0)
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu còn trống");
                 return;
             }
-            if (Program.ConnectSql() == 1)
+            if (Program.ConnectSqlWithAccount() == 1)
             {
                 
-                SqlDataReader myReader = Program.ExecSqlDataReader("EXEC SP_DANGNHAP '" + Program.login + "'");
+                SqlDataReader myReader = Program.ExecSqlDataReader("EXEC SP_DANGNHAP '" + Program.loginName + "'");
                 if (myReader != null)
                 {
                     if (myReader.Read())
                     {
                         Program.group = myReader.GetString(2);
-                        if (Program.group != "NganHang" && Program.group != "ChiNhanh" && Program.group != "KhachHang")
+                        if (Program.group != Program.NGANHANG && Program.group != Program.CHINHANH && Program.group != Program.KHACHHANG)
                         {
                             MessageBox.Show("Lỗi không thể lấy được thông tin tài khoản");
                             myReader.Close();
                             return;
                         }
-                        Program.userName = myReader.GetString(0);
-                        Program.name = myReader.GetString(1);
+                        Program.username = myReader.GetString(0);
+                        Program.ho_ten = myReader.GetString(1);
                         Program.branch = cmbChiNhanh.SelectedIndex;
                         Program.loginServer = cmbChiNhanh.SelectedValue.ToString();
-                        Program.loginLogin = Program.login;
+                        Program.loginLogin = Program.loginName;
                         Program.loginPassword = Program.password;
-                        Program.f.SetWorkingSpace(Program.group);
+                        Program.frmMain.SetWorkingSpace(Program.group);
                         MessageBox.Show("Đăng nhập thành công");
                         this.Dispose();
                     }

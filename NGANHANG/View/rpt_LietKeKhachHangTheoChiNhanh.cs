@@ -11,7 +11,7 @@ namespace NGANHANG.View
         public rpt_LietKeKhachHangTheoChiNhanh(string machinnhanh)
         {
             InitializeComponent();
-            this.sqlDataSource1.Connection.ConnectionString = Program.connString;
+            this.sqlDataSource1.Connection.ConnectionString = Program.connectionString;
             this.sqlDataSource1.Queries[0].Parameters[0].Value = machinnhanh;
             this.sqlDataSource1.Fill();
         }

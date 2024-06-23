@@ -24,14 +24,16 @@ namespace NGANHANG.View
         private void frmCustomer_Load(object sender, EventArgs e)
         {
             this.nGANHANG_ChiNhanh.EnforceConstraints = false;
+            if (Program.group != Program.NGANHANG)
+                cmbChiNhanh.Enabled = false;
             cmbChiNhanh.DataSource = Program.bds_dspm;
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
 
             cmbChiNhanh.SelectedIndex = Program.branch;
-            macn = (Program.branch == 0 ? "BENTHANH" : "TANDINH");
+            macn = (Program.branch == 1 ? "BENTHANH" : "TANDINH");
 
-            if (Program.group == "NganHang")
+            if (Program.group == Program.NGANHANG)
             {
                 groupControlTaiKhoan.Enabled = false;
                 btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = btnUndo.Enabled = btnSave.Enabled = false;
@@ -45,12 +47,12 @@ namespace NGANHANG.View
             this.dateNgayCap.Properties.MaxValue = DateTime.Today;
             
             Program.serverName = cmbChiNhanh.SelectedValue.ToString();
-            if(Program.ConnectSql() == 1)
+            if(Program.ConnectSqlWithAccount() == 1)
             {
-                khachHangTableAdapter.Connection.ConnectionString = Program.connString;
+                khachHangTableAdapter.Connection.ConnectionString = Program.connectionString;
                 khachHangTableAdapter.Fill(this.nGANHANG_ChiNhanh.KhachHang);
 
-                taiKhoanTableAdapter.Connection.ConnectionString = Program.connString;
+                taiKhoanTableAdapter.Connection.ConnectionString = Program.connectionString;
                 taiKhoanTableAdapter.Fill(this.nGANHANG_ChiNhanh.TaiKhoan);
             }
             else
@@ -145,7 +147,7 @@ namespace NGANHANG.View
                     this.khachHangTableAdapter.Update(this.nGANHANG_ChiNhanh.KhachHang);
                     String sql = string.Format("EXEC SP_XOALOGIN '{0}','{1}'", cmnd, cmnd);
                     Program.serverName = cmbChiNhanh.SelectedValue.ToString();
-                    if (Program.ConnectSql() == 1)
+                    if (Program.ConnectSqlWithAccount() == 1)
                     {
                         Program.ExecSqlNonQuery(sql);
                     }
@@ -169,27 +171,27 @@ namespace NGANHANG.View
             Program.serverName = cmbChiNhanh.SelectedValue.ToString();
             if (cmbChiNhanh.SelectedIndex != Program.branch)
             {
-                Program.login = Program.remoteLogin;
+                Program.loginName = Program.remoteLogin;
                 Program.password = Program.remotePassword;
                 btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = false;
             }
             else
             {
-                Program.login = Program.loginLogin;
+                Program.loginName = Program.loginLogin;
                 Program.password = Program.loginPassword;
-                btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = true;
+                if(Program.group != Program.NGANHANG) btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = true;
             }
-            if (Program.ConnectSql() == 0)
+            if (Program.ConnectSqlWithAccount() == 0)
             {
                 MessageBox.Show("Lỗi kết nối về chi nhánh mới");
                 this.Dispose();
             }
             else
             {
-                this.khachHangTableAdapter.Connection.ConnectionString = Program.connString;
+                this.khachHangTableAdapter.Connection.ConnectionString = Program.connectionString;
                 this.khachHangTableAdapter.Fill(this.nGANHANG_ChiNhanh.KhachHang);
             
-                this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connString;
+                this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connectionString;
                 this.taiKhoanTableAdapter.Fill(this.nGANHANG_ChiNhanh.TaiKhoan);
             }
         }
@@ -253,7 +255,7 @@ namespace NGANHANG.View
                 {
                     String sql = string.Format("EXEC dbo.SP_TAOLOGIN '{0}', '{1}', '{2}', '{3}'", txtCMND.Text,"123",txtCMND.Text, "KhachHang");
                     Program.serverName = cmbChiNhanh.SelectedValue.ToString();
-                    if(Program.ConnectSql() == 1 && Program.ExecSqlNonQuery(sql) == 0)
+                    if(Program.ConnectSqlWithAccount() == 1 && Program.ExecSqlNonQuery(sql) == 0)
                     {
                         MessageBox.Show("Lưu thành công");
                     }
@@ -320,7 +322,7 @@ namespace NGANHANG.View
                 String sotk = ((DataRowView)bdsTaiKhoan.Current)["SOTK"].ToString();
                 String sql = string.Format("EXEC dbo.SP_XOATAIKHOAN '{0}'", sotk);
                 Program.serverName = cmbChiNhanh.SelectedValue.ToString();
-                if(Program.ConnectSql() == 1)
+                if(Program.ConnectSqlWithAccount() == 1)
                 {
                     if(Program.ExecSqlNonQuery(sql) == 0)
                     {

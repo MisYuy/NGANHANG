@@ -47,13 +47,13 @@ namespace NGANHANG
                 this.btnCustomer.Enabled = false;
                 
             }
-            else if (role == "ChiNhanh" || role == "NganHang")
+            else if (role == Program.CHINHANH || role == Program.NGANHANG)
             {
-                this.MaNV.Text = Program.userName;
-                this.HoTen.Text = Program.name;
+                this.MaNV.Text = Program.username;
+                this.HoTen.Text = Program.ho_ten;
                 this.Nhom.Text = Program.group;
                 this.QuanTriPage.Visible = this.ThongKePage.Visible = true;
-                this.NghiepVuPage.Visible = (role == "ChiNhanh");
+                this.NghiepVuPage.Visible = (role == Program.CHINHANH);
                 this.btnLogin.Enabled = false;
                 this.btnChangePassword.Enabled = true;
                 this.btnLogout.Enabled = true;
@@ -61,10 +61,10 @@ namespace NGANHANG
                 this.btnCustomer.Enabled = true;
                 this.PGSK.Visible = this.PGKH.Visible = this.PGTK.Visible = true;
             }
-            else if (role == "KhachHang")
+            else if (role == Program.KHACHHANG)
             {
-                this.MaNV.Text = Program.userName;
-                this.HoTen.Text = Program.name;
+                this.MaNV.Text = Program.username;
+                this.HoTen.Text = Program.ho_ten;
                 this.Nhom.Text = Program.group;
                 this.btnLogin.Enabled = false;
                 this.btnChangePassword.Enabled = true;

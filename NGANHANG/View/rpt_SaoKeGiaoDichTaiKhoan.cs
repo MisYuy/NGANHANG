@@ -11,7 +11,7 @@ namespace NGANHANG.View
         public rpt_SaoKeGiaoDichTaiKhoan(string sotaikhoan, String ngaybatdau, String ngayketthuc)
         {
             InitializeComponent();
-            this.sqlDataSource1.Connection.ConnectionString = Program.connString;
+            this.sqlDataSource1.Connection.ConnectionString = Program.connectionString;
             this.sqlDataSource1.Queries[0].Parameters[0].Value = sotaikhoan;
             this.sqlDataSource1.Queries[0].Parameters[1].Value =ngaybatdau;
             this.sqlDataSource1.Queries[0].Parameters[2].Value =ngayketthuc;

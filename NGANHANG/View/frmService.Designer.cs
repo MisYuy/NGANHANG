@@ -488,7 +488,7 @@ namespace NGANHANG.View
             this.btnThoat.Appearance.BackColor = System.Drawing.Color.White;
             this.btnThoat.Appearance.Options.UseBackColor = true;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(1397, 33);
+            this.btnThoat.Location = new System.Drawing.Point(2000, 33);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(101, 73);
             this.btnThoat.TabIndex = 10;

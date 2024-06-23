@@ -41,8 +41,8 @@ namespace NGANHANG.View
             if (MessageBox.Show("Bạn có xác nhận tạo tài khoản nhân viên?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
 
-                int excute = Program.ExecSqlNonQuery("EXEC SP_TAOLOGIN '" + manv + "','" + txtPassword.Text + "','"+manv+"','"+txtGroup.Text+"'");
-                if (excute==0)
+                int excute = Program.ExecSqlNonQuery("EXEC SP_TAOLOGIN '" + manv + "','" + txtPassword.Text + "','" + manv + "','" + txtGroup.Text + "'");
+                if (excute == 0)
                 {
                     MessageBox.Show("Tạo thành công");
                 }

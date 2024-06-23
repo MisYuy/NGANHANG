@@ -69,15 +69,15 @@ namespace NGANHANG.View
             Program.serverName = cmbChiNhanh.SelectedValue.ToString();
             if (cmbChiNhanh.SelectedIndex != Program.branch)
             {
-                Program.login = Program.remoteLogin;
+                Program.loginName = Program.remoteLogin;
                 Program.password = Program.remotePassword;
             }
             else
             {
-                Program.login = Program.loginLogin;
+                Program.loginName = Program.loginLogin;
                 Program.password = Program.loginPassword;
             }
-            if (Program.ConnectSql() == 0)
+            if (Program.ConnectSqlWithAccount() == 0)
             {
                 //MessageBox.Show("Lỗi kết nối về chi nhánh mới");
             }
@@ -182,7 +182,7 @@ namespace NGANHANG.View
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.branch;
-            if (Program.group == "NganHang")
+            if (Program.group == Program.NGANHANG)
             {
                 cmbChiNhanh.Enabled = true;
                 btnXemTatCa.Enabled = true;

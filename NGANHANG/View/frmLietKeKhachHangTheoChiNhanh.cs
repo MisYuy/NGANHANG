@@ -69,7 +69,7 @@ namespace NGANHANG.View
             //this.get_SubscribesTableAdapter.Connection.ConnectionString = Program.connString;
             //this.get_SubscribesTableAdapter.Fill(this.nGANHANGDataSet1.Get_Subscribes);
             // TODO: This line of code loads data into the 'nGANHANGDataSetkhachhang.KhachHang' table. You can move, or remove it, as needed.
-            this.khachHangTableAdapter.Connection.ConnectionString = Program.connString;
+            this.khachHangTableAdapter.Connection.ConnectionString = Program.connectionString;
             this.khachHangTableAdapter.Fill(this.nGANHANGDataSetkhachhang.KhachHang);
             //
             
@@ -77,7 +77,7 @@ namespace NGANHANG.View
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.branch;
-            if(Program.group=="NganHang")
+            if(Program.group == Program.NGANHANG)
             {
                 cmbChiNhanh.Enabled = true;
             }
@@ -109,21 +109,21 @@ namespace NGANHANG.View
             Program.serverName = cmbChiNhanh.SelectedValue.ToString();
             if (cmbChiNhanh.SelectedIndex != Program.branch)
             {
-                Program.login = Program.remoteLogin;
+                Program.loginName = Program.remoteLogin;
                 Program.password = Program.remotePassword;
             }
             else
             {
-                Program.login = Program.loginLogin;
+                Program.loginName = Program.loginLogin;
                 Program.password = Program.loginPassword;
             }
-            if (Program.ConnectSql() == 0)
+            if (Program.ConnectSqlWithAccount() == 0)
             {
                 MessageBox.Show("Lỗi kết nối về chi nhánh mới");
             }
             else
             {
-                this.khachHangTableAdapter.Connection.ConnectionString = Program.connString;
+                this.khachHangTableAdapter.Connection.ConnectionString = Program.connectionString;
                 this.khachHangTableAdapter.Fill(this.nGANHANGDataSetkhachhang.KhachHang);
             }
            

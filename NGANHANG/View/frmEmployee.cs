@@ -38,7 +38,7 @@ namespace NGANHANG.View
                 MessageBox.Show("Nhân viên hiện không còn ở chi nhánh của bạn nữa\n", "", MessageBoxButtons.OK);
                 return;
             }
-            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Equals(Program.userName))
+            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Equals(Program.username))
             {
                 MessageBox.Show("Bạn không được chuyển bản thân\n", "", MessageBoxButtons.OK);
                 return;
@@ -54,7 +54,7 @@ namespace NGANHANG.View
                 f = new frmConvert(manv);
                 f.Show();
             }
-            this.NhanVienTableAdapter.Connection.ConnectionString = Program.connString;
+            this.NhanVienTableAdapter.Connection.ConnectionString = Program.connectionString;
             this.NhanVienTableAdapter.Fill(this.NGANHANG_NHANVIEN.NhanVien);
         }
 
@@ -70,16 +70,16 @@ namespace NGANHANG.View
         {
             this.NGANHANG_NHANVIEN.EnforceConstraints = false;
             // TODO: This line of code loads data into the 'nGANHANG_NHANVIEN.NhanVien' table. You can move, or remove it, as needed.
-            this.NhanVienTableAdapter.Connection.ConnectionString = Program.connString;
+            this.NhanVienTableAdapter.Connection.ConnectionString = Program.connectionString;
             this.NhanVienTableAdapter.Fill(this.NGANHANG_NHANVIEN.NhanVien);
             // TODO: This line of code loads data into the 'NGANHANG_NHANVIEN.GD_GOIRUT' table. You can move, or remove it, as needed.
-            this.GD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connString;
+            this.GD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connectionString;
             this.GD_GOIRUTTableAdapter.Fill(this.NGANHANG_NHANVIEN.GD_GOIRUT);
             // TODO: This line of code loads data into the 'NGANHANG_NHANVIEN.GD_CHUYENTIEN' table. You can move, or remove it, as needed.
-            this.GD_CHUYENTIENTableAdapter.Connection.ConnectionString = Program.connString;
+            this.GD_CHUYENTIENTableAdapter.Connection.ConnectionString = Program.connectionString;
             this.GD_CHUYENTIENTableAdapter.Fill(this.NGANHANG_NHANVIEN.GD_CHUYENTIEN);
             //macn = ((DataRowView)bdsNV[0])["MACN"].ToString();
-            macn = (Program.branch == 0 ? "BENTHANH" : "TANDINH");
+            macn = (Program.branch == 1 ? "BENTHANH" : "TANDINH");
             cmbChiNhanh.DataSource = Program.bds_dspm;
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
@@ -88,7 +88,7 @@ namespace NGANHANG.View
                 cmbChiNhanh.SelectedIndex = 0;
             }
             else cmbChiNhanh.SelectedIndex = 1;
-            if (Program.group == "NganHang")
+            if (Program.group == Program.NGANHANG)
             {
                 cmbChiNhanh.Enabled = true;
                 btnAdd.Enabled = btnConvert.Enabled = btnDelete.Enabled = btnEdit.Enabled = btnUndo.Enabled = btnSave.Enabled = false;
@@ -275,7 +275,7 @@ namespace NGANHANG.View
                             if (excute2 == 0)
                             {
                                 MessageBox.Show("Khôi phục thành công");
-                                this.NhanVienTableAdapter.Connection.ConnectionString = Program.connString;
+                                this.NhanVienTableAdapter.Connection.ConnectionString = Program.connectionString;
                                 this.NhanVienTableAdapter.Fill(this.NGANHANG_NHANVIEN.NhanVien);
                                 gcNhanVien.Enabled = true;
                                 btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = btnRefresh.Enabled = btnConvert.Enabled = btnExit.Enabled = btnRegister.Enabled = btnDeleteLogin.Enabled = true;
@@ -289,7 +289,7 @@ namespace NGANHANG.View
                 }
                 bdsNV.EndEdit();
                 bdsNV.ResetCurrentItem();
-                this.NhanVienTableAdapter.Connection.ConnectionString = Program.connString;
+                this.NhanVienTableAdapter.Connection.ConnectionString = Program.connectionString;
                 this.NhanVienTableAdapter.Update(this.NGANHANG_NHANVIEN.NhanVien);
                 btnStatus = null;
             }
@@ -330,7 +330,7 @@ namespace NGANHANG.View
 
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Equals(Program.userName))
+            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Equals(Program.username))
             {
                 MessageBox.Show("Bạn không được edit bản thân\n", "", MessageBoxButtons.OK);
                 return;
@@ -363,27 +363,27 @@ namespace NGANHANG.View
             Program.serverName = cmbChiNhanh.SelectedValue.ToString();
             if (cmbChiNhanh.SelectedIndex != Program.branch)
             {
-                Program.login = Program.remoteLogin;
+                Program.loginName = Program.remoteLogin;
                 Program.password = Program.remotePassword;
             }
             else
             {
-                Program.login = Program.loginLogin;
+                Program.loginName = Program.loginLogin;
                 Program.password = Program.loginPassword;
             }
-            if (Program.ConnectSql() == 0)
+            if (Program.ConnectSqlWithAccount() == 0)
             {
                 MessageBox.Show("Lỗi kết nối về chi nhánh mới");
             }
             else
             {
-                this.NhanVienTableAdapter.Connection.ConnectionString = Program.connString;
+                this.NhanVienTableAdapter.Connection.ConnectionString = Program.connectionString;
                 this.NhanVienTableAdapter.Fill(this.NGANHANG_NHANVIEN.NhanVien);
                 // TODO: This line of code loads data into the 'NGANHANG_NHANVIEN.GD_GOIRUT' table. You can move, or remove it, as needed.
-                this.GD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connString;
+                this.GD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connectionString;
                 this.GD_GOIRUTTableAdapter.Fill(this.NGANHANG_NHANVIEN.GD_GOIRUT);
                 // TODO: This line of code loads data into the 'NGANHANG_NHANVIEN.GD_CHUYENTIEN' table. You can move, or remove it, as needed.
-                this.GD_CHUYENTIENTableAdapter.Connection.ConnectionString = Program.connString;
+                this.GD_CHUYENTIENTableAdapter.Connection.ConnectionString = Program.connectionString;
                 this.GD_CHUYENTIENTableAdapter.Fill(this.NGANHANG_NHANVIEN.GD_CHUYENTIEN);
                 /*macn = ((DataRowView)bdsNV[0])["MACN"].ToString();//**/
             }
@@ -396,7 +396,7 @@ namespace NGANHANG.View
                 MessageBox.Show("Nhân viên hiện không còn ở chi nhánh của bạn nữa\n", "", MessageBoxButtons.OK);
                 return;
             }
-            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Equals(Program.userName))
+            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Equals(Program.username))
             {
                 MessageBox.Show("Bạn không được xóa bản thân\n", "", MessageBoxButtons.OK);
                 return;
@@ -425,7 +425,7 @@ namespace NGANHANG.View
                     if(excute2==0) MessageBox.Show("Xóa tài khoản nhân viên thành công");
                     MessageBox.Show("Xóa nhân viên thành công");
                 }
-                this.NhanVienTableAdapter.Connection.ConnectionString = Program.connString;
+                this.NhanVienTableAdapter.Connection.ConnectionString = Program.connectionString;
                 this.NhanVienTableAdapter.Fill(this.NGANHANG_NHANVIEN.NhanVien);
                 bdsNV.Position = bdsNV.Find("MANV", manv);
             }
@@ -454,7 +454,7 @@ namespace NGANHANG.View
                 MessageBox.Show("Nhân viên hiện không còn ở chi nhánh của bạn nữa\n", "", MessageBoxButtons.OK);
                 return;
             }
-            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Equals(Program.userName))
+            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Equals(Program.username))
             {
                 MessageBox.Show("Bạn đã có tài khoản\n", "", MessageBoxButtons.OK);
                 return;
@@ -479,7 +479,7 @@ namespace NGANHANG.View
                 MessageBox.Show("Nhân viên hiện không còn ở chi nhánh của bạn nữa\n", "", MessageBoxButtons.OK);
                 return;
             }
-            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Equals(Program.userName))
+            if (((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().Equals(Program.username))
             {
                 MessageBox.Show("Bạn không được xóa tài khoản bản thân\n", "", MessageBoxButtons.OK);
                 return;

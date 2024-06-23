@@ -40,22 +40,22 @@ namespace NGANHANG.View
             if (MessageBox.Show("Xác nhận đổi mật khẩu?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 String sql = string.Format("EXEC SP_DOI_MAT_KHAU '"+Program.loginLogin +"','" + txtNewPass.Text+"'");
-                if (Program.ConnectSqlNotUser() == 1)
+                if (Program.ConnectSqlWithoutAccount() == 1)
                 {//Kết nối tài khoản window
                     int excute = Program.ExecSqlNonQuery(sql);
                     if (excute == 0)
                     {
                         MessageBox.Show("Đổi mật khẩu thành công, vui lòng đăng nhập lại", "Thông báo");
                         
-                        Program.conn.ConnectionString = Program.connPublisherString;
-                        Program.conn.Open();
+                        Program.sqlConnection.ConnectionString = Program.connPublisherString;
+                        Program.sqlConnection.Open();
                         Program.LogOut();
                         this.Dispose();
                     }
                     else
                     {
                         MessageBox.Show("Đổi mật khẩu thất bại", "Lỗi");
-                        if (Program.ConnectSql() == 0) MessageBox.Show("Kết nối lại tài khoản thất bại");//Kết nối lại tài khoản
+                        if (Program.ConnectSqlWithAccount() == 0) MessageBox.Show("Kết nối lại tài khoản thất bại");//Kết nối lại tài khoản
                     }
                 }
                 else MessageBox.Show("Kết nối tài khoản window trong server thất bại");

@@ -196,9 +196,9 @@ namespace NGANHANG.View
         private void frmService_Activated(object sender, EventArgs e)
         {
             Program.serverName = Program.loginServer;
-            Program.login = Program.loginLogin;
+            Program.loginName = Program.loginLogin;
             Program.password = Program.loginPassword;
-            if (Program.ConnectSql() == 0)
+            if (Program.ConnectSqlWithAccount() == 0)
             {
                 MessageBox.Show("Lỗi kết nối server");
                 this.Dispose();
