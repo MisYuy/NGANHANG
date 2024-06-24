@@ -101,11 +101,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CHI_NHANH.xsd</DependentUpon>
     </Compile>
-    <Compile Include="NGANHANGDataSetkhachhang.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NGANHANGDataSetkhachhang.xsd</DependentUpon>
-    </Compile>
     <Compile Include="NHAN_VIEN.cs">
       <DependentUpon>NHAN_VIEN.xsd</DependentUpon>
     </Compile>
@@ -298,17 +293,6 @@
     </None>
     <None Include="CHI_NHANH.xss">
       <DependentUpon>CHI_NHANH.xsd</DependentUpon>
-    </None>
-    <None Include="NGANHANGDataSetkhachhang.xsc">
-      <DependentUpon>NGANHANGDataSetkhachhang.xsd</DependentUpon>
-    </None>
-    <None Include="NGANHANGDataSetkhachhang.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>NGANHANGDataSetkhachhang.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="NGANHANGDataSetkhachhang.xss">
-      <DependentUpon>NGANHANGDataSetkhachhang.xsd</DependentUpon>
     </None>
     <None Include="NHAN_VIEN.xsc">
       <DependentUpon>NHAN_VIEN.xsd</DependentUpon>

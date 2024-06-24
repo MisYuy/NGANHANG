@@ -69,8 +69,8 @@ namespace NGANHANG.View
             //this.get_SubscribesTableAdapter.Connection.ConnectionString = Program.connString;
             //this.get_SubscribesTableAdapter.Fill(this.nGANHANGDataSet1.Get_Subscribes);
             // TODO: This line of code loads data into the 'nGANHANGDataSetkhachhang.KhachHang' table. You can move, or remove it, as needed.
-            this.khachHangTableAdapter.Connection.ConnectionString = Program.connectionString;
-            this.khachHangTableAdapter.Fill(this.nGANHANGDataSetkhachhang.KhachHang);
+           // this.khachHangTableAdapter.Connection.ConnectionString = Program.connectionString;
+           // this.khachHangTableAdapter.Fill(this.nGANHANGDataSetkhachhang.KhachHang);
             //
             
             cmbChiNhanh.DataSource = Program.bds_dspm;
@@ -123,8 +123,8 @@ namespace NGANHANG.View
             }
             else
             {
-                this.khachHangTableAdapter.Connection.ConnectionString = Program.connectionString;
-                this.khachHangTableAdapter.Fill(this.nGANHANGDataSetkhachhang.KhachHang);
+                //this.khachHangTableAdapter.Connection.ConnectionString = Program.connectionString;
+                //this.khachHangTableAdapter.Fill(this.nGANHANGDataSetkhachhang.KhachHang);
             }
            
         }

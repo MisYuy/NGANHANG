@@ -37,17 +37,17 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.nGANHANGDataSetkhachhang = new NGANHANG.NGANHANGDataSetkhachhang();
+            //this.nGANHANGDataSetkhachhang = new NGANHANG.NGANHANGDataSetkhachhang();
             this.nGANHANGDataSetkhachhangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.khachHangTableAdapter = new NGANHANG.NGANHANG_KhachHangTableAdapters.KhachHangTableAdapter();
+            //this.khachHangTableAdapter = new NGANHANG.NGANHANG_KhachHangTableAdapters.KhachHangTableAdapter();
             this.spLietKeKhachHangTheoChiNhanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sp_LietKeKhachHangTheoChiNhanhTableAdapter = new NGANHANG.NGANHANG_KhachHangTableAdapters.sp_LietKeKhachHangTheoChiNhanhTableAdapter();
+            //this.sp_LietKeKhachHangTheoChiNhanhTableAdapter = new NGANHANG.NGANHANG_KhachHangTableAdapters.sp_LietKeKhachHangTheoChiNhanhTableAdapter();
             this.get_SubscribesTableAdapter = new NGANHANG.NGANHANGDataSet1TableAdapters.Get_SubscribesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.getSubscribesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSetkhachhang)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSetkhachhang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSetkhachhangBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spLietKeKhachHangTheoChiNhanhBindingSource)).BeginInit();
@@ -121,13 +121,13 @@
             // 
             // nGANHANGDataSetkhachhang
             // 
-            this.nGANHANGDataSetkhachhang.DataSetName = "NGANHANGDataSetkhachhang";
-            this.nGANHANGDataSetkhachhang.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+           // this.nGANHANGDataSetkhachhang.DataSetName = "NGANHANGDataSetkhachhang";
+           // this.nGANHANGDataSetkhachhang.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // nGANHANGDataSetkhachhangBindingSource
             // 
-            this.nGANHANGDataSetkhachhangBindingSource.DataSource = this.nGANHANGDataSetkhachhang;
-            this.nGANHANGDataSetkhachhangBindingSource.Position = 0;
+           // this.nGANHANGDataSetkhachhangBindingSource.DataSource = this.nGANHANGDataSetkhachhang;
+         //   this.nGANHANGDataSetkhachhangBindingSource.Position = 0;
             // 
             // khachHangBindingSource
             // 
@@ -136,7 +136,7 @@
             // 
             // khachHangTableAdapter
             // 
-            this.khachHangTableAdapter.ClearBeforeFill = true;
+            //this.khachHangTableAdapter.ClearBeforeFill = true;
             // 
             // spLietKeKhachHangTheoChiNhanhBindingSource
             // 
@@ -145,7 +145,7 @@
             // 
             // sp_LietKeKhachHangTheoChiNhanhTableAdapter
             // 
-            this.sp_LietKeKhachHangTheoChiNhanhTableAdapter.ClearBeforeFill = true;
+            //this.sp_LietKeKhachHangTheoChiNhanhTableAdapter.ClearBeforeFill = true;
             // 
             // get_SubscribesTableAdapter
             // 
@@ -168,10 +168,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.getSubscribesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSetkhachhang)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSetkhachhang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSetkhachhangBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spLietKeKhachHangTheoChiNhanhBindingSource)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.spLietKeKhachHangTheoChiNhanhBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,13 +185,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource nGANHANGDataSetkhachhangBindingSource;
-        private NGANHANGDataSetkhachhang nGANHANGDataSetkhachhang;
+        //private NGANHANGDataSetkhachhang nGANHANGDataSetkhachhang;
         private System.Windows.Forms.BindingSource khachHangBindingSource;
-        private NGANHANG_KhachHangTableAdapters.KhachHangTableAdapter khachHangTableAdapter;
+        //private NGANHANG_KhachHangTableAdapters.KhachHangTableAdapter khachHangTableAdapter;
         private System.Windows.Forms.BindingSource nGANHANGDataSet1BindingSource;
         private NGANHANGDataSet1 nGANHANGDataSet1;
         private System.Windows.Forms.BindingSource spLietKeKhachHangTheoChiNhanhBindingSource;
-        private NGANHANG_KhachHangTableAdapters.sp_LietKeKhachHangTheoChiNhanhTableAdapter sp_LietKeKhachHangTheoChiNhanhTableAdapter;
+        //private NGANHANG_KhachHangTableAdapters.sp_LietKeKhachHangTheoChiNhanhTableAdapter sp_LietKeKhachHangTheoChiNhanhTableAdapter;
         private System.Windows.Forms.BindingSource getSubscribesBindingSource;
         private NGANHANGDataSet1TableAdapters.Get_SubscribesTableAdapter get_SubscribesTableAdapter;
     }
