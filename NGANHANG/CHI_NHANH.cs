@@ -2,7 +2,7 @@
 {
 
 
-    partial class NGANHANG_ChiNhanh
+    partial class CHI_NHANH
     {
         partial class KhachHangDataTable
         {

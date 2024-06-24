@@ -60,7 +60,7 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.NGANHANG_NHANVIEN = new NGANHANG.NGANHANG_NHANVIEN();
+            this.NGANHANG_NHANVIEN = new NGANHANG.NHAN_VIEN();
             this.bdsNV = new System.Windows.Forms.BindingSource(this.components);
             this.NhanVienTableAdapter = new NGANHANG.NGANHANG_NHANVIENTableAdapters.NhanVienTableAdapter();
             this.tableAdapterManager = new NGANHANG.NGANHANG_NHANVIENTableAdapters.TableAdapterManager();
@@ -779,7 +779,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraBars.Bar bar1;
         private System.Windows.Forms.BindingSource bdsNV;
-        private NGANHANG_NHANVIEN NGANHANG_NHANVIEN;
+        private NHAN_VIEN NGANHANG_NHANVIEN;
         private System.Windows.Forms.ComboBox cmbChiNhanh;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private NGANHANG_NHANVIENTableAdapters.NhanVienTableAdapter NhanVienTableAdapter;
