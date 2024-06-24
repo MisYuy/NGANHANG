@@ -54,11 +54,11 @@ namespace NGANHANG.View
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.khachHangDataSet = new NGANHANG.KhachHang_BENTHANH();
+            this.khachHangDataSet = new NGANHANG.KHACH_HANG();
             this.panelControlKH = new DevExpress.XtraEditors.PanelControl();
             this.txtMaCN = new DevExpress.XtraEditors.TextEdit();
             this.bdsKhachHang = new System.Windows.Forms.BindingSource(this.components);
-            this.nGANHANG_ChiNhanh = new NGANHANG.NGANHANG_ChiNhanh();
+            this.nGANHANG_ChiNhanh = new NGANHANG.CHI_NHANH();
             this.txtSoDT = new DevExpress.XtraEditors.TextEdit();
             this.dateNgayCap = new DevExpress.XtraEditors.DateEdit();
             this.txtDiaChi = new DevExpress.XtraEditors.TextEdit();
@@ -756,7 +756,7 @@ namespace NGANHANG.View
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private KhachHang_BENTHANH khachHangDataSet;
+        private KHACH_HANG khachHangDataSet;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.ComboBox cmbChiNhanh;
         private System.Windows.Forms.Label label1;
@@ -764,7 +764,7 @@ namespace NGANHANG.View
         private DevExpress.XtraEditors.PanelControl panelControlKH;
         private DevExpress.XtraBars.BarButtonItem btnExit;
         private DevExpress.XtraEditors.GroupControl groupControlTaiKhoan;
-        private NGANHANG_ChiNhanh nGANHANG_ChiNhanh;
+        private CHI_NHANH nGANHANG_ChiNhanh;
         private System.Windows.Forms.BindingSource bdsKhachHang;
         private NGANHANG_ChiNhanhTableAdapters.KhachHangTableAdapter khachHangTableAdapter;
         private NGANHANG_ChiNhanhTableAdapters.TableAdapterManager tableAdapterManager;

@@ -83,46 +83,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="KhachHang_BENTHANH.Designer.cs">
+    <Compile Include="KHACH_HANG.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>KhachHang_BENTHANH.xsd</DependentUpon>
+      <DependentUpon>KHACH_HANG.xsd</DependentUpon>
     </Compile>
     <Compile Include="NGANHANGDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NGANHANGDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="NGANHANG_ChiNhanh.cs">
-      <DependentUpon>NGANHANG_ChiNhanh.xsd</DependentUpon>
+    <Compile Include="CHI_NHANH.cs">
+      <DependentUpon>CHI_NHANH.xsd</DependentUpon>
     </Compile>
-    <Compile Include="NGANHANG_ChiNhanh.Designer.cs">
+    <Compile Include="CHI_NHANH.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NGANHANG_ChiNhanh.xsd</DependentUpon>
+      <DependentUpon>CHI_NHANH.xsd</DependentUpon>
     </Compile>
     <Compile Include="NGANHANGDataSetkhachhang.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NGANHANGDataSetkhachhang.xsd</DependentUpon>
     </Compile>
-    <Compile Include="NGANHANG_NHANVIEN.cs">
-      <DependentUpon>NGANHANG_NHANVIEN.xsd</DependentUpon>
+    <Compile Include="NHAN_VIEN.cs">
+      <DependentUpon>NHAN_VIEN.xsd</DependentUpon>
     </Compile>
     <Compile Include="NGANHANG_TANDINH.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NGANHANG_TANDINH.xsd</DependentUpon>
     </Compile>
-    <Compile Include="NGANHANG_BENTHANH_NHANVIEN.Designer.cs">
+    <Compile Include="NHAN_VIEN.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NGANHANG_BENTHANH_NHANVIEN.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="NGANHANG_NHANVIEN.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NGANHANG_NHANVIEN.xsd</DependentUpon>
+      <DependentUpon>NHAN_VIEN.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -281,16 +276,16 @@
       <DependentUpon>rpt_TaiKhoanMo_1_ChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="KhachHang_BENTHANH.xsc">
-      <DependentUpon>KhachHang_BENTHANH.xsd</DependentUpon>
+    <None Include="KHACH_HANG.xsc">
+      <DependentUpon>KHACH_HANG.xsd</DependentUpon>
     </None>
-    <None Include="KhachHang_BENTHANH.xsd">
+    <None Include="KHACH_HANG.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>KhachHang_BENTHANH.Designer.cs</LastGenOutput>
+      <LastGenOutput>KHACH_HANG.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="KhachHang_BENTHANH.xss">
-      <DependentUpon>KhachHang_BENTHANH.xsd</DependentUpon>
+    <None Include="KHACH_HANG.xss">
+      <DependentUpon>KHACH_HANG.xsd</DependentUpon>
     </None>
     <None Include="NGANHANGDataSet1.xsc">
       <DependentUpon>NGANHANGDataSet1.xsd</DependentUpon>
@@ -303,16 +298,16 @@
     <None Include="NGANHANGDataSet1.xss">
       <DependentUpon>NGANHANGDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="NGANHANG_ChiNhanh.xsc">
-      <DependentUpon>NGANHANG_ChiNhanh.xsd</DependentUpon>
+    <None Include="CHI_NHANH.xsc">
+      <DependentUpon>CHI_NHANH.xsd</DependentUpon>
     </None>
-    <None Include="NGANHANG_ChiNhanh.xsd">
+    <None Include="CHI_NHANH.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>NGANHANG_ChiNhanh.Designer.cs</LastGenOutput>
+      <LastGenOutput>CHI_NHANH.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="NGANHANG_ChiNhanh.xss">
-      <DependentUpon>NGANHANG_ChiNhanh.xsd</DependentUpon>
+    <None Include="CHI_NHANH.xss">
+      <DependentUpon>CHI_NHANH.xsd</DependentUpon>
     </None>
     <None Include="NGANHANGDataSetkhachhang.xsc">
       <DependentUpon>NGANHANGDataSetkhachhang.xsd</DependentUpon>
@@ -336,27 +331,16 @@
     <None Include="NGANHANG_TANDINH.xss">
       <DependentUpon>NGANHANG_TANDINH.xsd</DependentUpon>
     </None>
-    <None Include="NGANHANG_BENTHANH_NHANVIEN.xsc">
-      <DependentUpon>NGANHANG_BENTHANH_NHANVIEN.xsd</DependentUpon>
+    <None Include="NHAN_VIEN.xsc">
+      <DependentUpon>NHAN_VIEN.xsd</DependentUpon>
     </None>
-    <None Include="NGANHANG_BENTHANH_NHANVIEN.xsd">
+    <None Include="NHAN_VIEN.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>NGANHANG_BENTHANH_NHANVIEN.Designer.cs</LastGenOutput>
+      <LastGenOutput>NHAN_VIEN.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="NGANHANG_BENTHANH_NHANVIEN.xss">
-      <DependentUpon>NGANHANG_BENTHANH_NHANVIEN.xsd</DependentUpon>
-    </None>
-    <None Include="NGANHANG_NHANVIEN.xsc">
-      <DependentUpon>NGANHANG_NHANVIEN.xsd</DependentUpon>
-    </None>
-    <None Include="NGANHANG_NHANVIEN.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>NGANHANG_NHANVIEN.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="NGANHANG_NHANVIEN.xss">
-      <DependentUpon>NGANHANG_NHANVIEN.xsd</DependentUpon>
+    <None Include="NHAN_VIEN.xss">
+      <DependentUpon>NHAN_VIEN.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
