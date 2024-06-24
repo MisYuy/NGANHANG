@@ -280,9 +280,6 @@
     <EmbeddedResource Include="View\rpt_TaiKhoanMo_1_ChiNhanh.resx">
       <DependentUpon>rpt_TaiKhoanMo_1_ChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="..\.editorconfig">
-      <Link>.editorconfig</Link>
-    </None>
     <None Include="App.config" />
     <None Include="KhachHang_BENTHANH.xsc">
       <DependentUpon>KhachHang_BENTHANH.xsd</DependentUpon>

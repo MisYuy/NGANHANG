@@ -244,13 +244,13 @@
             this.sqlDataSource1.ConnectionName = "NGANHANG.Properties.Settings.NGANHANGConnectionString";
             this.sqlDataSource1.Name = "sqlDataSource1";
             storedProcQuery1.Name = "usp_SaoKeGiaoDichMotTaiKhoanTrongMotKhoangThoiGian_Quy";
-            queryParameter1.Name = "@SOTAIKHOAN";
+            queryParameter1.Name = "@SOTK";
             queryParameter1.Type = typeof(string);
             queryParameter1.ValueInfo = "003242939";
-            queryParameter2.Name = "@NGAYBATDAU";
+            queryParameter2.Name = "@NGAYBD";
             queryParameter2.Type = typeof(System.DateTime);
             queryParameter2.ValueInfo = "2020-01-01";
-            queryParameter3.Name = "@NGAYKETTHUC";
+            queryParameter3.Name = "@NGAYKT";
             queryParameter3.Type = typeof(System.DateTime);
             queryParameter3.ValueInfo = "2023-06-15";
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {

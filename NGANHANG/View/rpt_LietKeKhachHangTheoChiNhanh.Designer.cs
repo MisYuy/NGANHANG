@@ -255,7 +255,7 @@
             // 
             // sqlDataSource1
             // 
-            this.sqlDataSource1.ConnectionName = "NGANHANG.Properties.Settings.NGANHANG_khachhangConnectionString1";
+            this.sqlDataSource1.ConnectionName = "NGANHANG.Properties.Settings.NGANHANGConnectionString";
             this.sqlDataSource1.Name = "sqlDataSource1";
             storedProcQuery1.Name = "SP_LIET_KE_KHACH_HANG_THEO_CHI_NHANH";
             queryParameter1.Name = "@MACN";

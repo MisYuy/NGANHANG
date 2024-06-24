@@ -230,10 +230,10 @@
             // 
             // sqlDataSource1
             // 
-            this.sqlDataSource1.ConnectionName = "NGANHANG.Properties.Settings.NGANHANGConnectionString2";
+            this.sqlDataSource1.ConnectionName = "NGANHANG.Properties.Settings.NGANHANGConnectionString";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            storedProcQuery1.Name = "usp_LietKeTaiKhoanMoTrongMotKhoangThoiGianTai_1_ChiNhanh";
-            queryParameter1.Name = "@machinhanh";
+            storedProcQuery1.Name = "SP_LIET_KE_TAI_KHOAN_THEO_TIME";
+            queryParameter1.Name = "@MACN";
             queryParameter1.Type = typeof(string);
             queryParameter1.ValueInfo = "BENTHANH";
             queryParameter2.Name = "@NGAYBD";
@@ -246,7 +246,7 @@
             queryParameter1,
             queryParameter2,
             queryParameter3});
-            storedProcQuery1.StoredProcName = "usp_LietKeTaiKhoanMoTrongMotKhoangThoiGianTai_1_ChiNhanh";
+            storedProcQuery1.StoredProcName = "SP_LIET_KE_TAI_KHOAN_THEO_TIME";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
@@ -314,7 +314,7 @@
             this.Detail});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1});
-            this.DataMember = "usp_LietKeTaiKhoanMoTrongMotKhoangThoiGianTai_1_ChiNhanh";
+            this.DataMember = "SP_LIET_KE_TAI_KHOAN_THEO_TIME";
             this.DataSource = this.sqlDataSource1;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
