@@ -109,11 +109,6 @@
     <Compile Include="NHAN_VIEN.cs">
       <DependentUpon>NHAN_VIEN.xsd</DependentUpon>
     </Compile>
-    <Compile Include="NGANHANG_TANDINH.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NGANHANG_TANDINH.xsd</DependentUpon>
-    </Compile>
     <Compile Include="NHAN_VIEN.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -319,17 +314,6 @@
     </None>
     <None Include="NGANHANGDataSetkhachhang.xss">
       <DependentUpon>NGANHANGDataSetkhachhang.xsd</DependentUpon>
-    </None>
-    <None Include="NGANHANG_TANDINH.xsc">
-      <DependentUpon>NGANHANG_TANDINH.xsd</DependentUpon>
-    </None>
-    <None Include="NGANHANG_TANDINH.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>NGANHANG_TANDINH.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="NGANHANG_TANDINH.xss">
-      <DependentUpon>NGANHANG_TANDINH.xsd</DependentUpon>
     </None>
     <None Include="NHAN_VIEN.xsc">
       <DependentUpon>NHAN_VIEN.xsd</DependentUpon>
