@@ -88,6 +88,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>KHACH_HANG.xsd</DependentUpon>
     </Compile>
+    <Compile Include="NGANHANGDataSet1.cs">
+      <DependentUpon>NGANHANGDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NGANHANGDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -18,14 +19,39 @@ namespace NGANHANG.View
         public frmSaoKeGiaoDich()
         {
             InitializeComponent();
+            gridView2.RowClick += OnSelectRow;
         }
 
         private void frmSaoKeGiaoDich_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'nGANHANGDataSet_ADMIN.VIEW_TAIKHOAN' table. You can move, or remove it, as needed.
             this.vIEW_TAIKHOANTableAdapter.Connection.ConnectionString = Program.connectionString;
-            this.vIEW_TAIKHOANTableAdapter.Fill(this.nGANHANGDataSet_ADMIN.VIEW_TAIKHOAN);
+            //this.vIEW_TAIKHOANTableAdapter.Fill(this.nGANHANGDataSet_ADMIN.VIEW_TAIKHOAN);
+            loadTaiKhoan();
+        }
 
+        public void loadTaiKhoan()
+        {
+            using (SqlConnection conn = new SqlConnection(Program.connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("SP_LAY_TAT_CA_TAI_KHOAN", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    bdsVIEW_TAIKHOAN.DataSource = dt;
+                    vIEW_TAIKHOANGridControl.DataSource = bdsVIEW_TAIKHOAN;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading account data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,7 +94,7 @@ namespace NGANHANG.View
 
         }
 
-        private void vIEW_TAIKHOANGridControl_Click(object sender, EventArgs e)
+        private void OnSelectRow(object sender, EventArgs e)
         {
             // Lấy dòng đang được chọn
             var selectedRow = gridView2.GetFocusedDataRow();
