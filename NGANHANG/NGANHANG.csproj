@@ -191,11 +191,11 @@
     <Compile Include="View\rpt_LietKeKhachHangTheoChiNhanh.Designer.cs">
       <DependentUpon>rpt_LietKeKhachHangTheoChiNhanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\rpt_SaoKeGiaoDichTaiKhoan.cs">
+    <Compile Include="View\TransactionReport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="View\rpt_SaoKeGiaoDichTaiKhoan.Designer.cs">
-      <DependentUpon>rpt_SaoKeGiaoDichTaiKhoan.cs</DependentUpon>
+    <Compile Include="View\TransactionReport.Designer.cs">
+      <DependentUpon>TransactionReport.cs</DependentUpon>
     </Compile>
     <Compile Include="View\rpt_TaiKhoanMoTatCaChiNhanh.cs">
       <SubType>Component</SubType>
@@ -254,8 +254,8 @@
     <EmbeddedResource Include="View\rpt_LietKeKhachHangTheoChiNhanh.resx">
       <DependentUpon>rpt_LietKeKhachHangTheoChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\rpt_SaoKeGiaoDichTaiKhoan.resx">
-      <DependentUpon>rpt_SaoKeGiaoDichTaiKhoan.cs</DependentUpon>
+    <EmbeddedResource Include="View\TransactionReport.resx">
+      <DependentUpon>TransactionReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\rpt_TaiKhoanMoTatCaChiNhanh.resx">
       <DependentUpon>rpt_TaiKhoanMoTatCaChiNhanh.cs</DependentUpon>

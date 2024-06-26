@@ -714,7 +714,6 @@ D:\Study\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.frmRegister.resources
 D:\Study\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.frmSaoKeGiaoDich.resources
 D:\Study\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.frmService.resources
 D:\Study\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.rpt_LietKeKhachHangTheoChiNhanh.resources
-D:\Study\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.rpt_SaoKeGiaoDichTaiKhoan.resources
 D:\Study\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.rpt_TaiKhoanMoTatCaChiNhanh.resources
 D:\Study\NGANHANG\NGANHANG\obj\Debug\NGANHANG.View.rpt_TaiKhoanMo_1_ChiNhanh.resources
 D:\Study\NGANHANG\NGANHANG\obj\Debug\NGANHANG.csproj.GenerateResource.cache
@@ -723,3 +722,4 @@ D:\Study\NGANHANG\NGANHANG\obj\Debug\NGANHANG.csproj.CoreCompileInputs.cache
 D:\Study\NGANHANG\NGANHANG\obj\Debug\NGANHANG.csproj.CopyComplete
 D:\Study\NGANHANG\NGANHANG\obj\Debug\NGANHANG.exe
 D:\Study\NGANHANG\NGANHANG\obj\Debug\NGANHANG.pdb
+D:\Study\NGANHANG\NGANHANG\obj\Debug\TransactionReport.resources

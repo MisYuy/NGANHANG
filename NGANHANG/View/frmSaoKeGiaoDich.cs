@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraGrid.Views.Grid;
+﻿using DevExpress.DataAccess.ConnectionParameters;
+using DevExpress.DataAccess.Sql;
+using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
@@ -57,7 +59,7 @@ namespace NGANHANG.View
         private void button1_Click(object sender, EventArgs e)
         {
             dateKetThuc.Properties.MaxValue = DateTime.Today;
-           
+
             if (!DateTime.TryParseExact(dateBatDau.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out DateTime ngayBatDau))
             {
                 MessageBox.Show("Ngày bắt đầu không hợp lệ. Vui lòng nhập đúng định dạng dd/MM/yyyy", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -79,19 +81,43 @@ namespace NGANHANG.View
                 return;
             }
 
-            string ngayBD = ngayBatDau.ToString("yyyy/MM/dd");
-            string ngayKT = ngayKetThuc.ToString("yyyy/MM/dd");
+            string ngayBD = ngayBatDau.ToString("yyyy-MM-dd");
+            string ngayKT = ngayKetThuc.ToString("yyyy-MM-dd");
             DateTime ngayBD2 = ngayBatDau.Date;
             DateTime ngayKT2 = ngayKetThuc.Date;
 
+            // Create the connection parameters
+            MsSqlConnectionParameters connectionParameters = new MsSqlConnectionParameters(
+                "DESKTOP-KL0DTTA\\TANDINH", // Server name
+                "NGANHANG",                 // Database name
+                "TH",                       // User ID
+                "123",                      // Password
+                MsSqlAuthorizationType.SqlServer // Authentication type
+            );
 
+            // Create a new SQL data source with the connection parameters
+            SqlDataSource sqlDataSource = new SqlDataSource(connectionParameters);
 
-            rpt_SaoKeGiaoDichTaiKhoan rpt = new rpt_SaoKeGiaoDichTaiKhoan(txtSoTaiKhoan.Text, ngayBD, ngayKT);
-            rpt.lbTieuDe.Text = "SAO KÊ GIAO DỊCH TÀI KHOẢN TỪ " + ngayBatDau.ToString("dd/MM/yyyy") +
-                " ĐẾN NGÀY " + ngayKetThuc.ToString("dd/MM/yyyy");
-            ReportPrintTool print = new ReportPrintTool(rpt);
-            print.ShowPreviewDialog();
+            // Create a stored procedure query
+            StoredProcQuery storedProcQuery = new StoredProcQuery("SP_SAO_KE_GIAO_DICH", "SP_SAO_KE_GIAO_DICH");
+            storedProcQuery.Parameters.Add(new QueryParameter("@SOTK", typeof(string), txtSoTaiKhoan.Text)); // Example account number
+            storedProcQuery.Parameters.Add(new QueryParameter("@NGAYBD", typeof(DateTime), ngayBD));
+            storedProcQuery.Parameters.Add(new QueryParameter("@NGAYKT", typeof(DateTime), ngayKT));
 
+            // Add the query to the data source
+            sqlDataSource.Queries.Add(storedProcQuery);
+            sqlDataSource.Fill();
+
+            // Create an instance of the report
+            TransactionReport report = new TransactionReport();
+
+            // Assign the data source to the report
+            report.DataSource = sqlDataSource;
+            report.DataMember = "SP_SAO_KE_GIAO_DICH";
+
+            // Show the report preview
+            ReportPrintTool printTool = new ReportPrintTool(report);
+            printTool.ShowPreview();
         }
 
         private void OnSelectRow(object sender, EventArgs e)
