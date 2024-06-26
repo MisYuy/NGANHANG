@@ -47,7 +47,7 @@ namespace NGANHANG.View
                     da.Fill(dt);
 
                     bdsVIEW_TAIKHOAN.DataSource = dt;
-                    vIEW_TAIKHOANGridControl.DataSource = bdsVIEW_TAIKHOAN;
+                    gridControl_taikhoan.DataSource = bdsVIEW_TAIKHOAN;
                 }
                 catch (Exception ex)
                 {
@@ -56,7 +56,34 @@ namespace NGANHANG.View
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void OnSelectRow(object sender, EventArgs e)
+        {
+            // Lấy dòng đang được chọn
+            var selectedRow = gridView2.GetFocusedDataRow();
+
+            // Kiểm tra xem dòng có tồn tại và có giá trị trong cột SOTK không
+            if (selectedRow != null && selectedRow["SOTK"] != null)
+            {
+                // Lấy giá trị từ cột SOTK của dòng được chọn
+                var selectedValue = selectedRow["SOTK"].ToString();
+
+                // Gán giá trị vào textEdit
+                txtSoTaiKhoan.Text = selectedValue;
+            }
+            else
+            {
+                // Nếu không có giá trị, xóa nội dung của textEdit
+                txtSoTaiKhoan.Text = string.Empty;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        // Add these methods to your frmSaoKeGiaoDich class
+        private void btnView_Click(object sender, EventArgs e)
         {
             dateKetThuc.Properties.MaxValue = DateTime.Today;
 
@@ -72,8 +99,6 @@ namespace NGANHANG.View
                 MessageBox.Show("Ngày kết thúc không hợp lệ. Vui lòng nhập đúng định dạng dd/MM/yyyy", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-
 
             if (ngayBatDau > ngayKetThuc)
             {
@@ -120,28 +145,7 @@ namespace NGANHANG.View
             printTool.ShowPreview();
         }
 
-        private void OnSelectRow(object sender, EventArgs e)
-        {
-            // Lấy dòng đang được chọn
-            var selectedRow = gridView2.GetFocusedDataRow();
-
-            // Kiểm tra xem dòng có tồn tại và có giá trị trong cột SOTK không
-            if (selectedRow != null && selectedRow["SOTK"] != null)
-            {
-                // Lấy giá trị từ cột SOTK của dòng được chọn
-                var selectedValue = selectedRow["SOTK"].ToString();
-
-                // Gán giá trị vào textEdit
-                txtSoTaiKhoan.Text = selectedValue;
-            }
-            else
-            {
-                // Nếu không có giá trị, xóa nội dung của textEdit
-                txtSoTaiKhoan.Text = string.Empty;
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }

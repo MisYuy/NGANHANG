@@ -17,10 +17,18 @@ public class TransactionReport : XtraReport
         // Create report title
         XRLabel reportTitle = new XRLabel();
         reportTitle.Text = "Sao Kê Giao Dịch";
-        reportTitle.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+        reportTitle.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
         reportTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-        reportTitle.Dock = DevExpress.XtraReports.UI.XRDockStyle.Top;
-        reportHeaderBand.Controls.Add(reportTitle);
+        reportTitle.BoundsF = new System.Drawing.RectangleF(0, 0, this.PageWidth - this.Margins.Left - this.Margins.Right, 50);
+        topMarginBand.Controls.Add(reportTitle);
+
+        XRLabel soDuDauTxt = new XRLabel();
+        soDuDauTxt.Text = "Số dư đầu";
+        soDuDauTxt.ExpressionBindings.Add(new ExpressionBinding("BeforePrint", "Text", "SoDuDau"));
+        soDuDauTxt.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+        soDuDauTxt.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+        soDuDauTxt.BoundsF = new System.Drawing.RectangleF(0, 0, this.PageWidth - this.Margins.Left - this.Margins.Right, 0);
+        reportHeaderBand.Controls.Add(soDuDauTxt);
 
         // Create table for the header
         XRTable headerTable = new XRTable();
@@ -36,6 +44,7 @@ public class TransactionReport : XtraReport
             headerTableCell.Text = header;
             headerTableCell.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             headerTableCell.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            headerTableCell.WidthF = (headerTable.WidthF / headers.Length);
             headerTableRow.Cells.Add(headerTableCell);
         }
 
@@ -55,6 +64,7 @@ public class TransactionReport : XtraReport
             detailTableCell.ExpressionBindings.Add(new ExpressionBinding("BeforePrint", "Text", $"[{field}]"));
             detailTableCell.Font = new System.Drawing.Font("Arial", 10F);
             detailTableCell.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            detailTableCell.WidthF = (detailTable.WidthF / detailFields.Length);
             detailTableRow.Cells.Add(detailTableCell);
         }
 

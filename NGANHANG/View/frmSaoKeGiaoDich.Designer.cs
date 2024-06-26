@@ -32,18 +32,18 @@
             this.txtSoTaiKhoan = new DevExpress.XtraEditors.TextEdit();
             this.dateBatDau = new DevExpress.XtraEditors.DateEdit();
             this.dateKetThuc = new DevExpress.XtraEditors.DateEdit();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnView = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.lblSoTaiKhoan = new System.Windows.Forms.Label();
+            this.lblTuNgay = new System.Windows.Forms.Label();
+            this.lblDenNgay = new System.Windows.Forms.Label();
+            this.lblChonTK = new System.Windows.Forms.Label();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.nGANHANGDataSet_ADMIN = new NGANHANG.NGANHANGDataSet1();
             this.bdsVIEW_TAIKHOAN = new System.Windows.Forms.BindingSource(this.components);
             this.vIEW_TAIKHOANTableAdapter = new NGANHANG.NGANHANGDataSet1TableAdapters.VIEW_TAIKHOANTableAdapter();
             this.tableAdapterManager = new NGANHANG.NGANHANGDataSet1TableAdapters.TableAdapterManager();
-            this.vIEW_TAIKHOANGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridControl_taikhoan = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colCMND = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -58,13 +58,13 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSet_ADMIN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsVIEW_TAIKHOAN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vIEW_TAIKHOANGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_taikhoan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSoTaiKhoan
             // 
-            this.txtSoTaiKhoan.Location = new System.Drawing.Point(308, 61);
+            this.txtSoTaiKhoan.Location = new System.Drawing.Point(1200, 50);
             this.txtSoTaiKhoan.Margin = new System.Windows.Forms.Padding(17, 19, 17, 19);
             this.txtSoTaiKhoan.Name = "txtSoTaiKhoan";
             this.txtSoTaiKhoan.Properties.ReadOnly = true;
@@ -74,7 +74,7 @@
             // dateBatDau
             // 
             this.dateBatDau.EditValue = null;
-            this.dateBatDau.Location = new System.Drawing.Point(308, 159);
+            this.dateBatDau.Location = new System.Drawing.Point(1200, 110);
             this.dateBatDau.Margin = new System.Windows.Forms.Padding(17, 19, 17, 19);
             this.dateBatDau.Name = "dateBatDau";
             this.dateBatDau.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -91,7 +91,7 @@
             // dateKetThuc
             // 
             this.dateKetThuc.EditValue = null;
-            this.dateKetThuc.Location = new System.Drawing.Point(308, 229);
+            this.dateKetThuc.Location = new System.Drawing.Point(1200, 170);
             this.dateKetThuc.Margin = new System.Windows.Forms.Padding(21, 24, 21, 24);
             this.dateKetThuc.Name = "dateKetThuc";
             this.dateKetThuc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -105,89 +105,94 @@
             this.dateKetThuc.Size = new System.Drawing.Size(294, 26);
             this.dateKetThuc.TabIndex = 2;
             // 
-            // button1
+            // btnView
             // 
-            this.button1.Location = new System.Drawing.Point(102, 362);
-            this.button1.Margin = new System.Windows.Forms.Padding(14, 15, 14, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(340, 95);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Xem";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnView.Location = new System.Drawing.Point(1000, 240);
+            this.btnView.Margin = new System.Windows.Forms.Padding(14, 15, 14, 15);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(150, 40);
+            this.btnView.TabIndex = 3;
+            this.btnView.Text = "Xem";
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.BackColor = System.Drawing.Color.Blue; // Set the background color to red
+            this.btnView.ForeColor = System.Drawing.Color.White;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
-            // button2
+            // btnExit
             // 
-            this.button2.Location = new System.Drawing.Point(613, 362);
-            this.button2.Margin = new System.Windows.Forms.Padding(14, 15, 14, 15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(399, 95);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnExit.Location = new System.Drawing.Point(1350, 240);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(14, 15, 14, 15);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(150, 40);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = false; // Ensure this is set to false to customize color
+            this.btnExit.BackColor = System.Drawing.Color.Red; // Set the background color to red
+            this.btnExit.ForeColor = System.Drawing.Color.White; 
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+
             // 
-            // label1
+            // lblSoTaiKhoan
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(189, 68);
-            this.label1.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 19);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Số tài khoản";
+            this.lblSoTaiKhoan.AutoSize = true;
+            this.lblSoTaiKhoan.Location = new System.Drawing.Point(1000, 50);
+            this.lblSoTaiKhoan.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
+            this.lblSoTaiKhoan.Name = "lblSoTaiKhoan";
+            this.lblSoTaiKhoan.Size = new System.Drawing.Size(97, 19);
+            this.lblSoTaiKhoan.TabIndex = 5;
+            this.lblSoTaiKhoan.Text = "Số tài khoản";
             // 
-            // label2
+            // lblTuNgay
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(218, 162);
-            this.label2.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 19);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Từ ngày";
+            this.lblTuNgay.AutoSize = true;
+            this.lblTuNgay.Location = new System.Drawing.Point(1000, 110);
+            this.lblTuNgay.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
+            this.lblTuNgay.Name = "lblTuNgay";
+            this.lblTuNgay.Size = new System.Drawing.Size(68, 19);
+            this.lblTuNgay.TabIndex = 6;
+            this.lblTuNgay.Text = "Từ ngày";
             // 
-            // label3
+            // lblDenNgay
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(214, 234);
-            this.label3.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 19);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Đến ngày";
+            this.lblDenNgay.AutoSize = true;
+            this.lblDenNgay.Location = new System.Drawing.Point(1000, 170);
+            this.lblDenNgay.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
+            this.lblDenNgay.Name = "lblDenNgay";
+            this.lblDenNgay.Size = new System.Drawing.Size(72, 19);
+            this.lblDenNgay.TabIndex = 7;
+            this.lblDenNgay.Text = "Đến ngày";
             // 
-            // label4
+            // lblChonTK
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(504, 24);
-            this.label4.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 19);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Chọn TK";
+            this.lblChonTK.AutoSize = true;
+            this.lblChonTK.Location = new System.Drawing.Point(1200, 10);
+            this.lblChonTK.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
+            this.lblChonTK.Name = "lblChonTK";
+            this.lblChonTK.Size = new System.Drawing.Size(126, 19);
+            this.lblChonTK.TabIndex = 8;
+            this.lblChonTK.Text = "Chọn tài khoản";
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.txtSoTaiKhoan);
-            this.panelControl1.Controls.Add(this.label4);
-            this.panelControl1.Controls.Add(this.dateBatDau);
-            this.panelControl1.Controls.Add(this.label3);
+            this.panelControl1.Controls.Add(this.lblChonTK);
+            this.panelControl1.Controls.Add(this.lblDenNgay);
+            this.panelControl1.Controls.Add(this.lblTuNgay);
+            this.panelControl1.Controls.Add(this.lblSoTaiKhoan);
+            this.panelControl1.Controls.Add(this.btnExit);
+            this.panelControl1.Controls.Add(this.btnView);
             this.panelControl1.Controls.Add(this.dateKetThuc);
-            this.panelControl1.Controls.Add(this.label2);
-            this.panelControl1.Controls.Add(this.button1);
-            this.panelControl1.Controls.Add(this.label1);
-            this.panelControl1.Controls.Add(this.button2);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(14, 15, 14, 15);
+            this.panelControl1.Controls.Add(this.dateBatDau);
+            this.panelControl1.Controls.Add(this.txtSoTaiKhoan);
+            this.panelControl1.Location = new System.Drawing.Point(29, 17);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(17, 19, 17, 19);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1189, 522);
+            this.panelControl1.Size = new System.Drawing.Size(1500, 300);
             this.panelControl1.TabIndex = 9;
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             // 
             // nGANHANGDataSet_ADMIN
             // 
-            this.nGANHANGDataSet_ADMIN.DataSetName = "NGANHANGDataSet1";
+            this.nGANHANGDataSet_ADMIN.DataSetName = "NGANHANGDataSet_ADMIN";
             this.nGANHANGDataSet_ADMIN.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bdsVIEW_TAIKHOAN
@@ -201,28 +206,29 @@
             // 
             // tableAdapterManager
             // 
-//this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+          //  this.tableAdapterManager.ChiNhanhTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
           //  this.tableAdapterManager.GD_CHUYENTIENTableAdapter = null;
-//this.tableAdapterManager.GD_GOIRUTTableAdapter = null;
-           // this.tableAdapterManager.NGANHANGTableAdapter = null;
-          //  this.tableAdapterManager.TAIKHOANTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = NGANHANG.NGANHANGDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            //this.tableAdapterManager.VIEW_TAIKHOANTableAdapter = this.vIEW_TAIKHOANTableAdapter;
+          //  this.tableAdapterManager.GD_GOIRUTTableAdapter = null;
+           // this.tableAdapterManager.KhachHangTableAdapter = null;
+          //  this.tableAdapterManager.NhanVienTableAdapter = null;
+//this.tableAdapterManager.TaiKhoanTableAdapter = null;
+           // this.tableAdapterManager.UpdateOrder = NGANHANG.NGANHANGDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // vIEW_TAIKHOANGridControl
             // 
-            this.vIEW_TAIKHOANGridControl.DataSource = this.bdsVIEW_TAIKHOAN;
-            this.vIEW_TAIKHOANGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vIEW_TAIKHOANGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.vIEW_TAIKHOANGridControl.Location = new System.Drawing.Point(0, 522);
-            this.vIEW_TAIKHOANGridControl.MainView = this.gridView2;
-            this.vIEW_TAIKHOANGridControl.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.vIEW_TAIKHOANGridControl.Name = "vIEW_TAIKHOANGridControl";
-            this.vIEW_TAIKHOANGridControl.Size = new System.Drawing.Size(1189, 634);
-            this.vIEW_TAIKHOANGridControl.TabIndex = 10;
-            this.vIEW_TAIKHOANGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridControl_taikhoan.DataSource = this.bdsVIEW_TAIKHOAN;
+            this.gridControl_taikhoan.Location = new System.Drawing.Point(1000, 360);
+            this.gridControl_taikhoan.MainView = this.gridView2;
+            this.gridControl_taikhoan.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
+            this.gridControl_taikhoan.Name = "taikhoan";
+            this.gridControl_taikhoan.Size = new System.Drawing.Size(1500, 650);
+            this.gridControl_taikhoan.TabIndex = 10;
+            this.gridControl_taikhoan.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
-            this.vIEW_TAIKHOANGridControl.Click += new System.EventHandler(this.OnSelectRow);
+            this.gridControl_taikhoan.Dock = System.Windows.Forms.DockStyle.Bottom;
+            //  this.vIEW_TAIKHOANGridControl.Click += new System.EventHandler(this.vIEW_TAIKHOANGridControl_Click);
             // 
             // gridView2
             // 
@@ -231,57 +237,56 @@
             this.colHOTEN,
             this.colSOTK,
             this.colSODU});
-            this.gridView2.DetailHeight = 524;
-            this.gridView2.FixedLineWidth = 3;
-            this.gridView2.GridControl = this.vIEW_TAIKHOANGridControl;
+            this.gridView2.DetailHeight = 755;
+            this.gridView2.FixedLineWidth = 4;
+            this.gridView2.GridControl = this.gridControl_taikhoan;
             this.gridView2.Name = "gridView2";
             // 
             // colCMND
             // 
             this.colCMND.FieldName = "CMND";
-            this.colCMND.MinWidth = 30;
+            this.colCMND.MinWidth = 27;
             this.colCMND.Name = "colCMND";
             this.colCMND.Visible = true;
             this.colCMND.VisibleIndex = 0;
-            this.colCMND.Width = 112;
+            this.colCMND.Width = 100;
             // 
             // colHOTEN
             // 
             this.colHOTEN.FieldName = "HOTEN";
-            this.colHOTEN.MinWidth = 30;
+            this.colHOTEN.MinWidth = 27;
             this.colHOTEN.Name = "colHOTEN";
             this.colHOTEN.Visible = true;
             this.colHOTEN.VisibleIndex = 1;
-            this.colHOTEN.Width = 112;
+            this.colHOTEN.Width = 100;
             // 
             // colSOTK
             // 
             this.colSOTK.FieldName = "SOTK";
-            this.colSOTK.MinWidth = 30;
+            this.colSOTK.MinWidth = 27;
             this.colSOTK.Name = "colSOTK";
             this.colSOTK.Visible = true;
             this.colSOTK.VisibleIndex = 2;
-            this.colSOTK.Width = 112;
+            this.colSOTK.Width = 100;
             // 
             // colSODU
             // 
             this.colSODU.FieldName = "SODU";
-            this.colSODU.MinWidth = 30;
+            this.colSODU.MinWidth = 27;
             this.colSODU.Name = "colSODU";
             this.colSODU.Visible = true;
             this.colSODU.VisibleIndex = 3;
-            this.colSODU.Width = 112;
+            this.colSODU.Width = 100;
             // 
             // frmSaoKeGiaoDich
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 1156);
-            this.Controls.Add(this.vIEW_TAIKHOANGridControl);
+            this.ClientSize = new System.Drawing.Size(760, 660);
+            this.Controls.Add(this.gridControl_taikhoan);
             this.Controls.Add(this.panelControl1);
-            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "frmSaoKeGiaoDich";
-            this.Text = "frmSaoKeGiaoDich";
+            this.Text = "Sao kê giao dịch";
             this.Load += new System.EventHandler(this.frmSaoKeGiaoDich_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTaiKhoan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBatDau.Properties.CalendarTimeProperties)).EndInit();
@@ -293,7 +298,7 @@
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSet_ADMIN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsVIEW_TAIKHOAN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vIEW_TAIKHOANGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_taikhoan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
@@ -304,18 +309,18 @@
         private DevExpress.XtraEditors.TextEdit txtSoTaiKhoan;
         private DevExpress.XtraEditors.DateEdit dateBatDau;
         private DevExpress.XtraEditors.DateEdit dateKetThuc;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnView;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblSoTaiKhoan;
+        private System.Windows.Forms.Label lblTuNgay;
+        private System.Windows.Forms.Label lblDenNgay;
+        private System.Windows.Forms.Label lblChonTK;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private NGANHANGDataSet1 nGANHANGDataSet_ADMIN;
+        private NGANHANG.NGANHANGDataSet1 nGANHANGDataSet_ADMIN;
         private System.Windows.Forms.BindingSource bdsVIEW_TAIKHOAN;
-        private NGANHANGDataSet1TableAdapters.VIEW_TAIKHOANTableAdapter vIEW_TAIKHOANTableAdapter;
-        private NGANHANGDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
-        private DevExpress.XtraGrid.GridControl vIEW_TAIKHOANGridControl;
+        private NGANHANG.NGANHANGDataSet1TableAdapters.VIEW_TAIKHOANTableAdapter vIEW_TAIKHOANTableAdapter;
+        private NGANHANG.NGANHANGDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        private DevExpress.XtraGrid.GridControl gridControl_taikhoan;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn colCMND;
         private DevExpress.XtraGrid.Columns.GridColumn colHOTEN;
