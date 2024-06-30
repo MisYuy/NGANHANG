@@ -134,7 +134,7 @@ namespace NGANHANG.View
             sqlDataSource.Fill();
 
             // Create an instance of the report
-            TransactionReport report = new TransactionReport();
+            TransactionReport report = new TransactionReport(Program.connectionString, txtSoTaiKhoan.Text, DateTime.Parse(ngayBD), DateTime.Parse(ngayKT));
 
             // Assign the data source to the report
             report.DataSource = sqlDataSource;
