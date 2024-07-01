@@ -1,6 +1,6 @@
 ﻿namespace NGANHANG.View
 {
-    partial class rpt_TaiKhoanMoTatCaChiNhanh
+    partial class reportLietKeTaiKhoanTheoTimeTatCaChiNhanh
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rpt_TaiKhoanMoTatCaChiNhanh));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reportLietKeTaiKhoanTheoTimeTatCaChiNhanh));
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();

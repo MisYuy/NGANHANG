@@ -177,29 +177,29 @@
     <Compile Include="View\frmService.Designer.cs">
       <DependentUpon>frmService.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\rpt_LietKeKhachHangTheoChiNhanh.cs">
+    <Compile Include="View\reportLietKeKhachHangTheoChiNhanh.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="View\rpt_LietKeKhachHangTheoChiNhanh.Designer.cs">
-      <DependentUpon>rpt_LietKeKhachHangTheoChiNhanh.cs</DependentUpon>
+    <Compile Include="View\reportLietKeKhachHangTheoChiNhanh.Designer.cs">
+      <DependentUpon>reportLietKeKhachHangTheoChiNhanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TransactionReport.cs">
+    <Compile Include="View\reportSaoKeGiaoDich.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="View\TransactionReport.Designer.cs">
-      <DependentUpon>TransactionReport.cs</DependentUpon>
+    <Compile Include="View\reportSaoKeGiaoDich.Designer.cs">
+      <DependentUpon>reportSaoKeGiaoDich.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\rpt_TaiKhoanMoTatCaChiNhanh.cs">
+    <Compile Include="View\reportLietKeTaiKhoanTheoTimeTatCaChiNhanh.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="View\rpt_TaiKhoanMoTatCaChiNhanh.Designer.cs">
-      <DependentUpon>rpt_TaiKhoanMoTatCaChiNhanh.cs</DependentUpon>
+    <Compile Include="View\reportLietKeTaiKhoanTheoTimeTatCaChiNhanh.Designer.cs">
+      <DependentUpon>reportLietKeTaiKhoanTheoTimeTatCaChiNhanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\rpt_TaiKhoanMo_1_ChiNhanh.cs">
+    <Compile Include="View\reportLietKeTaiKhoanTheoTime.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="View\rpt_TaiKhoanMo_1_ChiNhanh.Designer.cs">
-      <DependentUpon>rpt_TaiKhoanMo_1_ChiNhanh.cs</DependentUpon>
+    <Compile Include="View\reportLietKeTaiKhoanTheoTime.Designer.cs">
+      <DependentUpon>reportLietKeTaiKhoanTheoTime.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -243,17 +243,17 @@
     <EmbeddedResource Include="View\frmService.resx">
       <DependentUpon>frmService.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\rpt_LietKeKhachHangTheoChiNhanh.resx">
-      <DependentUpon>rpt_LietKeKhachHangTheoChiNhanh.cs</DependentUpon>
+    <EmbeddedResource Include="View\reportLietKeKhachHangTheoChiNhanh.resx">
+      <DependentUpon>reportLietKeKhachHangTheoChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\TransactionReport.resx">
-      <DependentUpon>TransactionReport.cs</DependentUpon>
+    <EmbeddedResource Include="View\reportSaoKeGiaoDich.resx">
+      <DependentUpon>reportSaoKeGiaoDich.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\rpt_TaiKhoanMoTatCaChiNhanh.resx">
-      <DependentUpon>rpt_TaiKhoanMoTatCaChiNhanh.cs</DependentUpon>
+    <EmbeddedResource Include="View\reportLietKeTaiKhoanTheoTimeTatCaChiNhanh.resx">
+      <DependentUpon>reportLietKeTaiKhoanTheoTimeTatCaChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\rpt_TaiKhoanMo_1_ChiNhanh.resx">
-      <DependentUpon>rpt_TaiKhoanMo_1_ChiNhanh.cs</DependentUpon>
+    <EmbeddedResource Include="View\reportLietKeTaiKhoanTheoTime.resx">
+      <DependentUpon>reportLietKeTaiKhoanTheoTime.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="KHACH_HANG.xsc">

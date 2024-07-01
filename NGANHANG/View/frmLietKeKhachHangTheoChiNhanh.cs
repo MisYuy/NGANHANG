@@ -95,7 +95,7 @@ namespace NGANHANG.View
             string chiNhanhCode = chiNhanh.Equals("BẾN THÀNH") ? "BENTHANH" : "TANDINH";
            
            
-            rpt_LietKeKhachHangTheoChiNhanh rpt = new rpt_LietKeKhachHangTheoChiNhanh(chiNhanhCode);
+            reportLietKeKhachHangTheoChiNhanh rpt = new reportLietKeKhachHangTheoChiNhanh(chiNhanhCode);
             rpt.lbTieuDe.Text = "DANH SÁCH KHÁCH HÀNG THEO CHI NHÁNH " + cmbChiNhanh.Text.ToUpperInvariant();
             ReportPrintTool print = new ReportPrintTool(rpt);
             print.ShowPreviewDialog();

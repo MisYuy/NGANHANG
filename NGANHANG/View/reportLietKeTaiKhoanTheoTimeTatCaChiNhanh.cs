@@ -6,9 +6,9 @@ using System.Drawing;
 
 namespace NGANHANG.View
 {
-    public partial class rpt_TaiKhoanMoTatCaChiNhanh : DevExpress.XtraReports.UI.XtraReport
+    public partial class reportLietKeTaiKhoanTheoTimeTatCaChiNhanh : DevExpress.XtraReports.UI.XtraReport
     {
-        public rpt_TaiKhoanMoTatCaChiNhanh(string ngaybatdau, string ngayketthuc)
+        public reportLietKeTaiKhoanTheoTimeTatCaChiNhanh(string ngaybatdau, string ngayketthuc)
         {
             InitializeComponent();
             this.sqlDataSource1.Connection.ConnectionString = Program.connPublisherString;

@@ -121,7 +121,7 @@ namespace NGANHANG.View
 
             string ngayBD = ngayBatDau.ToString("yyyy/MM/dd");
             string ngayKT = ngayKetThuc.ToString("yyyy/MM/dd");
-            rpt_TaiKhoanMo_1_ChiNhanh rpt = new rpt_TaiKhoanMo_1_ChiNhanh(chiNhanhCode, ngayBD, ngayKT);
+            reportLietKeTaiKhoanTheoTime rpt = new reportLietKeTaiKhoanTheoTime(chiNhanhCode, ngayBD, ngayKT);
            
             rpt.lbTieuDe.Text = "DANH SÁCH  TÀI KHOẢN MỞ Ở "+chiNhanh +" TỪ " + ngayBatDau.ToString("dd/MM/yyyy") +
                 " ĐẾN NGÀY " + ngayKetThuc.ToString("dd/MM/yyyy");
@@ -164,7 +164,7 @@ namespace NGANHANG.View
             string ngayBD = ngayBatDau.ToString("yyyy/MM/dd");
             string ngayKT = ngayKetThuc.ToString("yyyy/MM/dd");
 
-            rpt_TaiKhoanMoTatCaChiNhanh rpt = new rpt_TaiKhoanMoTatCaChiNhanh(ngayBD, ngayKT);
+            reportLietKeTaiKhoanTheoTimeTatCaChiNhanh rpt = new reportLietKeTaiKhoanTheoTimeTatCaChiNhanh(ngayBD, ngayKT);
             rpt.lbTieuDe.Text = "DANH SÁCH TẤT CẢ TÀI KHOẢN MỞ TỪ " + ngayBatDau.ToString("MMddyyyy") +
                 " ĐẾN NGÀY " + ngayKetThuc.ToString("MMddyyyy");
 
