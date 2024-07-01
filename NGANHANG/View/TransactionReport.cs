@@ -66,6 +66,7 @@ public class TransactionReport : XtraReport
 
         // Create table for the detail
         XRTable detailTable = new XRTable();
+        detailTable.HeightF = 100f;
         detailTable.WidthF = this.PageWidth - this.Margins.Left - this.Margins.Right;
         XRTableRow detailTableRow = new XRTableRow();
         detailTableRow.HeightF = 5f; //
