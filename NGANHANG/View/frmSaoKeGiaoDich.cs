@@ -27,7 +27,6 @@ namespace NGANHANG.View
         private void frmSaoKeGiaoDich_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'nGANHANGDataSet_ADMIN.VIEW_TAIKHOAN' table. You can move, or remove it, as needed.
-            this.vIEW_TAIKHOANTableAdapter.Connection.ConnectionString = Program.connectionString;
             //this.vIEW_TAIKHOANTableAdapter.Fill(this.nGANHANGDataSet_ADMIN.VIEW_TAIKHOAN);
             loadTaiKhoan();
         }

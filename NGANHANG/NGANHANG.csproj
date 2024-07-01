@@ -88,14 +88,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>KHACH_HANG.xsd</DependentUpon>
     </Compile>
-    <Compile Include="NGANHANGDataSet1.cs">
-      <DependentUpon>NGANHANGDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="NGANHANGDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NGANHANGDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="CHI_NHANH.cs">
       <DependentUpon>CHI_NHANH.xsd</DependentUpon>
     </Compile>
@@ -274,17 +266,6 @@
     </None>
     <None Include="KHACH_HANG.xss">
       <DependentUpon>KHACH_HANG.xsd</DependentUpon>
-    </None>
-    <None Include="NGANHANGDataSet1.xsc">
-      <DependentUpon>NGANHANGDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="NGANHANGDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>NGANHANGDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="NGANHANGDataSet1.xss">
-      <DependentUpon>NGANHANGDataSet1.xsd</DependentUpon>
     </None>
     <None Include="CHI_NHANH.xsc">
       <DependentUpon>CHI_NHANH.xsd</DependentUpon>

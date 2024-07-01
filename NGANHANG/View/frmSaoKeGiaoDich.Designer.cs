@@ -39,10 +39,7 @@
             this.lblDenNgay = new System.Windows.Forms.Label();
             this.lblChonTK = new System.Windows.Forms.Label();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.nGANHANGDataSet_ADMIN = new NGANHANG.NGANHANGDataSet1();
             this.bdsVIEW_TAIKHOAN = new System.Windows.Forms.BindingSource(this.components);
-            this.vIEW_TAIKHOANTableAdapter = new NGANHANG.NGANHANGDataSet1TableAdapters.VIEW_TAIKHOANTableAdapter();
-            this.tableAdapterManager = new NGANHANG.NGANHANGDataSet1TableAdapters.TableAdapterManager();
             this.gridControl_taikhoan = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colCMND = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,7 +53,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateKetThuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSet_ADMIN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsVIEW_TAIKHOAN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_taikhoan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
@@ -192,23 +188,14 @@
             // 
             // nGANHANGDataSet_ADMIN
             // 
-            this.nGANHANGDataSet_ADMIN.DataSetName = "NGANHANGDataSet_ADMIN";
-            this.nGANHANGDataSet_ADMIN.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // bdsVIEW_TAIKHOAN
             // 
-            this.bdsVIEW_TAIKHOAN.DataMember = "VIEW_TAIKHOAN";
-            this.bdsVIEW_TAIKHOAN.DataSource = this.nGANHANGDataSet_ADMIN;
             // 
             // vIEW_TAIKHOANTableAdapter
             // 
-            this.vIEW_TAIKHOANTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-          //  this.tableAdapterManager.ChiNhanhTableAdapter = null;
-            this.tableAdapterManager.Connection = null;
           //  this.tableAdapterManager.GD_CHUYENTIENTableAdapter = null;
           //  this.tableAdapterManager.GD_GOIRUTTableAdapter = null;
            // this.tableAdapterManager.KhachHangTableAdapter = null;
@@ -296,7 +283,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nGANHANGDataSet_ADMIN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsVIEW_TAIKHOAN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_taikhoan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
@@ -316,10 +302,7 @@
         private System.Windows.Forms.Label lblDenNgay;
         private System.Windows.Forms.Label lblChonTK;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private NGANHANG.NGANHANGDataSet1 nGANHANGDataSet_ADMIN;
         private System.Windows.Forms.BindingSource bdsVIEW_TAIKHOAN;
-        private NGANHANG.NGANHANGDataSet1TableAdapters.VIEW_TAIKHOANTableAdapter vIEW_TAIKHOANTableAdapter;
-        private NGANHANG.NGANHANGDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private DevExpress.XtraGrid.GridControl gridControl_taikhoan;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn colCMND;
