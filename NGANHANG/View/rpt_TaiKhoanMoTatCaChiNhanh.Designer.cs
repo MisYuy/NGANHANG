@@ -229,9 +229,9 @@
             // 
             // sqlDataSource1
             // 
-            this.sqlDataSource1.ConnectionName = "NGANHANG.Properties.Settings.NGANHANGConnectionString2";
+            this.sqlDataSource1.ConnectionName = "NGANHANG.Properties.Settings.NGANHANGConnectionString";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            storedProcQuery1.Name = "usp_LietKeTaiKhoanMoTrongMotKhoangThoiGianTatCaChiNhanh";
+            storedProcQuery1.Name = "SP_LIET_KE_TAI_KHOAN_THEO_TIME_TAT_CA_CHI_NHANH";
             queryParameter1.Name = "@NGAYBD";
             queryParameter1.Type = typeof(System.DateTime);
             queryParameter1.ValueInfo = "2020-01-01";
@@ -241,7 +241,7 @@
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2});
-            storedProcQuery1.StoredProcName = "usp_LietKeTaiKhoanMoTrongMotKhoangThoiGianTatCaChiNhanh";
+            storedProcQuery1.StoredProcName = "SP_LIET_KE_TAI_KHOAN_THEO_TIME_TAT_CA_CHI_NHANH";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
@@ -309,7 +309,7 @@
             this.Detail});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1});
-            this.DataMember = "usp_LietKeTaiKhoanMoTrongMotKhoangThoiGianTatCaChiNhanh";
+            this.DataMember = "SP_LIET_KE_TAI_KHOAN_THEO_TIME_TAT_CA_CHI_NHANH";
             this.DataSource = this.sqlDataSource1;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
