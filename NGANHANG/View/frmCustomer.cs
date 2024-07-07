@@ -298,11 +298,35 @@ namespace NGANHANG.View
             }
             if(MessageBox.Show("Xác nhận thêm tài khoản cho khách hàng này?","Xác nhận",MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                String sql = string.Format("INSERT INTO TaiKhoan(SOTK, CMND, SODU, NGAYMOTK, MACN) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')", "100000" + bdsKhachHang.Count + 1, txtCMND.Text, 0, DateTime.Now, macn);
-                if (Program.ExecSqlNonQuery(sql) == 0)
+                using (SqlConnection connection = new SqlConnection(Program.connPublisherString))
                 {
-                    this.taiKhoanTableAdapter.Fill(this.nGANHANG_ChiNhanh.TaiKhoan);
-                    MessageBox.Show("Thêm tài khoản thành công");
+                    SqlCommand command = new SqlCommand("dbo.SP_TAO_TAI_KHOAN_NGAN_HANG", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@CMND", txtCMND.Text);
+                    command.Parameters.AddWithValue("@SODU", 0); // Assuming the initial balance is 0
+                    command.Parameters.AddWithValue("@NGAYMOTK", DateTime.Now);
+                    command.Parameters.AddWithValue("@MACN", macn);
+
+                    // Add a parameter to capture the return value
+                    SqlParameter returnValue = new SqlParameter();
+                    returnValue.Direction = ParameterDirection.ReturnValue;
+                    command.Parameters.Add(returnValue);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    int result = (int)returnValue.Value;
+
+                    if (result == 0)
+                    {
+                        this.taiKhoanTableAdapter.Fill(this.nGANHANG_ChiNhanh.TaiKhoan);
+                        MessageBox.Show("Thêm tài khoản thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm tài khoản thất bại");
+                    }
                 }
 
             }
