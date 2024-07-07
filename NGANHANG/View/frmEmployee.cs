@@ -421,7 +421,7 @@ namespace NGANHANG.View
                 int excute = Program.ExecSqlNonQuery("EXEC SP_XOANHANVIEN '" + manv + "'");
                 if (excute == 0)
                 {
-                    int excute2= Program.ExecSqlNonQuery("EXEC Xoa_Login '" + manv + "','" + manv + "'");
+                    int excute2= Program.ExecSqlNonQuery("EXEC SP_XOA_LOGIN '" + manv + "','" + manv + "'");
                     if(excute2==0) MessageBox.Show("Xóa tài khoản nhân viên thành công");
                     MessageBox.Show("Xóa nhân viên thành công");
                 }
@@ -487,7 +487,7 @@ namespace NGANHANG.View
             if (MessageBox.Show("Bạn có xác nhận xóa tài khoản nhân viên?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 String manv = ((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString();
-                int excute = Program.ExecSqlNonQuery("EXEC Xoa_Login '" + manv + "','" + manv + "'");
+                int excute = Program.ExecSqlNonQuery("EXEC SP_XOA_LOGIN '" + manv + "','" + manv + "'");
                 if (excute == 0) MessageBox.Show("Xóa tài khoản thành công");
             }
         }

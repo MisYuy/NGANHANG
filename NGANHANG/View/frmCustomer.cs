@@ -145,7 +145,7 @@ namespace NGANHANG.View
                     cmnd = ((DataRowView)bdsKhachHang[bdsKhachHang.Position])["CMND"].ToString();
                     bdsKhachHang.RemoveCurrent();
                     this.khachHangTableAdapter.Update(this.nGANHANG_ChiNhanh.KhachHang);
-                    String sql = string.Format("EXEC SP_XOALOGIN '{0}','{1}'", cmnd, cmnd);
+                    String sql = string.Format("EXEC SP_XOA_LOGIN '{0}','{1}'", cmnd, cmnd);
                     Program.serverName = cmbChiNhanh.SelectedValue.ToString();
                     if (Program.ConnectSqlWithAccount() == 1)
                     {
@@ -298,7 +298,7 @@ namespace NGANHANG.View
             }
             if(MessageBox.Show("Xác nhận thêm tài khoản cho khách hàng này?","Xác nhận",MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                String sql = string.Format("INSERT INTO TaiKhoan(CMND,MACN) VALUES ('{0}','{1}')", txtCMND.Text, macn);
+                String sql = string.Format("INSERT INTO TaiKhoan(SOTK, CMND, SODU, NGAYMOTK, MACN) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')", "100000" + bdsKhachHang.Count + 1, txtCMND.Text, 0, DateTime.Now, macn);
                 if (Program.ExecSqlNonQuery(sql) == 0)
                 {
                     this.taiKhoanTableAdapter.Fill(this.nGANHANG_ChiNhanh.TaiKhoan);

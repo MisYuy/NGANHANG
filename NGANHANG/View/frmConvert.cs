@@ -30,7 +30,7 @@ namespace NGANHANG.View
                 if (excute == 0)
                 {
                     MessageBox.Show("Chuyển thành công");
-                    excute = Program.ExecSqlNonQuery("EXEC Xoa_Login '" + manv + "','" + manv + "'");
+                    excute = Program.ExecSqlNonQuery("EXEC SP_XOA_LOGIN '" + manv + "','" + manv + "'");
                     if (excute == 0) MessageBox.Show("Xóa tài khoản thành công");
                 }
                 this.Dispose();

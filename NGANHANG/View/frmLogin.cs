@@ -12,7 +12,7 @@ namespace NGANHANG.View
             SqlConnection conn = new SqlConnection();
             try
             {
-                conn.ConnectionString = "Data Source=DESKTOP-KL0DTTA\\NGANHANG;Initial Catalog=NGANHANG;Persist Security Info=True;User ID=HTKN;Password=123";
+                conn.ConnectionString = "Data Source=DESKTOP-KL0DTTA\\NGANHANG;Initial Catalog=NGANHANG;Persist Security Info=True;User ID=sa;Password=123";
                 Program.connPublisherString = conn.ConnectionString;
                 return conn;
             }

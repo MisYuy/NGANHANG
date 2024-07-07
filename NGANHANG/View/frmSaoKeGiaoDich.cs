@@ -22,13 +22,52 @@ namespace NGANHANG.View
         {
             InitializeComponent();
             gridView2.RowClick += OnSelectRow;
+
+            if(Program.group == Program.KHACHHANG)
+            {
+                setSoTK();
+            }
+        }
+
+        public void setSoTK()
+        {
+            using (SqlConnection conn = new SqlConnection(Program.connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(@"
+                USE [NGANHANG]
+                SELECT [SOTK]
+                  FROM [dbo].[TaiKhoan]
+                  WHERE [dbo].[TaiKhoan].CMND =  @CMND", conn);
+                    cmd.Parameters.AddWithValue("@CMND", Program.username);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        txtSoTaiKhoan.Text = dt.Rows[0]["SOTK"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Chua co tai khoan", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading account data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void frmSaoKeGiaoDich_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'nGANHANGDataSet_ADMIN.VIEW_TAIKHOAN' table. You can move, or remove it, as needed.
             //this.vIEW_TAIKHOANTableAdapter.Fill(this.nGANHANGDataSet_ADMIN.VIEW_TAIKHOAN);
-            loadTaiKhoan();
+            if(Program.group != Program.KHACHHANG) loadTaiKhoan();
         }
 
         public void loadTaiKhoan()
@@ -114,7 +153,7 @@ namespace NGANHANG.View
             MsSqlConnectionParameters connectionParameters = new MsSqlConnectionParameters(
                 "DESKTOP-KL0DTTA\\TANDINH", // Server name
                 "NGANHANG",                 // Database name
-                "TH",                       // User ID
+                "sa",                       // User ID
                 "123",                      // Password
                 MsSqlAuthorizationType.SqlServer // Authentication type
             );
