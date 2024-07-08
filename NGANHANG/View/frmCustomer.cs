@@ -298,14 +298,15 @@ namespace NGANHANG.View
             }
             if(MessageBox.Show("Xác nhận thêm tài khoản cho khách hàng này?","Xác nhận",MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                using (SqlConnection connection = new SqlConnection(Program.connPublisherString))
+                using (SqlConnection connection = new SqlConnection(Program.connectionString))
                 {
                     SqlCommand command = new SqlCommand("dbo.SP_TAO_TAI_KHOAN_NGAN_HANG", connection);
                     command.CommandType = CommandType.StoredProcedure;
+                    DateTime now = DateTime.Now;
 
                     command.Parameters.AddWithValue("@CMND", txtCMND.Text);
                     command.Parameters.AddWithValue("@SODU", 0); // Assuming the initial balance is 0
-                    command.Parameters.AddWithValue("@NGAYMOTK", DateTime.Now);
+                    command.Parameters.AddWithValue("@NGAYMOTK", now);
                     command.Parameters.AddWithValue("@MACN", macn);
 
                     // Add a parameter to capture the return value
